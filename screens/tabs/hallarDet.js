@@ -1,13 +1,33 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import ItemHU from '../components/itemHU';
 
 export default ({navigation}) => {
+ 
+  const items = [    
+    {
+      titulo: 'HALLAR UBICACION',
+      ruta: 'HallarP'
+    },     
+    {
+      titulo: 'ELEGIR PUNTO',
+      ruta: 'ElegirP'
+    },     
+    {
+      titulo: 'MAPA INTERACTIVO',
+      ruta: 'Mapa'
+    }, 
+ ]
   return (
     <View style={styles.container}>
-      <Text>Pagina de los determinantes</Text>
-      <Button title="Determ Ubicacion" onPress={() => navigation.navigate("verDeterm")} />
-      <Button title="Elegir Ubicacion" onPress={() => navigation.navigate("elegirPunto")} />
-      <Button title="Mapa Determinantes" onPress={() => navigation.navigate("MapDeterm")} />
+    <Text>Hallar Determinantes Ambientales</Text>
+    <View style={styles.container}>
+    	<ItemHU navigation={navigation} item={items[0]}  />
+      <View style={styles.div}>
+    	<ItemHU navigation={navigation} item={items[1]}  />
+    	<ItemHU navigation={navigation} item={items[2]}  />
+      </View>
+    </View>
     </View>
   );
 }
@@ -15,7 +35,15 @@ export default ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fec',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingRight: 5,
+    paddingLeft: 5,
+  },
+  div: {
+    flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -1,11 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import Map from './components/Map' 
 
 export default ({navigation}) => {
-  return (
-    <View style={styles.container}>
-      <Text>Pagina del ElegirPunto</Text>
+
+  let posicion	
+
+   return (
+    <>
+    <View style={styles.mapa}>
+      <Map posicion={posicion} />
     </View>
+    <View style={styles.container}>
+      <Text>Pagina elegir punto</Text>
+    </View>
+    </>
   );
 }
 
@@ -16,4 +25,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  mapa: {
+    flex: 2,
+  }
 });
+
