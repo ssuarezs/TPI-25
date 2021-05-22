@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 
-export default ({posicion}) => {
+export default ({ posicion, onLongPress }) => {
 
   let region = {
       latitude : 4.21,
@@ -21,8 +21,12 @@ export default ({posicion}) => {
    }
 
   return (
-    <MapView region={region} style={styles.map}>
-    {posicion 
+    <MapView 
+      region={region} 
+      style={styles.map} 
+      onLongPress={onLongPress} 
+    >
+    {(posicion !== null)
       ? <Marker 
       coordinate={posicion}
       title="Tu ubicacion"

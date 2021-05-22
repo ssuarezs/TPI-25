@@ -5,7 +5,6 @@ import Map from './components/Map'
 export default ({navigation}) => {
 
   const posicion = navigation.getParam('location')
-  console.log(posicion)
 
    return (
     <>
