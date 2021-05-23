@@ -10,6 +10,7 @@ export default ({navigation}) => {
     setPosicion(nativeEvent.coordinate)
   }
   
+  console.log(posicion)
 
    return (
     <>
