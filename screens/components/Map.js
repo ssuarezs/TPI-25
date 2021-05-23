@@ -21,31 +21,35 @@ export default ({ posicion, onLongPress }) => {
    }
 
   return (
+    <View style={styles.center}>
     <MapView 
       region={region} 
       style={styles.map} 
       onLongPress={onLongPress} 
     >
-    {(posicion !== null)
-      ? <Marker 
-      coordinate={posicion}
-      title="Tu ubicacion"
-      />
-      : null
-    }
+      {(posicion !== null)
+	  ? <Marker 
+	  coordinate={posicion}
+	  title="Tu ubicacion"
+	  />
+	  : null
+      }
     </MapView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  center: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 10,
+    backgroundColor: '#fec',
   },
   map: {
     flex: 1,
-    width: Dimensions.get('window').width,
+    width: Dimensions.get('window').width-20,
     height: Dimensions.get('window').height,
   }
 });

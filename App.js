@@ -11,6 +11,18 @@ const TabNavigator = createBottomTabNavigator({
   menu: Menu,
 }, {
   initialRouteName: 'HallarDeterm',
+  tabBarOptions: {
+    style: {
+      position: 'absolute',
+      height: 60,
+      bottom: 15,
+      left: 20,
+      right: 20,
+      elevation: 0,
+      backgroundColor: '#fcf',
+      borderRadius: 15,
+    }
+  }
 })
 
 const RootStack = createStackNavigator({

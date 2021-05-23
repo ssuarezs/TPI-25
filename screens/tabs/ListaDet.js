@@ -1,30 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Button, AsyncStorage } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, AsyncStorage, FlatList } from 'react-native';
 
 export default ({navigation}) => {
 
-  const [puntos, setPuntos] = useState()
-  const [data, setData] = useState()
-
-  const obtenerPuntos = async () => { 
-    const obtenidos = await AsyncStorage.getItem('@my-app:puntosguardados')
-    const d = JSON.parse(obtenidos)
-    setPuntos(obtenidos)
-    setData(d)
+  const [puntos, setPuntos] = useState([])
+  const obtenerPuntos = async () => {
+    const obtenidos = await AsyncStorage.getItem('listaPuntos2')
+    const listaPuntos= JSON.parse(obtenidos)
+    if(listaPuntos !== null){
+      setPuntos(listaPuntos)
+    }
   }
+
+  
+  console.log(puntos)
 
   useEffect(() => {
     obtenerPuntos()
-  }, [data])
-
+  }, [puntos])
   
   return (
     <View style={styles.container}>
       <Text>Pagina del Listado</Text>
-    {data ?
+    {puntos ?
       <>
-      <Text>Latitud : {data.latitude}</Text>
-      <Text>Longitud : {data.longitude}</Text>
+	<FlatList 
+      data={puntos} 
+      keyExtractor={x => x.name}
+      renderItem={({item}) => 
+	<View>
+	<Text>{item.name}</Text>
+	<Text>	{item.coordinate.latitude}</Text>
+	<Text>	{item.coordinate.longitude}</Text>
+	</View>
+      }
+	/>
       </>
       :null 
     }

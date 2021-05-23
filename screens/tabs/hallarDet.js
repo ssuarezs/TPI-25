@@ -28,6 +28,8 @@ export default ({navigation}) => {
     	<ItemHU navigation={navigation} item={items[2]}  />
       </View>
     </View>
+    <View style={styles.espacioTabs}>
+    </View>
     </View>
   );
 }
@@ -47,4 +49,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  espacioTabs: {
+    height: 80,
+  }
 });

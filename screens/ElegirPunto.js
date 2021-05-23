@@ -1,44 +1,55 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
 import Map from './components/Map' 
+import Modal from './components/modal' 
 
 export default ({navigation}) => {
 
+
   const [posicion, setPosicion] = useState(null)
+  const [visibility, setVisibility] = useState(false)
 
   const obtenerPunto = ({ nativeEvent }) => {
     setPosicion(nativeEvent.coordinate)
+    setVisibility(true)
   }
+
   
-  console.log(posicion)
 
    return (
     <>
     <View style={styles.mapa}>
       <Map 
-     posicion={posicion} 
-     onLongPress={obtenerPunto}
+	 posicion={posicion} 
+	 onLongPress={obtenerPunto}
        />
+     <Modal visibility={visibility} >
+	    <>
+	      <Text>Este es el modal</Text>      
+	     <TouchableOpacity
+	     onPress={() => {
+	       if(posicion !== null){
+		navigation.navigate('verDeterm', { location : posicion })
+	       }
+	       setPosicion(null)
+	       setVisibility(false)
+	     }}
+	     >
+	       <Text>Aceptar</Text>
+	     </TouchableOpacity>   
+	     <TouchableOpacity
+	     onPress={() => {
+	       setPosicion(null)
+	       setVisibility(false)
+	     }}
+	     >
+	       <Text>Cancelar</Text>
+	     </TouchableOpacity>
+	  </>
+     </Modal>
     </View>
     <View style={styles.container}>
-      <Text>Pagina elegir punto</Text>   
-     <TouchableOpacity
-     onPress={() => {
-       if(posicion !== null){
-	navigation.navigate('verDeterm', { location : posicion })
-       }
-     }}
-     >
-       <Text>Aceptar</Text>
-     </TouchableOpacity>   
-     <TouchableOpacity
-     onPress={() => {
-       setPosicion(null)
-     }}
-     >
-       <Text>Cancelar</Text>
-     </TouchableOpacity>
-
+      <Text>Pagina elegir punto</Text> 
    </View>
     </>
   );
@@ -52,7 +63,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   mapa: {
-    flex: 2,
+    flex: 5,
   }
 });
 
