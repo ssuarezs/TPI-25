@@ -1,14 +1,42 @@
 import React from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Geojson } from 'react-native-maps';
+import * as turf from '@turf/turf'
 
 export default ({ posicion, onLongPress }) => {
+
+  
+  const polygon = {
+      type: 'FeatureCollection',
+      features: [
+	{
+	  type: 'Feature',
+	  properties: {},
+	  geometry: {
+	    type: 'Polygon',
+	    coordinates: [   
+	  [
+	    [-74, 6],
+	    [-73, 6],
+	    [-73, 4],
+	    [-74, 4],
+	  ]
+
+	    ],
+	  }
+	}
+      ]
+    };
+
+  let point = turf.point([0, 0])
+
 
   let region = {
       latitude : 4.21,
       longitude : -74.63,
       latitudeDelta : 10,
       longitudeDelta : 10,
+     
     }
 
  if(posicion != null){ 
@@ -18,7 +46,13 @@ export default ({ posicion, onLongPress }) => {
       latitudeDelta : 0.05,
       longitudeDelta : 0.05,
     }
+   point = turf.point([posicion.longitude, posicion.latitude])
+
    }
+
+  const pointInPoly = turf.booleanPointInPolygon(point, polygon.features[0]);
+  
+  console.log(pointInPoly)
 
   return (
     <View style={styles.center}>
@@ -33,7 +67,11 @@ export default ({ posicion, onLongPress }) => {
 	  title="Tu ubicacion"
 	  />
 	  : null
-      }
+      }   
+    <Geojson 
+      geojson={polygon} 
+      fillColor="green"
+    />
     </MapView>
     </View>
   );
