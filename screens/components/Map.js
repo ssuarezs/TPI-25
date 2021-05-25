@@ -2,9 +2,11 @@ import React from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
 import MapView, { Marker, Geojson } from 'react-native-maps';
 import * as turf from '@turf/turf'
+import incendio from '../../Determi/incendio.json' 
 
 export default ({ posicion, onLongPress }) => {
 
+  console.log(incendio)
   
   const polygon = {
       type: 'FeatureCollection',
@@ -50,7 +52,7 @@ export default ({ posicion, onLongPress }) => {
 
    }
 
-  const pointInPoly = turf.booleanPointInPolygon(point, polygon.features[0]);
+  const pointInPoly = turf.booleanPointInPolygon(point, incendio.features[0]);
   
   console.log(pointInPoly)
 
@@ -69,7 +71,7 @@ export default ({ posicion, onLongPress }) => {
 	  : null
       }   
     <Geojson 
-      geojson={polygon} 
+      geojson={incendio} 
       fillColor="green"
     />
     </MapView>
