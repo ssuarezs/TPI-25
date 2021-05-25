@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Map from './components/Map' 
+import { Map } from './components/index' 
 import Incendios from '../Determi/incendios/mapIncendio' 
 
 export default ({navigation}) => {

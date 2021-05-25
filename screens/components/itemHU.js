@@ -3,9 +3,6 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import * as Location from 'expo-location'
 
 
-
-
-
 export default ({navigation, item}) => {
 
   const buscaLocation = async () => {

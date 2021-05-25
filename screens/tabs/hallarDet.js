@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import ItemHU from '../components/itemHU';
+import { StyleSheet, Text, View } from 'react-native';
+import { ItemHU } from '../components/index';
 
 export default ({navigation}) => {
  
@@ -20,16 +20,15 @@ export default ({navigation}) => {
  ]
   return (
     <View style={styles.container}>
-    <Text>Hallar Determinantes Ambientales</Text>
-    <View style={styles.container}>
-    	<ItemHU navigation={navigation} item={items[0]}  />
-      <View style={styles.div}>
-    	<ItemHU navigation={navigation} item={items[1]}  />
-    	<ItemHU navigation={navigation} item={items[2]}  />
+      <Text>Hallar Determinantes Ambientales</Text>
+      <View style={styles.container}>
+	  <ItemHU navigation={navigation} item={items[0]}  />
+	<View style={styles.div}>
+	  <ItemHU navigation={navigation} item={items[1]}  />
+	  <ItemHU navigation={navigation} item={items[2]}  />
+	</View>
       </View>
-    </View>
-    <View style={styles.espacioTabs}>
-    </View>
+      <View style={styles.espacioTabs} />
     </View>
   );
 }

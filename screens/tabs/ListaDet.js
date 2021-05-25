@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, AsyncStorage, FlatList } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity, AsyncStorage, FlatList } from 'react-native';
 
 export default ({navigation}) => {
 
   const [puntos, setPuntos] = useState([])
   const obtenerPuntos = async () => {
-    const obtenidos = await AsyncStorage.getItem('listaPuntos2')
+    const obtenidos = await AsyncStorage.getItem('Puntos')
     const listaPuntos= JSON.parse(obtenidos)
     if(listaPuntos !== null){
       setPuntos(listaPuntos)
     }
   }
-
-  
-  console.log(puntos)
 
   useEffect(() => {
     obtenerPuntos()

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import Map from './components/Map' 
-import Modal from './components/modal' 
+import { Modal, Map } from './components/index' 
 
 export default ({navigation}) => {
-
 
   const [posicion, setPosicion] = useState(null)
   const [visibility, setVisibility] = useState(false)
@@ -13,8 +11,6 @@ export default ({navigation}) => {
     setPosicion(nativeEvent.coordinate)
     setVisibility(true)
   }
-
-  
 
    return (
     <>
