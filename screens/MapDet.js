@@ -1,11 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Map from './components/Map' 
+import Incendios from '../Determi/incendios/mapIncendio' 
 
 export default ({navigation}) => {
-  return (
-    <View style={styles.container}>
-      <Text>Pagina del Mapa Determinantes</Text>
+
+   return (
+    <>
+    <View style={styles.mapa}>
+     <Map >
+       <Incendios mapInteractivo={true} />
+     </Map>
     </View>
+    <View style={styles.container}>
+      <Text>Mapa Interactivo de la zona</Text> 
+   </View>
+    </>
   );
 }
 
@@ -16,4 +26,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  mapa: {
+    flex: 5,
+  }
 });
+

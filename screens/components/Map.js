@@ -1,80 +1,42 @@
 import React from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
-import MapView, { Marker, Geojson } from 'react-native-maps';
-import * as turf from '@turf/turf'
-import incendio from '../../Determi/incendio.json' 
+import MapView, { Marker } from 'react-native-maps';
 
-export default ({ posicion, onLongPress }) => {
-
-  console.log(incendio)
-  
-  const polygon = {
-      type: 'FeatureCollection',
-      features: [
-	{
-	  type: 'Feature',
-	  properties: {},
-	  geometry: {
-	    type: 'Polygon',
-	    coordinates: [   
-	  [
-	    [-74, 6],
-	    [-73, 6],
-	    [-73, 4],
-	    [-74, 4],
-	  ]
-
-	    ],
-	  }
-	}
-      ]
-    };
-
-  let point = turf.point([0, 0])
-
+export default ({ posicion, onLongPress, children }) => {
 
   let region = {
-      latitude : 4.21,
-      longitude : -74.63,
-      latitudeDelta : 10,
-      longitudeDelta : 10,
-     
+      latitude : 5.3844,
+      longitude : -73.3306,
+      latitudeDelta : 0.1,
+      longitudeDelta : 0.1,
     }
 
  if(posicion != null){ 
-    region = {
-      latitude : posicion.latitude,
-      longitude : posicion.longitude,
-      latitudeDelta : 0.05,
-      longitudeDelta : 0.05,
-    }
-   point = turf.point([posicion.longitude, posicion.latitude])
-
+      region = {
+	latitude : posicion.latitude,
+	longitude : posicion.longitude,
+	latitudeDelta : 0.01,
+	longitudeDelta : 0.01,
+      }
    }
-
-  const pointInPoly = turf.booleanPointInPolygon(point, incendio.features[0]);
   
-  console.log(pointInPoly)
 
   return (
     <View style={styles.center}>
-    <MapView 
-      region={region} 
-      style={styles.map} 
-      onLongPress={onLongPress} 
-    >
-      {(posicion !== null)
-	  ? <Marker 
-	  coordinate={posicion}
-	  title="Tu ubicacion"
-	  />
-	  : null
-      }   
-    <Geojson 
-      geojson={incendio} 
-      fillColor="green"
-    />
-    </MapView>
+      <MapView 
+	region={region} 
+	style={styles.map} 
+	onLongPress={onLongPress} 
+      >
+	{(posicion != null)
+	    ? <Marker 
+		coordinate={posicion}
+		title="Tu ubicacion"
+	      />
+	    : null
+	}   
+	{children}
+      </MapView>
     </View>
   );
 }

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Dimensions, TouchableOpacity, AsyncStorage } fr
 import Map from './components/Map' 
 import Modal from './components/modal' 
 import Input from './components/input' 
+import Incendios from '../Determi/incendios/mapIncendio' 
 
 export default ({navigation}) => {
 
@@ -12,6 +13,12 @@ export default ({navigation}) => {
   const [puntos, setPuntos] = useState([])
   const [posicion, setPosicion] = useState({ latitude: 0, longitude: 0, })
   const [mVisibility, setMVisibility] = useState(false)
+
+  const [resultado, setResultado] = useState('')
+  
+  const confResultado = (text) => {
+    setResultado(text)
+  }
  
   const obtenerPuntos = async () => {
     const obtenidos = await AsyncStorage.getItem('listaPuntos2')
@@ -67,10 +74,13 @@ export default ({navigation}) => {
      </TouchableOpacity>
     </View>
     <View style={styles.mapa}>
-      <Map posicion={posicion} />
+      <Map posicion={posicion} >
+     <Incendios posicion={posicion} confResultado={confResultado} />
+     </Map>
     </View>
     <View style={styles.container}>
       <Text>Pagina Visualizar Determinantes</Text>
+      <Text>{resultado}</Text>
     </View>
     </>
   );
