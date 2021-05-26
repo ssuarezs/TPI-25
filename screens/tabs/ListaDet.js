@@ -5,12 +5,19 @@ import { TouchableOpacity, AsyncStorage, FlatList } from 'react-native';
 export default ({navigation}) => {
 
   const [puntos, setPuntos] = useState([])
+
   const obtenerPuntos = async () => {
     const obtenidos = await AsyncStorage.getItem('Puntos')
     const listaPuntos= JSON.parse(obtenidos)
     if(listaPuntos !== null){
       setPuntos(listaPuntos)
     }
+  }
+
+  const irLocacion = (item) => {
+     navigation.navigate('verDeterm', {
+       location : item.coordinate 
+     })
   }
 
   useEffect(() => {
@@ -26,11 +33,17 @@ export default ({navigation}) => {
       data={puntos} 
       keyExtractor={x => x.name}
       renderItem={({item}) => 
-	<View>
+	<>
+	<TouchableOpacity onPress={() => { 
+	   navigation.navigate('verDeterm', {
+	     location : item.coordinate 
+	   })
+	}} >
 	<Text>{item.name}</Text>
 	<Text>	{item.coordinate.latitude}</Text>
 	<Text>	{item.coordinate.longitude}</Text>
-	</View>
+	</TouchableOpacity>
+	</>
       }
 	/>
       </>

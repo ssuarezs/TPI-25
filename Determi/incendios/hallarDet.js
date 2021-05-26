@@ -8,8 +8,9 @@ import medio from './media.json'
 import alta from './alta.json' 
 import muyalta from './muyalta.json' 
 
-export default ({ posicion , confResultado, mapInteractivo }) => {
+export default ( posicion ) => {
 
+  console.log(posicion)
   let point = turf.point([0, 0])
 
  if(posicion != null){ 
@@ -22,33 +23,21 @@ export default ({ posicion , confResultado, mapInteractivo }) => {
   let pointInA = turf.booleanPointInPolygon(point, alta.features[0]);
   let pointInMA = turf.booleanPointInPolygon(point, muyalta.features[0]);
 
-  if (pointInMB) { 
-    confResultado('Muy baja') 
-  }else if(pointInB){  
-    confResultado('Baja') 
-  }else if(pointInm){  
-    confResultado('Media') 
-  }else if(pointInA){  
-    confResultado('Alta') 
-  }else if(pointInMA){  
-    confResultado('Muy alta') 
-  }
+  let detHallado = 'El punto elegido no tiene ningun Determinante Ambiental relacionado'
   
-  if(mapInteractivo){
-    pointInMB=true
-    pointInB=true
-    pointInm=true
-    pointInA=true
-    pointInMA=true
+  if (pointInMB) { 
+    detHallado = 'Muy baja'
+  }else if(pointInB){  
+    detHallado = 'baja'
+  }else if(pointInm){  
+    detHallado = 'medio'
+  }else if(pointInA){  
+    detHallado = 'alto'
+  }else if(pointInMA){  
+    detHallado = 'muy alto'
   }
-    return (
-    <>
-      {pointInMB ? <Geojson geojson={muybaja} fillColor="blue" /> : null}
-      {pointInB ? <Geojson geojson={baja} fillColor="green" /> : null}
-      {pointInm  ? <Geojson geojson={medio} fillColor="yellow" /> : null}
-      {pointInA ? <Geojson geojson={alta} fillColor="orange" /> : null}
-      {pointInMA ? <Geojson geojson={muyalta} fillColor="red" /> : null}
-    </>
-    )
+
+  return detHallado;
+
   }
 

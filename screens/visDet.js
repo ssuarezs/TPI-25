@@ -4,6 +4,7 @@ import { TouchableOpacity, AsyncStorage } from 'react-native';
 
 import { Modal, Map, Input } from './components/index' 
 import Incendios from '../Determi/incendios/mapIncendio' 
+import hallarDet from '../Determi/incendios/hallarDet' 
 
 export default ({navigation}) => {
 
@@ -13,9 +14,9 @@ export default ({navigation}) => {
   const [resultado, setResultado] = useState('')
   const [puntos, setPuntos] = useState([])
   const [mVisibility, setMVisibility] = useState(false)
-  const [posicion, setPosicion] = useState({ 
-    latitude: 0, 
-    longitude: 0, 
+  const [posicion, setPosicion] = useState({
+    latitude: 0,
+    longitude: 0,
   })
   
   const confResultado = (text) => {
@@ -33,6 +34,7 @@ export default ({navigation}) => {
       setPuntos(listaPuntos)
     }
   }
+
 
   const submitPuntos = async () => {
     const newPuntos = [{
@@ -58,6 +60,7 @@ export default ({navigation}) => {
     obtenerPuntos()
   }, [])
 
+  const ResDeter = hallarDet(posicion);
 
    return (
     <>
@@ -78,12 +81,11 @@ export default ({navigation}) => {
     </View>
     <View style={styles.mapa}>
       <Map posicion={posicion} >
-     <Incendios posicion={posicion} confResultado={confResultado} />
      </Map>
     </View>
     <View style={styles.container}>
       <Text>Pagina Visualizar Determinantes</Text>
-      <Text>{resultado}</Text>
+      <Text>{ResDeter}</Text>
     </View>
     </>
   );
