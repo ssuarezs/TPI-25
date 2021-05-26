@@ -10,7 +10,6 @@ import muyalta from './muyalta.json'
 
 export default ( posicion ) => {
 
-  console.log(posicion)
   let point = turf.point([0, 0])
 
  if(posicion != null){ 

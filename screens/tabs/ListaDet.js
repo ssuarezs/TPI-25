@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { TouchableOpacity, AsyncStorage, FlatList } from 'react-native';
 
 export default ({navigation}) => {
@@ -27,14 +27,16 @@ export default ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text>Pagina del Listado</Text>
+    <View style={styles.containList}>
     {puntos ?
       <>
 	<FlatList 
+      style={styles.list}
       data={puntos} 
       keyExtractor={x => x.name}
       renderItem={({item}) => 
 	<>
-	<TouchableOpacity onPress={() => { 
+	<TouchableOpacity style={styles.item} onPress={() => { 
 	   navigation.navigate('verDeterm', {
 	     location : item.coordinate 
 	   })
@@ -50,14 +52,36 @@ export default ({navigation}) => {
       :null 
     }
     </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fec',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: 15,
   },
+  tabsNav: {
+    flex: 0.15,
+  },
+  item: {
+    borderBottomWidth: 3,
+    borderColor: '#222'
+  },
+  list: {
+    alignSelf: 'stretch',
+  },
+  containList: {  
+    alignSelf: 'stretch',
+    padding: 5,
+    borderRadius: 10,
+    margin: 10,
+    marginBottom: 100,
+    marginTop: 20,
+    borderColor:'#222',
+    borderWidth: 1,
+  }
 });

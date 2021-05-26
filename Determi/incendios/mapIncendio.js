@@ -43,11 +43,11 @@ export default ({ posicion , confResultado, mapInteractivo }) => {
   }
     return (
     <>
-      {pointInMB ? <Geojson geojson={muybaja} fillColor="blue" /> : null}
-      {pointInB ? <Geojson geojson={baja} fillColor="green" /> : null}
-      {pointInm  ? <Geojson geojson={medio} fillColor="yellow" /> : null}
-      {pointInA ? <Geojson geojson={alta} fillColor="orange" /> : null}
-      {pointInMA ? <Geojson geojson={muyalta} fillColor="red" /> : null}
+      {pointInMB ? <Geojson geojson={muybaja} 	fillColor="rgba( 73,166, 74,0.6)" /> : null}
+      {pointInB ? <Geojson geojson={baja} 	fillColor="rgba( 84,213, 86,0.4)" /> : null}
+      {pointInm  ? <Geojson geojson={medio} 	fillColor="rgba(238,255, 61,0.4)" /> : null}
+      {pointInA ? <Geojson geojson={alta} 	fillColor="rgba(255,171, 61,0.4)" /> : null}
+      {pointInMA ? <Geojson geojson={muyalta} 	fillColor="rgba(222, 37, 37,0.4)" /> : null}
     </>
     )
   }
