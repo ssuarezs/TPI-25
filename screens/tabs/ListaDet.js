@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { TouchableOpacity, AsyncStorage, FlatList } from 'react-native';
+import sty from '../styles.js'
 
 export default ({navigation}) => {
 
@@ -57,13 +58,7 @@ export default ({navigation}) => {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fec',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 15,
-  },
+  container: sty.container,
   tabsNav: {
     flex: 0.15,
   },
@@ -79,7 +74,6 @@ const styles = StyleSheet.create({
     padding: 5,
     borderRadius: 10,
     margin: 10,
-    marginBottom: 100,
     marginTop: 20,
     borderColor:'#222',
     borderWidth: 1,

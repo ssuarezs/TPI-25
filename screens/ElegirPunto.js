@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Modal, Map, AceptarPunto } from './components/index' 
+import sty from './styles.js'
 
 export default ({navigation}) => {
 
@@ -27,6 +28,7 @@ export default ({navigation}) => {
  
    return (
     <>
+    <View style={styles.container}>
 
     <View style={styles.mapa}>
 
@@ -41,8 +43,9 @@ export default ({navigation}) => {
 
     </View>
 
-    <View style={styles.container}>
+    <View style={styles.box}>
       <Text>Pagina elegir punto</Text> 
+   </View>
    </View>
 
     </>
@@ -51,6 +54,10 @@ export default ({navigation}) => {
 
 const styles = StyleSheet.create({
   container: {
+    ...sty.container,
+    paddingBottom: 10,
+  },
+  box: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',

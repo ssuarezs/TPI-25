@@ -3,6 +3,8 @@ import { createStackNavigator } from 'react-navigation-stack'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import { HallarDet, ListaDet, InfoDet, Menu } from './screens'
 import { MapDet, ePunto, verDet, verInfo, usoApp  } from './screens'
+import styles from './screens/styles.js'
+
 
 const TabNavigator = createBottomTabNavigator({ 
   HallarDeterm: HallarDet,   
@@ -11,18 +13,8 @@ const TabNavigator = createBottomTabNavigator({
   menu: Menu,
 }, {
   initialRouteName: 'HallarDeterm',
-  tabBarOptions: {
-    style: {
-      position: 'absolute',
-      height: 60,
-      bottom: 15,
-      left: 20,
-      right: 20,
-      elevation: 0,
-      backgroundColor: '#fcf',
-      borderRadius: 15,
-    }
-  }
+  animationEnabled: true,
+  tabBarOptions: styles.tabBar,
 })
 
 const RootStack = createStackNavigator({
@@ -33,7 +25,8 @@ const RootStack = createStackNavigator({
   verInform: verInfo ,
   usoApp: usoApp ,
 }, {
-  mode: 'Modal'
+  mode: 'Modal',
+  defaultNavigationOptions: styles.stackBar,
 })
 
 export default createAppContainer(RootStack)
