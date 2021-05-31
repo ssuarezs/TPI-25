@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { TouchableOpacity, AsyncStorage } from 'react-native';
 
 import { Modal, Map, Input } from './components/index' 
 import { hallarDet } from '../Determi/incendios/index' 
+
+import sty from './styles.js'
 
 export default ({navigation}) => {
 
@@ -63,6 +65,7 @@ export default ({navigation}) => {
 
    return (
     <>
+    <View style={{...sty.container, paddingTop: 0, paddingBottom: 0,}}> 
      <Modal visibility={mVisibility}>   
        <Text>Quieres guardar este Punto?</Text>
 	<Input title="Nombre Punto" placeholder="Escribe nombre..." onChangeText={handleName}  />
@@ -73,11 +76,9 @@ export default ({navigation}) => {
        <Text>Cancelar</Text>
      </TouchableOpacity>
      </Modal>
-    <View style={styles.guardar}> 
-     <TouchableOpacity onPress={() => {setMVisibility(true)}} >
-       <Text>Guardar Punto</Text>
+     <TouchableOpacity style={styles.guardar} onPress={() => {setMVisibility(true)}} >
+       <Text style={sty.subtitle}>G U A R D A R   P U N T O</Text>
      </TouchableOpacity>
-    </View>
     <View style={styles.mapa}>
       <Map posicion={posicion} >
      </Map>
@@ -86,6 +87,7 @@ export default ({navigation}) => {
       <Text>Pagina Visualizar Determinantes</Text>
       <Text style={styles.parrafo}>{ResDeter}</Text>
     </View>
+    </View>
     </>
   );
 }
@@ -93,7 +95,6 @@ export default ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 15,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -102,8 +103,12 @@ const styles = StyleSheet.create({
   },
   guardar: {
     flex: 1.5,
+    backgroundColor: 'rgba(32,106,93,1)',
     alignItems: 'center',
     justifyContent: 'center',
+    width: Dimensions.get('window').width-30,
+    margin: 10,
+    borderRadius: 5,
   },
   parrafo: {
     textAlign: 'center'

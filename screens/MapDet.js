@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Map } from './components/index' 
 import { Incendios } from '../Determi/incendios/index' 
+import sty from './styles.js'
 
 export default ({navigation}) => {
 
@@ -29,14 +30,9 @@ export default ({navigation}) => {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 2,
-    backgroundColor: '#eee',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  container: sty.container,
   mapa: {
-    flex: 5,
+    flex: 4,
   }
 });
 

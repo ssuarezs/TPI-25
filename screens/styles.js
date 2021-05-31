@@ -1,13 +1,11 @@
-const primary = 'rgba(120,174,20,1)'
-const primaryS = '#E9F7CF'
-const secondary = 'rgba(32,106,93,0.8)'
-const secondaryS = 'rgba(32,106,93,0.8)'
-const tertiary = 'rgba(255,204,41,0.8)'
-const tertiaryS = 'rgba(255,204,41,0.8)'
+const primary = '#81b214'
+const secondary = '#206a5d'
+const tertiary = '#ffcc29'
+const four = '#f8ede3'
 
 const styles = {
   tabBar : {  
-    inactiveTintColor: secondary,
+    inactiveTintColor: four,
     activeTintColor: tertiary,
     style: {
       position: 'absolute',
@@ -17,7 +15,7 @@ const styles = {
       right: 20,
       elevation: 0,
       borderRadius: 15,
-      backgroundColor: primary,
+      backgroundColor: secondary,
 	shadowColor: '#7f5df0',
 	shadowOffset: {
 	  width: 0,
@@ -30,19 +28,45 @@ const styles = {
   },
   stackBar: {
     headerStyle: {
-      backgroundColor: primary,
+      backgroundColor: secondary,
     },
-    headerTintColor: primaryS,
-  },
+    headerTintColor: four,
+  },  
   container : {   
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 5,
-    paddingTop: 15,
-    paddingBottom: 100,
-    backgroundColor: primaryS,
-  }
+    paddingTop: 20,
+    paddingBottom: 115,
+    backgroundColor: four,
+  },   
+  item : {   
+    flex: 1,
+    backgroundColor: primary,
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    margin: 15,
+    marginBottom: 0,
+    alignSelf: 'stretch',
+    borderRadius: 20,
+    padding: 20,
+  },  
+  title : { 
+    color: secondary,
+    fontWeight: 'bold',
+    fontSize: 20,
+  },  
+  subtitle : { 
+    color: secondary,
+    fontWeight: 'bold',
+    fontSize: 15,
+    textAlign: 'center',
+    paddingRight: 5,
+    paddingLeft: 5,
+  },
+
+
 
 };
 

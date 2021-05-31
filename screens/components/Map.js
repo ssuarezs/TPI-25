@@ -46,12 +46,12 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 10,
-    backgroundColor: '#fec',
+    padding: 15,
+    backgroundColor: 'rgba(32,106,93,1)',
   },
   map: {
     flex: 1,
-    width: Dimensions.get('window').width-20,
+    width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
   }
 });

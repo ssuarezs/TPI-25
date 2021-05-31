@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import * as Location from 'expo-location'
+import sty from '../styles.js'
 
 
 export default ({navigation, item}) => {
@@ -26,7 +27,7 @@ export default ({navigation, item}) => {
 	}
   return (
 	<TouchableOpacity 
-	  style={styles.container}
+	  style={styles.item}
 	  onPress={ruta}
 	>
 	  <Text style={styles.text} >{item.titulo}</Text>
@@ -35,9 +36,10 @@ export default ({navigation, item}) => {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  item : sty.item,
+  container: {  
     flex: 1,
-    backgroundColor: '#cef',
+    backgroundColor: '#2ef',
     alignItems: 'center',
     justifyContent: 'flex-start',
     margin: 15,
@@ -45,8 +47,5 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 20,
   },
-  text: {
-    fontSize: 15,
-    fontWeight: 'bold',
-  }
+  text: sty.title,
 });

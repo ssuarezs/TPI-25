@@ -7,7 +7,7 @@ export default ({navigation}) => {
  
   const items = [    
     {
-      titulo: 'HALLAR UBICACION',
+      titulo: 'HALLAR TU UBICACION',
       ruta: 'HallarP'
     },     
     {
@@ -21,14 +21,12 @@ export default ({navigation}) => {
  ]
   return (
     <View style={styles.container}>
-      <Text>Hallar Determinantes Ambientales</Text>
-      <View style={styles.itemCont}>
+      <Text style={{...sty.subtitle, color: "rgba(32,106,93,1)"}} >
+	Elige una opcion :
+      </Text>
 	  <ItemHU navigation={navigation} item={items[0]}  />
-	<View style={styles.div}>
 	  <ItemHU navigation={navigation} item={items[1]}  />
 	  <ItemHU navigation={navigation} item={items[2]}  />
-	</View>
-      </View>
     </View>
   );
 }
