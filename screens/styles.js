@@ -1,12 +1,19 @@
+import { Dimensions } from 'react-native'
 const primary = '#81b214'
 const secondary = '#206a5d'
 const tertiary = '#ffcc29'
 const four = '#f8ede3'
 
 const styles = {
+  act: {
+    borderBottomWidth: 5,
+  },
   tabBar : {  
     inactiveTintColor: four,
     activeTintColor: tertiary,
+    inactiveTintColor: secondary,
+    showLabel: false,
+    pressOpacity: 1,
     style: {
       position: 'absolute',
       height: 70,
@@ -25,7 +32,7 @@ const styles = {
 	shadowRadius: 3.5,
 	elevation: 5,
     }
-  },
+  }, 
   stackBar: {
     headerStyle: {
       backgroundColor: secondary,
