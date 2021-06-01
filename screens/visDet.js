@@ -100,10 +100,10 @@ const styles = StyleSheet.create({
   },
   mapa: {
     flex: 6,
-  },
+  }, 
   guardar: {
     flex: 1.5,
-    backgroundColor: 'rgba(32,106,93,1)',
+    backgroundColor: '#81b214',
     alignItems: 'center',
     justifyContent: 'center',
     width: Dimensions.get('window').width-30,

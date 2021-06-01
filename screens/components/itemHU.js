@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 import * as Location from 'expo-location'
 import sty from '../styles.js'
 
@@ -24,19 +24,32 @@ export default ({navigation, item}) => {
 	  } else if(rutaname === "Mapa") {
 	    navigation.navigate('MapDeterm')
 	  }
-	}
+	}   
+
   return (
 	<TouchableOpacity 
 	  style={styles.item}
 	  onPress={ruta}
 	>
-	  <Text style={styles.text} >{item.titulo}</Text>
+	  <View style={styles.div}>
+	  <View style={styles.center}>
+	    <Text style={sty.title} >{item.titulo}</Text>
+	    <Text style={styles.subtitle} >{item.descripcion}</Text>
+	  </View>
+    { (rutaname == 'HallarP') ? <Image style={styles.img} source={require('../assets/ubicacion.png')} /> : null } 
+    { (rutaname == 'ElegirP') ? <Image style={styles.img} source={require('../assets/elegir.png')} /> : null } 
+    { (rutaname == 'Mapa') ? <Image style={styles.img} source={require('../assets/map.png')} /> : null } 
+	  </View>
 	</TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   item : sty.item,
+  img : {
+    height: 140,
+    width: 140,
+  },
   container: {  
     flex: 1,
     backgroundColor: '#2ef',
@@ -45,7 +58,23 @@ const styles = StyleSheet.create({
     margin: 15,
     alignSelf: 'stretch',
     borderRadius: 20,
-    padding: 20,
+    padding: 10,
+  },  
+  div: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  center: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  subtitle : {
+    flex: 1,
+    ...sty.subtitle,
+    fontSize: 14,
   },
   text: sty.title,
 });

@@ -38,7 +38,7 @@ const styles = {
     justifyContent: 'center',
     padding: 5,
     paddingTop: 20,
-    paddingBottom: 115,
+    paddingBottom: 120,
     backgroundColor: four,
   },   
   item : {   
@@ -61,7 +61,6 @@ const styles = {
     color: secondary,
     fontWeight: 'bold',
     fontSize: 15,
-    textAlign: 'center',
     paddingRight: 5,
     paddingLeft: 5,
   },

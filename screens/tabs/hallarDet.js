@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { ItemHU } from '../components/index';
 import sty from '../styles.js'
 
@@ -8,22 +8,25 @@ export default ({navigation}) => {
   const items = [    
     {
       titulo: 'HALLAR TU UBICACION',
-      ruta: 'HallarP'
+      ruta: 'HallarP',
+      img: '../assets/ubicacion.png',
+      descripcion: 'Encuentra el Determinante Ambiental relacionado a tu ubicacion actual'
     },     
     {
       titulo: 'ELEGIR PUNTO',
-      ruta: 'ElegirP'
+      ruta: 'ElegirP',
+      img: '../assets/elegir.png',
+      descripcion: 'Escoge un punto en el mapa y su Deteminante Ambiental '
     },     
     {
-      titulo: 'MAPA INTERACTIVO',
-      ruta: 'Mapa'
+      titulo: 'MAPA DE LA ZONA', 
+      ruta: 'Mapa',
+      img: '../assets/map.png',
+      descripcion: 'Mapa del Determinante Ambiental en la zona de interes'
     }, 
  ]
   return (
     <View style={styles.container}>
-      <Text style={{...sty.subtitle, color: "rgba(32,106,93,1)"}} >
-	Elige una opcion :
-      </Text>
 	  <ItemHU navigation={navigation} item={items[0]}  />
 	  <ItemHU navigation={navigation} item={items[1]}  />
 	  <ItemHU navigation={navigation} item={items[2]}  />
@@ -37,11 +40,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  div: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  }, 
 });

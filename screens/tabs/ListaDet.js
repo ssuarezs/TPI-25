@@ -27,32 +27,30 @@ export default ({navigation}) => {
   
   return (
     <View style={styles.container}>
-      <Text>Pagina del Listado</Text>
-    <View style={styles.containList}>
-    {puntos ?
-      <>
-	<FlatList 
-      style={styles.list}
-      data={puntos} 
-      keyExtractor={x => x.name}
-      renderItem={({item}) => 
-	<>
-	<TouchableOpacity style={styles.item} onPress={() => { 
-	   navigation.navigate('verDeterm', {
-	     location : item.coordinate 
-	   })
-	}} >
-	<Text>{item.name}</Text>
-	<Text>	{item.coordinate.latitude}</Text>
-	<Text>	{item.coordinate.longitude}</Text>
-	</TouchableOpacity>
-	</>
-      }
-	/>
-      </>
+      <Text style={{...sty.title, marginTop: 30}} >LISTADO DE PUNTOS GUARDADOS ANTERIORMENTE</Text>
+    {puntos  ?
+	<View style={styles.containList}>
+	  <FlatList 
+	style={styles.list}
+	data={puntos} 
+	keyExtractor={x => x.name}
+	renderItem={({item}) => 
+	  <>
+	  <TouchableOpacity style={sty.item} onPress={() => { 
+	     navigation.navigate('verDeterm', {
+	       location : item.coordinate 
+	     })
+	  }} >
+	  <Text style={sty.title} > Nombre {':'} {item.name}</Text>
+	  <Text style={sty.subtitle} > Lat {':'} {item.coordinate.latitude}</Text>
+	  <Text style={sty.subtitle} > Long {':'} {item.coordinate.longitude}</Text>
+	  </TouchableOpacity>
+	  </>
+	}
+	  />
+	</View>
       :null 
     }
-    </View>
     </View>
   );
 }
@@ -71,11 +69,10 @@ const styles = StyleSheet.create({
   },
   containList: {  
     alignSelf: 'stretch',
-    padding: 5,
-    borderRadius: 10,
-    margin: 10,
-    marginTop: 20,
-    borderColor:'#222',
-    borderWidth: 1,
+    marginTop: 15,
+    marginBottom: 30,
+    borderColor : '#ffcc29',
+    borderBottomWidth : 3,
+    borderTopWidth : 3,
   }
 });
