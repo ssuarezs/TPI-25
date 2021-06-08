@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { TouchableOpacity, AsyncStorage } from 'react-native';
 
 import { Modal, Map, Input } from './components/index' 
-import { hallarDet } from '../Determi/incendios/index' 
+import { hallarDet, Det } from '../Determi/incendios/index' 
 
 import sty from './styles.js'
 
@@ -80,24 +80,15 @@ export default ({navigation}) => {
        <Text style={sty.subtitle}>G U A R D A R   P U N T O</Text>
      </TouchableOpacity>
     <View style={styles.mapa}>
-      <Map posicion={posicion} >
-     </Map>
+      <Map posicion={posicion} />
     </View>
-    <View style={styles.container}>
-      <Text>Pagina Visualizar Determinantes</Text>
-      <Text style={styles.parrafo}>{ResDeter}</Text>
-    </View>
+     <Det resDeter={ResDeter} />
     </View>
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 15,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   mapa: {
     flex: 6,
   }, 

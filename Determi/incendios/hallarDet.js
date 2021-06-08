@@ -25,15 +25,15 @@ export default ( posicion ) => {
   let detHallado = 'El punto elegido no tiene ningun Determinante Ambiental relacionado'
   
   if (pointInMB) { 
-    detHallado = 'Muy baja'
+    detHallado = 'MUY BAJO'
   }else if(pointInB){  
-    detHallado = 'baja'
+    detHallado = 'BAJO'
   }else if(pointInm){  
-    detHallado = 'medio'
+    detHallado = 'MEDIO'
   }else if(pointInA){  
-    detHallado = 'alto'
+    detHallado = 'ALTO'
   }else if(pointInMA){  
-    detHallado = 'muy alto'
+    detHallado = 'MUY ALTO'
   }
 
   return detHallado;
