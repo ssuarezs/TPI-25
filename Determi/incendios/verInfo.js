@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { StyleSheet, View, Dimensions, Text, ScrollView, TouchableOpacity, FlatList } from 'react-native';
+import { hallarDet } from './index' 
 import * as WebBrowser from 'expo-web-browser';
 import info from './info.json' 
 import { Modal } from '../../screens/components/index'
 
 
-const BUU = ({ D, title }) => {
+const ITEM = ({ D, title }) => {
   return (       
-	    <TouchableOpacity style={styles.button2} onPress={D} >
-		<Text style={styles.textA} >{title}</Text>
+	    <TouchableOpacity style={styles.item} onPress={D} >
+		<Text style={styles.textI} >{title}</Text>
 	    </TouchableOpacity>
   )
 }
@@ -21,7 +22,9 @@ const BOO = ({ D, title }) => {
   )
 }
 
-export default ({ resDeter, onPress }) => {
+export default ({ posicion }) => {
+
+  const resDeter = hallarDet(posicion);
    
   const [ley, setLey]=useState({
     titulo: 'SELECCIONAR LEY'
@@ -42,23 +45,19 @@ export default ({ resDeter, onPress }) => {
     <View style={styles.center}>
 
     <Modal visibility={visible}>
-      <View style={styles.list}>
 	<FlatList 
+	  style={styles.FlatList}
 	  data={info.Leyes}
 	  keyExtractor={x => x.titulo}
 	  renderItem={({item}) => (
-	    <BUU title={item.titulo} D={() => {configLey(item.num)}} />
+	    <ITEM title={item.titulo} D={() => {configLey(item.num)}} />
 	)}
 	/>
-       </View>
     </Modal>
 
-	<Text style={styles.title} >{info.titulo}</Text>
+	<Text style={styles.subtitle} >Nivel de Riesgo{':'} {resDeter}</Text>
 
     <ScrollView style={styles.scroll}>
-
-	<Text style={styles.subtitle} >Nivel de Riesgo{':'}</Text>
-	<Text style={styles.subtitle} >{resDeter}</Text>
 
 	  <View style={styles.section}>
 	<Text style={styles.parraf} >{info.parrafos[0]}</Text>
@@ -97,9 +96,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 5,
-    margin: 8,
+    margin: 2,
   },
   scroll: {
+    marginTop: 10,
     padding: 5,
     borderColor: '#ffcc29',
     borderTopWidth: 4,
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   subtitle: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#206a5d',
@@ -170,6 +170,9 @@ const styles = StyleSheet.create({
     margin: 35,
     borderRadius: 20,
   },
+  FlatList: {
+    alignSelf: 'stretch',
+  },
   section: {
     marginTop: 20,
     marginBottom: 20,
@@ -178,6 +181,21 @@ const styles = StyleSheet.create({
     borderColor: '#206a5d',
     borderWidth: 4,
     borderRadius: 20,
-  }
+  }, 
+  item: { 
+    padding: 5,
+    margin: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomWidth: 4,
+    borderColor: '#206a5d',
+  },    
+  textI: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#206a5d',
+  },
+
 }); 
  

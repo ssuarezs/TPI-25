@@ -3,8 +3,7 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { TouchableOpacity, AsyncStorage } from 'react-native';
 
 import { Modal, Map, Input } from './components/index' 
-import { hallarDet, Det } from '../Determi/incendios/index' 
-
+import DetMain from '../Determi/detMain' 
 import sty from './styles.js'
 
 export default ({navigation}) => {
@@ -61,7 +60,6 @@ export default ({navigation}) => {
     obtenerPuntos()
   }, [])
 
-  const ResDeter = hallarDet(posicion);
 
    return (
     <>
@@ -82,7 +80,7 @@ export default ({navigation}) => {
     <View style={styles.mapa}>
       <Map posicion={posicion} />
     </View>
-     <Det resDeter={ResDeter} />
+     <DetMain posicion={posicion} />
     </View>
     </>
   );
