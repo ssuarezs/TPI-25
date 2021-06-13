@@ -3,13 +3,13 @@ import { StyleSheet, Text, View, Dimensions, Modal, TouchableOpacity } from 'rea
 
 export default ({ visibility, children }) => {
   return (
-    <Modal 
+    <Modal
       visible={visibility}
       animationType= "fade"
       transparent={true}
     >
       <View style={styles.center}>
-      <View style={styles.ModalView}>    
+      <View style={styles.ModalView}>
 	{children}
       </View>
       </View>
@@ -28,15 +28,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     minWidth: Dimensions.get('window').width-100,
+    maxWidth: Dimensions.get('window').width-50,
     minHeight: Dimensions.get('window').height-600,
     maxHeight: Dimensions.get('window').height-400,
     backgroundColor: '#f8ede3',
-    borderRadius: 5,
-    padding: 0,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 1,
-      height: 3,
-    },
+    borderRadius: 10,
+    padding: 8,
+    paddingTop: 20,
+    paddingBottom: 20,
   },
 });

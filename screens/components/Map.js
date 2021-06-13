@@ -11,30 +11,30 @@ export default ({ posicion, onLongPress, children }) => {
       longitudeDelta : 0.1,
     }
 
- if(posicion != null){ 
+ if(posicion != null){
       region = {
 	latitude : posicion.latitude,
 	longitude : posicion.longitude,
-	latitudeDelta : 0.01,
-	longitudeDelta : 0.01,
+	latitudeDelta : 0.1,
+	longitudeDelta : 0.1,
       }
    }
-  
+
 
   return (
     <View style={styles.center}>
-      <MapView 
-	region={region} 
-	style={styles.map} 
-	onLongPress={onLongPress} 
+      <MapView
+	region={region}
+	style={styles.map}
+	onLongPress={onLongPress}
       >
 	{(posicion != null)
-	    ? <Marker 
+	    ? <Marker
 		coordinate={posicion}
 		title="Tu ubicacion"
 	      />
 	    : null
-	}   
+	}
 	{children}
       </MapView>
     </View>

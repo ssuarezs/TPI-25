@@ -51,14 +51,12 @@ export default ({ posicion }) => {
 	  data={info.Leyes}
 	  keyExtractor={x => x.titulo}
 	  renderItem={({item}) => (
-	    <ITEM title={item.titulo} D={() => {
-            configLey(item.num)
-        }} />
+	    <ITEM title={item.titulo} D={() => {configLey(item.num)}} />
 	)}
 	/>
     </Modal>
 
-	<Text style={styles.subtitle} >Nivel de Riesgo{':'} {resDeter}</Text>
+	<Text style={styles.subtitle} >Nivel de Amenaza{':'} {resDeter}</Text>
 
     <ScrollView style={styles.scroll}>
 
@@ -187,8 +185,7 @@ const styles = StyleSheet.create({
   },
   item: {
     padding: 5,
-    paddingTop: 10,
-    paddingBottom: 10,
+    margin: 10,
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomWidth: 4,

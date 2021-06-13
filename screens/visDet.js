@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { TouchableOpacity, AsyncStorage } from 'react-native';
 
-import { Modal, Map, Input } from './components/index' 
-import DetMain from '../Determi/detMain' 
+import { Modal, Map, Input } from './components/index'
+import DetMain from '../Determi/detMain'
 import sty from './styles.js'
 
 export default ({navigation}) => {
@@ -18,7 +18,7 @@ export default ({navigation}) => {
     latitude: 0,
     longitude: 0,
   })
-  
+
   const confResultado = (text) => {
     setResultado(text)
   }
@@ -26,19 +26,20 @@ export default ({navigation}) => {
   const handleName = (text) => {
     setNombre(text)
   }
- 
+
   const obtenerPuntos = async () => {
     const obtenidos = await AsyncStorage.getItem('Puntos')
     const listaPuntos= JSON.parse(obtenidos)
     if(listaPuntos !== null){
       setPuntos(listaPuntos)
     }
+      // listaPuntos ? setPuntos(listaPuntos) : null
   }
 
 
   const submitPuntos = async () => {
     const newPuntos = [{
-      coordinate: posicion, 
+      coordinate: posicion,
       name: nombre
     }]
     const treta= puntos.concat(newPuntos)
@@ -53,7 +54,7 @@ export default ({navigation}) => {
   }
 
   useEffect(() => {
-    setPosicion({ 
+    setPosicion({
 	latitude: location.latitude,
 	longitude: location.longitude,
       })
@@ -63,13 +64,13 @@ export default ({navigation}) => {
 
    return (
     <>
-    <View style={{...sty.container, paddingTop: 0, paddingBottom: 0,}}> 
-     <Modal visibility={mVisibility}>   
+    <View style={{...sty.container, paddingTop: 0, paddingBottom: 0,}}>
+     <Modal visibility={mVisibility}>
        <Text>Quieres guardar este Punto?</Text>
 	<Input title="Nombre Punto" placeholder="Escribe nombre..." onChangeText={handleName}  />
      <TouchableOpacity onPress={submitPuntos} >
        <Text>Aceptar</Text>
-     </TouchableOpacity>   
+     </TouchableOpacity>
      <TouchableOpacity onPress={() => {setMVisibility(false)}} >
        <Text>Cancelar</Text>
      </TouchableOpacity>
@@ -89,7 +90,7 @@ export default ({navigation}) => {
 const styles = StyleSheet.create({
   mapa: {
     flex: 6,
-  }, 
+  },
   guardar: {
     flex: 1.5,
     backgroundColor: '#81b214',

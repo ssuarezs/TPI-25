@@ -8,35 +8,35 @@ import React from 'react';
 import { View, Image } from 'react-native';
 
 
-const TabNavigator = createBottomTabNavigator({ 
-  HallarDeterm: HallarDet,   
+const TabNavigator = createBottomTabNavigator({
+  HallarDeterm: HallarDet,
   ListadoDeterm: ListaDet,
-  InfoDeterm: InfoDet,  
+  InfoDeterm: InfoDet,
   menu: Menu,
 }, {
   initialRouteName: 'HallarDeterm',
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused, horizontal, tintColor }) => {
-      const { routeName } = navigation.state  
+      const { routeName } = navigation.state
       let iconName
-     if (routeName === 'HallarDeterm') {  
+     if (routeName === 'HallarDeterm') {
        iconName = require('./screens/assets/hallar.png')
-     }  
+     }
      if (routeName === 'ListadoDeterm') {
        iconName = require('./screens/assets/list.png')
-     }  
+     }
      if (routeName === 'InfoDeterm') {
        iconName = require('./screens/assets/info.png')
-     }  
+     }
      if (routeName === 'menu') {
        iconName = require('./screens/assets/menu.png')
-     }   
+     }
       return (
 	<View style={{ ...styles.act, borderColor:tintColor, }}>
 	 <Image style={{height:50, width: 50}} source={iconName} />
 	</View>
-      ) 
-      
+      )
+
     },
   tabBarOptions: styles.tabBar,
   })
