@@ -17,40 +17,43 @@ export default ({navigation}) => {
 
   const irLocacion = (item) => {
      navigation.navigate('verDeterm', {
-       location : item.coordinate 
+       location : item.coordinate
      })
   }
 
   useEffect(() => {
     obtenerPuntos()
   }, [puntos])
-  
+
   return (
     <View style={styles.container}>
-      <Text style={{...sty.title, marginTop: 30}} >LISTADO DE PUNTOS GUARDADOS ANTERIORMENTE</Text>
-    {puntos  ?
-	<View style={styles.containList}>
-	  <FlatList 
-	style={styles.list}
-	data={puntos} 
-	keyExtractor={x => x.name}
-	renderItem={({item}) => 
-	  <>
-	  <TouchableOpacity style={sty.item} onPress={() => { 
-	     navigation.navigate('verDeterm', {
-	       location : item.coordinate 
-	     })
-	  }} >
-	  <Text style={sty.title} > Nombre {':'} {item.name}</Text>
-	  <Text style={sty.subtitle} > Lat {':'} {item.coordinate.latitude}</Text>
-	  <Text style={sty.subtitle} > Long {':'} {item.coordinate.longitude}</Text>
-	  </TouchableOpacity>
-	  </>
-	}
-	  />
-	</View>
-      :null 
-    }
+          <Text style={{...sty.title, marginTop: 30}} >
+              LISTADO DE PUNTOS GUARDADOS ANTERIORMENTE
+          </Text>
+
+        {puntos ?
+            <View style={styles.containList}>
+              <FlatList
+                style={styles.list}
+                data={puntos}
+                keyExtractor={x => x.name}
+                renderItem={({item}) =>
+                  <>
+                  <TouchableOpacity style={sty.item} onPress={() => {
+                     navigation.navigate('verDeterm', {
+                       location : item.coordinate
+                     })
+                  }} >
+                  <Text style={sty.title} > Nombre {':'} {item.name}</Text>
+                  <Text style={sty.subtitle} > Lat {':'} {item.coordinate.latitude}</Text>
+                  <Text style={sty.subtitle} > Long {':'} {item.coordinate.longitude}</Text>
+                  </TouchableOpacity>
+                  </>
+                }
+              />
+            </View>
+          :null
+        }
     </View>
   );
 }
@@ -67,7 +70,7 @@ const styles = StyleSheet.create({
   list: {
     alignSelf: 'stretch',
   },
-  containList: {  
+  containList: {
     alignSelf: 'stretch',
     marginTop: 15,
     marginBottom: 30,

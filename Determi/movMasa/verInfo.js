@@ -61,16 +61,33 @@ export default ({ posicion }) => {
     <ScrollView style={styles.scroll}>
 
 	  <View style={styles.section}>
-	<Text style={styles.parraf} >{info.parrafos[0]}</Text>
-	<Text style={styles.parraf} >{info.parrafos[1]}</Text>
-	<Text style={styles.parraf} >{info.parrafos[2]}</Text>
+        { info.parrafos[0] ? <Text style={styles.parraf} >{info.parrafos[0]}</Text> : null }
+        { info.parrafos[1] ? <Text style={styles.parraf} >{info.parrafos[1]}</Text> : null }
+        { info.parrafos[2] ? <Text style={styles.parraf} >{info.parrafos[2]}</Text> : null }
+	  </View>
+
+	  <View style={styles.section}>
+        <Text style={styles.subtitle} >TIPOS DE MOVIMIENTOS DE MASA</Text>
+        { info.tipos[0] ? <Text style={styles.parraf} >{info.tipos[0]}</Text> : null }
+        { info.tipos[1] ? <Text style={styles.parraf} >{info.tipos[1]}</Text> : null }
+        { info.tipos[2] ? <Text style={styles.parraf} >{info.tipos[2]}</Text> : null }
+        { info.tipos[3] ? <Text style={styles.parraf} >{info.tipos[3]}</Text> : null }
+	  </View>
+
+	  <View style={styles.section}>
+	<Text style={styles.subtitle} >CLASIFICACION DE LA AMENAZA</Text>
+        { info.clasif[0] ? <Text style={styles.parraf} >{info.clasif[0]}</Text> : null }
+        { info.clasif[1] ? <Text style={styles.parraf} >{info.clasif[1]}</Text> : null }
+        { info.clasif[2] ? <Text style={styles.parraf} >{info.clasif[2]}</Text> : null }
 	  </View>
 
 	  <View style={styles.section}>
 	<Text style={styles.subtitle} >LEYES Y NORMAS RELACIONADAS</Text>
 	  <View style={styles.space} />
-	<BOO title={ley.titulo} D={() => {setVisible(true)}} />
-	<Text style={styles.parraf} >{ley.contenido}</Text>
+        <BOO title={ley.titulo} D={() => {setVisible(true)}} />
+        { ley.contenido  ? <Text style={styles.parraf} >{ley.contenido}</Text> : null }
+        { ley.contenido2 ? <Text style={styles.parraf} >{ley.contenido2}</Text> : null }
+        { ley.contenido3 ? <Text style={styles.parraf} >{ley.contenido3}</Text> : null }
 	  </View>
 
 	  <View style={styles.section}>
@@ -78,9 +95,6 @@ export default ({ posicion }) => {
 	  <View style={styles.space} />
         <BOO title={info.Recursos[0].titulo} D={() => {URL(info.Recursos[0].link)}} />
         <BOO title={info.Recursos[1].titulo} D={() => {URL(info.Recursos[1].link)}} />
-        <BOO title={info.Recursos[2].titulo} D={() => {URL(info.Recursos[2].link)}} />
-        <BOO title={info.Recursos[3].titulo} D={() => {URL(info.Recursos[3].link)}} />
-        <BOO title={info.Recursos[4].titulo} D={() => {URL(info.Recursos[4].link)}} />
 	  </View>
 
 	  <View style={styles.space} />
@@ -106,7 +120,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 4,
   },
   parraf: {
-    padding: 8,
+    paddingTop: 8,
     paddingLeft: 20,
     paddingRight: 12,
     textAlign: 'justify',
@@ -176,7 +190,7 @@ const styles = StyleSheet.create({
   },
   section: {
     marginTop: 20,
-    marginBottom: 20,
+    marginBottom: 10,
     paddingTop: 10,
     paddingBottom: 10,
     borderColor: '#206a5d',

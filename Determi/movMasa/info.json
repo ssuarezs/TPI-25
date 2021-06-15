@@ -1,10 +1,19 @@
 {
-  "titulo" : "RIESGO DE INCENDIO",
+  "titulo" : "AMENAZA POR MOVIMIENTO DE MASAS", 
   "parrafos" : [
-    "Definicion de Incendio forestal: Fuego que se extiende sin control, cuyo combustible principal es la vegetación viva o muerta.",
-    "Los incendios de la cobertura vegetal son fuegos que se propagan sin control y consumen diversos tipos de material vegetal. Aunque el fuego es un elemento esencial y natural en el funcionamiento de numerosos ecosistemas, las actividades humanas y la mayor frecuencia del fenómeno de El Niño han dado lugar a que los incendios se constituyan en un riesgo ecológico que genera pérdidas de la biodiversidad, desestabilización de los hábitats naturales y sus ciclos y, por ende, graves afectaciones directas al ambiente y al ser humano.",
-    "Los incendios de la cobertura vegetal son fuegos que se propagan sin control y consumen diversos tipos de material vegetal. Aunque el fuego es un elemento esencial y natural en el funcionamiento de numerosos ecosistemas, las actividades humanas y la mayor frecuencia del fenómeno de El Niño han dado lugar a que los incendios se constituyan en un riesgo ecológico que genera pérdidas de la biodiversidad, desestabilización de los hábitats naturales y sus ciclos y, por ende, graves afectaciones directas al ambiente y al ser humano."
+      "Fenómenos de remoción en masa (FRM): Son movimientos de terreno, suelo o roca que se desplazan sobre las pendientes debido a factores naturales o por acciones humanas. Es necesario contar con una estrategia para reducir los impactos generados por este tipo de fenómenos, teniendo como medio de prevención instrumentos que permitan la evaluación y la adopción de medidas de mitigación."
   ], 
+  "tipos" : [
+      "CAIDA DE ROCAS: Desprendimientos de suelos y rocas de un terreno empinado en forma de bloques a través del aire, por caída libre, saltos o rodamiento. Se caracterizan por su movimiento rápido y pueden estar precedidos por movimientos menores.",
+     "DESPLAZAMIENTOS: Desplazamiento lento o rápido, pendiente abajo, del material superficial de la corteza de la tierra, constituido, entre otros, por suelo, arena o rocas, debido a un aumento de peso, pérdida de la consistencia de los materiales u otros factores que generan desequilibrio en la ladera.",
+     "FLUJOS: Son movimientos de partículas de suelo, material vegetal o bloques pequeños de roca, dentro de una masa que se desliza o corre en una superficie; pueden ser lentos o rápidos, secos o húmedos.",
+     "VOLCAMIENTOS: Es el giro hacia adelante de uno o varios bloques de roca alrededor de un punto en el que están sostenidos, bien sea por acción de su propio peso o por el agua."
+  ],
+  "clasif" : [
+      "AMENAZA BAJA, la categoría de uso aprobada por los subcomponentes anteriores se valida.",
+      "AMENAZA MEDIA, la categoría de uso aprobada por los subcomponentes anteriores se valida de manera condicionada.",
+      "AMENAZA ALTA, por amenaza volcánica, inundación, movimientos en masa y avenidas torrenciales (se exceptúa la sísmica por ser analizada como un detonante de otros eventos), se califica con uso condicionado y se define como categoría de conservación y protección ambiental, hasta tanto se realicen estudios más detallados por parte de las entidades territoriales para la toma de decisiones en la reglamentación de usos del suelo."
+  ],
   "Leyes" : [  
     {
       "num" : 0,
@@ -13,24 +22,33 @@
     }, 
     {
       "num" : 1,
-      "titulo" : "DECRETO LEY 2811 DE 1974",
-      "contenido" : "Código de los Recursos Naturales Renovables y de Protección al Medio Ambiente. - La Administración deberá, expedir la reglamentación que considere necesaria para prevenir y controlar incendios forestales y recuperar los bosques destruidos por estos."
+      "titulo" : "LEY 388 DE 1997", 
+      "contenido" : "Numeral 1 del artículo 10 - los determinantes ambientales que constituyen normas de superior jerarquía deben ser tenidas en cuenta en la elaboración y adopción de los Planes de Ordenamiento Territorial."
     }, 
     {
       "num" : 2,
-      "titulo" : "ART.2.2.1.1.18.2",
-      "contenido" : "Protección y conservación de los bosques. Los propietarios de predios están obligados a mantener en cobertura boscosa dentro del predio las áreas forestales protectoras, proteger los ejemplares de especies de la flora silvestre vedadas que existan dentro del predio y cumplir con las disposiciones relacionadas con la prevención de incendios, de plagas forestales y con el control de quemas. (Decreto 1449 de 1977)."
+      "titulo" : "LEY 1523 DE 2012",
+      "contenido" : "Por la cual se adopta la política nacional de gestión del riesgo de desastres y se establece el Sistema Nacional de Gestión del Riesgo de Desastres y se dictan otras disposiciones."
     }, 
     {
       "num" : 3,
-      "titulo" : "DECRETO 1076 DE 2015",
-      "contenido" : "En su articulo 2.2.1.1.18.2: Establece una serie de obligaciones en relación a la protección y conservación de los bosques, entre las cuales se destaca 1) Mantener en cobertura boscosa las áreas forestales protectoras entendidas como nacimientos de agua, faja paralela a las líneas de mareas máximas a cada lado de los cauces de los ríos, quebradas y arroyos sean permanente o no y alrededor de lagos o depósitos de agua; 2) Proteger los ejemplares de especies de la flora silvestre vedadas que existen dentro del predio y 3) Cumplir las disposiciones relacionadas con la prevención de incendios, de plagas forestales y el control de quemas."
+      "titulo" : "DECRETO 1807 DE 2014",
+      "contenido" : "Reglamenta la incorporación de la Gestión del riesgo en los planes de ordenamiento territorial, además de establecer lineamientos técnicos mínimos para la realización de las principales amenazas, como lo son los Movimientos en masa, Inundaciones y Avenidas Torrenciales.",
+      "contenido2" : "De conformidad con lo dispuesto en el artículo 2 del Decreto 1807 de 2014, para la revisión de los contenidos de mediano y largo plazo de los planes de ordenamiento territorial o la expedición de nuevos planes, se deben elaborar estudios en los suelos urbanos, de expansión urbana y rural para los fenómenos de inundación, avenidas torrenciales y movimientos en masa."
     }, 
     {
       "num" : 4,
-      "titulo" : "LEY 1523 2012",
-      "contenido" : "Los Planes de gestión del riesgo en incendios forestales se deben involucrar en los de gestión del riesgo de desastres del municipio. Los Gobernadores y alcaldes, son los que conducen la gestión del riesgo en incendios forestales a nivel territorial."
+      "titulo" : "DECRETO 1076 DE 2015",
+      "contenido" : "Artículo 2.2.1.1.17.6. Mediante el cual se establecen todas las áreas protectoras: (d) Todas las tierras con pendiente superior al ciento por ciento (100 %) en cualquier formación ecológica."
+    }, 
+    {
+      "num" : 5,
+      "titulo" : "DECRETO 1077 DE 2015",
+      "contenido" : "Artículo 2.2.4.2.2.3.1.2 La Corporación Autónoma Regional o de Desarrollo Sostenible correspondiente, se pronunciará en la etapa de prefactibilidad únicamente sobre el análisis de amenaza y vulnerabilidad por inundación, crecientes súbitas y deslizamientos de origen hidrometeorológico.",
+      "contenido2" : "Artículo 2.3.2.3.2.2.5. Áreas inestables. Se deberá procurar que las áreas para disposición final de residuos sólidos, no se ubiquen en zonas que puedan generar asentamientos que desestabilicen la integridad de la infraestructura allí instalada, como estratos de suelos altamente compresibles, sitios susceptibles de deslizamientos y aquellos donde se pueda generar fenómenos de carsismo.",
+      "contenido3" : "Artículo 2.2.2.1.3.2.1.3. - 2.2 Estudio hidrológico de la cuenca, orientado al flujo torrencial, considerando el ciclo de sedimentos."
     }
+
   ], 
   "Recursos" : [  
     {
@@ -38,20 +56,8 @@
       "link" : "https://www.minambiente.gov.co/images/OrdenamientoAmbientalTerritorialyCoordinaciondelSIN/pdf/La_dimension_ambiental_en_los_planes_de_desarrollo/CARTILLA_DETERMINANTES_AMBIENTALES_V2.0_22022021.pdf"
     }, 
     {
-      "titulo" : "CARTILLA ORIENTADORA PARA LA GESTIÓN DEL RIESGO EN INCENDIOS FORESTALES ",
-      "link" : "https://www.minambiente.gov.co/images/Articulos-slider-destacados/Incendios_Forestales/071212_cartilla_incendios_forestales_ley_1523_2012_2.pdf"
-    }, 
-    {
-      "titulo" : "CARTILLA ORIENTADORA PARA LA GESTIÓN DEL RIESGO EN INCENDIOS FORESTALES ",
-      "link" : "http://webanterior.corpochivor.gov.co/sites/default/files/attach/19_Riesgos_amenazas_vulnerabilidad.pdf"
-    }, 
-    {
-      "titulo" : "PLAN DE ACCION CUATRIENAL DE CORPOCHIVOR 2020-2023",
-      "link" : "https://www.corpochivor.gov.co/wp-content/uploads/2020/06/CORPOCHIVOR-PLAN-DE-ACCION-CUATRIENAL-2020-2023.pdf"
-    }, 
-    {
-      "titulo" : "PLAN DE EMERGENCIAS Y CONTINGENCIAS",
-      "link" : "https://www.icbf.gov.co/sites/default/files/procesos/pl8.p9.gth_plan_de_emergencias_y_contingencias_centro_zonal_miraflores_v1.pdf"
-    } 
+      "titulo" : "LEY 1523 DE 2012 NIVEL NACIONAL",
+      "link" : "https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=47141"
+    }
   ]
 }

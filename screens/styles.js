@@ -8,7 +8,7 @@ const styles = {
   act: {
     borderBottomWidth: 5,
   },
-  tabBar : {  
+  tabBar : {
     inactiveTintColor: four,
     activeTintColor: tertiary,
     inactiveTintColor: secondary,
@@ -32,14 +32,14 @@ const styles = {
 	shadowRadius: 3.5,
 	elevation: 5,
     }
-  }, 
+  },
   stackBar: {
     headerStyle: {
       backgroundColor: secondary,
     },
     headerTintColor: four,
-  },  
-  container : {   
+  },
+  container : {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -47,8 +47,8 @@ const styles = {
     paddingTop: 20,
     paddingBottom: 120,
     backgroundColor: four,
-  },   
-  item : {   
+  },
+  item : {
     flex: 1,
     backgroundColor: primary,
     alignItems: 'flex-start',
@@ -58,13 +58,14 @@ const styles = {
     alignSelf: 'stretch',
     borderRadius: 20,
     padding: 20,
-  },  
-  title : { 
+  },
+  title : {
+    textAlign: 'center',
     color: secondary,
     fontWeight: 'bold',
-    fontSize: 20,
-  },  
-  subtitle : { 
+    fontSize: 18,
+  },
+  subtitle : {
     color: secondary,
     fontWeight: 'bold',
     fontSize: 15,
