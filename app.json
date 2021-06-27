@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "TPI-25",
+    "name": "RDA",
     "slug": "TPI-25",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,10 +19,17 @@
     "ios": {
       "supportsTablet": true
     },
-    "android": {
+    "android": { 
+      "package": "com.tpi25.rda",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "config": {
+          "googleMaps": {
+              "apiKey": "AIzaSyDXRNNiGs-JmHrLZjsX5tK4O_opEc6VxIk"
+          }
       }
     },
     "web": {

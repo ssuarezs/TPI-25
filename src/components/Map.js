@@ -24,18 +24,18 @@ export default ({ posicion, onLongPress, children }) => {
   return (
     <View style={styles.center}>
       <MapView
-	region={region}
-	style={styles.map}
-	onLongPress={onLongPress}
+        region={region}
+        style={styles.map}
+        onLongPress={onLongPress}
       >
-	{(posicion != null)
-	    ? <Marker
-		coordinate={posicion}
-		title="Tu ubicacion"
-	      />
-	    : null
-	}
-	{children}
+        {(posicion != null)
+            ? <Marker
+                coordinate={posicion}
+                title="Ubicacion Seleccionada"
+              />
+            : null
+        }
+        {children}
       </MapView>
     </View>
   );

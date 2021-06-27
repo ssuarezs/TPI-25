@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { TouchableOpacity, AsyncStorage } from 'react-native';
 
-import { Modal, Map, Input } from './components/index'
+import { Modal, Map, Input } from '../components/index'
 import DetMain from '../Determi/detMain'
-import sty from './styles.js'
+import sty from './styles'
 
 export default ({navigation}) => {
 
@@ -63,44 +63,29 @@ export default ({navigation}) => {
 
 
    return (
-    <>
-    <View style={{...sty.container, paddingTop: 0, paddingBottom: 0,}}>
-     <Modal visibility={mVisibility}>
-       <Text>Quieres guardar este Punto?</Text>
-	<Input title="Nombre Punto" placeholder="Escribe nombre..." onChangeText={handleName}  />
-     <TouchableOpacity onPress={submitPuntos} >
-       <Text>Aceptar</Text>
-     </TouchableOpacity>
-     <TouchableOpacity onPress={() => {setMVisibility(false)}} >
-       <Text>Cancelar</Text>
-     </TouchableOpacity>
-     </Modal>
-     <TouchableOpacity style={styles.guardar} onPress={() => {setMVisibility(true)}} >
-       <Text style={sty.subtitle}>G U A R D A R   P U N T O</Text>
-     </TouchableOpacity>
-    <View style={styles.mapa}>
-      <Map posicion={posicion} />
+    <View style={sty.container}>
+         <Modal visibility={mVisibility}>
+           <Text>Quieres guardar este Punto?</Text>
+        <Input title="Nombre Punto" placeholder="Escribe nombre..." onChangeText={handleName}  />
+         <TouchableOpacity onPress={submitPuntos} >
+           <Text>Aceptar</Text>
+         </TouchableOpacity>
+         <TouchableOpacity
+           onPress={() => {setMVisibility(false)}} >
+           <Text>Cancelar</Text>
+         </TouchableOpacity>
+         </Modal>
+
+         <TouchableOpacity style={sty.button}
+           onPress={() => {setMVisibility(true)}} >
+           <Text style={sty.subtitle}>
+               G U A R D A R   P U N T O</Text>
+         </TouchableOpacity>
+        <View style={sty.mapa}>
+          <Map posicion={posicion} />
+        </View>
+         <DetMain posicion={posicion} />
     </View>
-     <DetMain posicion={posicion} />
-    </View>
-    </>
   );
 }
 
-const styles = StyleSheet.create({
-  mapa: {
-    flex: 6,
-  },
-  guardar: {
-    flex: 1.5,
-    backgroundColor: '#81b214',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: Dimensions.get('window').width-30,
-    margin: 10,
-    borderRadius: 5,
-  },
-  parrafo: {
-    textAlign: 'center'
-  }
-});

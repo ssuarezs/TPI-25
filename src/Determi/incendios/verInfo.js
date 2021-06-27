@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { StyleSheet, View, Dimensions, Text, ScrollView, TouchableOpacity, FlatList } from 'react-native';
-import { Modal } from '../../screens/components/index'
+import { Modal } from '../../components/index'
 
 import * as WebBrowser from 'expo-web-browser';
 import hallarDet from './hallarDet'
@@ -58,7 +58,7 @@ export default ({ posicion }) => {
 	/>
     </Modal>
 
-	<Text style={styles.subtitle} >Nivel de Riesgo{':'} {resDeter}</Text>
+	<Text style={styles.subtitle} >NIVEL DE RIESGO{':'} {resDeter}</Text>
 
     <ScrollView style={styles.scroll}>
 

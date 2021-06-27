@@ -3,7 +3,7 @@ import DetIncendio from './incendios/verInfo'
 import DetMovMasa from './movMasa/verInfo'
 
 import { StyleSheet, View, Dimensions, Text, ScrollView, TouchableOpacity, FlatList } from 'react-native';
-import { Modal } from '../screens/components/index'
+import { Modal } from '../components/index'
 
 
   const ITEM = ({ D, title }) => {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'react-native';
-import { Modal, Map, AceptarPunto } from './components/index'
-
 import sty from './styles.js'
+import { Modal, Map, AceptarPunto } from '../components/index'
+
 
 export default ({navigation}) => {
 
@@ -19,9 +19,7 @@ export default ({navigation}) => {
   }
 
   const elegirPunto = ({ }) => {
-       if(posicion !== null){
-	    navigation.navigate('verDeterm', { location : posicion })
-	 }
+     posicion ? navigation.navigate('verDeterm', { location : posicion }) : null;
 	 setPosicion(null)
 	 setVisibility(false)
   }
@@ -32,10 +30,10 @@ export default ({navigation}) => {
   }
 
    return (
-    <>
+    <View style={sty.container}>
 
-     <Modal visibility={visibility} >
-       <AceptarPunto onPress={elegirPunto} onPressLeft={cerrarModal}/>
+     <Modal visibility={visibility} bajarModal={true} >
+        <AceptarPunto onPress={elegirPunto} onPressLeft={cerrarModal} />
      </Modal>
 
     <View style={styles.mapa}>
@@ -45,25 +43,23 @@ export default ({navigation}) => {
        />
     </View>
 
-    <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={sty.subtitle} > Manten presionado un punto en el mapa </Text>
-        <Text style={sty.subtitle} > O ingresa sus coordinadas {':'} </Text>
-         <TouchableOpacity style={styles.ingPunto} onPress={ingresaPunto} >
-           <Text style={sty.subtitle}>INGRESA COORDENADA</Text>
+    <View style={sty.container}>
+        <Text style={sty.subtitle} >
+           Manten presionado un punto en el mapa </Text>
+        <Text style={sty.subtitle} >
+           O ingresa sus coordinadas {':'} </Text>
+         <TouchableOpacity
+           style={sty.button}
+           onPress={ingresaPunto} >
+               <Text style={sty.subtitle}>
+               INGRESA COORDENADA</Text>
          </TouchableOpacity>
-       </View>
      </View>
-
-    </>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    ...sty.container,
-    paddingBottom: 10,
-  },
   box: {
     flex: 1,
     alignItems: 'center',
@@ -72,15 +68,5 @@ const styles = StyleSheet.create({
   mapa: {
     flex: 5,
   },
-  ingPunto: {
-    flex: 1.5,
-    backgroundColor: '#81b214',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: Dimensions.get('window').width-120,
-    margin: 10,
-    borderRadius: 5,
-  },
-
 });
 

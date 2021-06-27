@@ -1,16 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, Modal, TouchableOpacity } from 'react-native';
 
-export default ({ visibility, children }) => {
+export default ({ visibility, children, bajarModal }) => {
   return (
     <Modal
       visible={visibility}
       animationType= "fade"
       transparent={true}
     >
+      {bajarModal ? <View style={styles.center}/> : null}
       <View style={styles.center}>
       <View style={styles.ModalView}>
-	{children}
+        {children}
       </View>
       </View>
     </Modal>
