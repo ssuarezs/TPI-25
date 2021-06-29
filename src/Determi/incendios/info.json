@@ -9,27 +9,27 @@
     {
       "num" : 0,
       "titulo" : "LEY 99 DE 1993",
-      "contenido" : "Régimen ambiental - La Prevención de desastres será materia de interés colectivo y las medidas tomadas para evitar o mitigar los efectos de su ocurrencia serán de obligatorio cumplimiento."
+      "contenido" : ["Régimen ambiental - La Prevención de desastres será materia de interés colectivo y las medidas tomadas para evitar o mitigar los efectos de su ocurrencia serán de obligatorio cumplimiento."]
     }, 
     {
       "num" : 1,
       "titulo" : "DECRETO LEY 2811 DE 1974",
-      "contenido" : "Código de los Recursos Naturales Renovables y de Protección al Medio Ambiente. - La Administración deberá, expedir la reglamentación que considere necesaria para prevenir y controlar incendios forestales y recuperar los bosques destruidos por estos."
+      "contenido" : ["Código de los Recursos Naturales Renovables y de Protección al Medio Ambiente. - La Administración deberá, expedir la reglamentación que considere necesaria para prevenir y controlar incendios forestales y recuperar los bosques destruidos por estos."]
     }, 
     {
       "num" : 2,
       "titulo" : "ART.2.2.1.1.18.2",
-      "contenido" : "Protección y conservación de los bosques. Los propietarios de predios están obligados a mantener en cobertura boscosa dentro del predio las áreas forestales protectoras, proteger los ejemplares de especies de la flora silvestre vedadas que existan dentro del predio y cumplir con las disposiciones relacionadas con la prevención de incendios, de plagas forestales y con el control de quemas. (Decreto 1449 de 1977)."
+      "contenido" : ["Protección y conservación de los bosques. Los propietarios de predios están obligados a mantener en cobertura boscosa dentro del predio las áreas forestales protectoras, proteger los ejemplares de especies de la flora silvestre vedadas que existan dentro del predio y cumplir con las disposiciones relacionadas con la prevención de incendios, de plagas forestales y con el control de quemas. (Decreto 1449 de 1977)."]
     }, 
     {
       "num" : 3,
       "titulo" : "DECRETO 1076 DE 2015",
-      "contenido" : "En su articulo 2.2.1.1.18.2: Establece una serie de obligaciones en relación a la protección y conservación de los bosques, entre las cuales se destaca 1) Mantener en cobertura boscosa las áreas forestales protectoras entendidas como nacimientos de agua, faja paralela a las líneas de mareas máximas a cada lado de los cauces de los ríos, quebradas y arroyos sean permanente o no y alrededor de lagos o depósitos de agua; 2) Proteger los ejemplares de especies de la flora silvestre vedadas que existen dentro del predio y 3) Cumplir las disposiciones relacionadas con la prevención de incendios, de plagas forestales y el control de quemas."
+      "contenido" : ["En su articulo 2.2.1.1.18.2: Establece una serie de obligaciones en relación a la protección y conservación de los bosques, entre las cuales se destaca 1) Mantener en cobertura boscosa las áreas forestales protectoras entendidas como nacimientos de agua, faja paralela a las líneas de mareas máximas a cada lado de los cauces de los ríos, quebradas y arroyos sean permanente o no y alrededor de lagos o depósitos de agua; 2) Proteger los ejemplares de especies de la flora silvestre vedadas que existen dentro del predio y 3) Cumplir las disposiciones relacionadas con la prevención de incendios, de plagas forestales y el control de quemas."]
     }, 
     {
       "num" : 4,
       "titulo" : "LEY 1523 2012",
-      "contenido" : "Los Planes de gestión del riesgo en incendios forestales se deben involucrar en los de gestión del riesgo de desastres del municipio. Los Gobernadores y alcaldes, son los que conducen la gestión del riesgo en incendios forestales a nivel territorial."
+      "contenido" : ["Los Planes de gestión del riesgo en incendios forestales se deben involucrar en los de gestión del riesgo de desastres del municipio. Los Gobernadores y alcaldes, son los que conducen la gestión del riesgo en incendios forestales a nivel territorial."]
     }
   ], 
   "Recursos" : [  

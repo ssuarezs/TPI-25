@@ -18,35 +18,39 @@
     {
       "num" : 0,
       "titulo" : "LEY 99 DE 1993",
-      "contenido" : "Régimen ambiental - La Prevención de desastres será materia de interés colectivo y las medidas tomadas para evitar o mitigar los efectos de su ocurrencia serán de obligatorio cumplimiento."
+      "contenido" : ["Régimen ambiental - La Prevención de desastres será materia de interés colectivo y las medidas tomadas para evitar o mitigar los efectos de su ocurrencia serán de obligatorio cumplimiento."]
     }, 
     {
       "num" : 1,
       "titulo" : "LEY 388 DE 1997", 
-      "contenido" : "Numeral 1 del artículo 10 - los determinantes ambientales que constituyen normas de superior jerarquía deben ser tenidas en cuenta en la elaboración y adopción de los Planes de Ordenamiento Territorial."
+      "contenido" : ["Numeral 1 del artículo 10 - los determinantes ambientales que constituyen normas de superior jerarquía deben ser tenidas en cuenta en la elaboración y adopción de los Planes de Ordenamiento Territorial."]
     }, 
     {
       "num" : 2,
       "titulo" : "LEY 1523 DE 2012",
-      "contenido" : "Por la cual se adopta la política nacional de gestión del riesgo de desastres y se establece el Sistema Nacional de Gestión del Riesgo de Desastres y se dictan otras disposiciones."
+      "contenido" : ["Por la cual se adopta la política nacional de gestión del riesgo de desastres y se establece el Sistema Nacional de Gestión del Riesgo de Desastres y se dictan otras disposiciones."]
     }, 
     {
       "num" : 3,
       "titulo" : "DECRETO 1807 DE 2014",
-      "contenido" : "Reglamenta la incorporación de la Gestión del riesgo en los planes de ordenamiento territorial, además de establecer lineamientos técnicos mínimos para la realización de las principales amenazas, como lo son los Movimientos en masa, Inundaciones y Avenidas Torrenciales.",
-      "contenido2" : "De conformidad con lo dispuesto en el artículo 2 del Decreto 1807 de 2014, para la revisión de los contenidos de mediano y largo plazo de los planes de ordenamiento territorial o la expedición de nuevos planes, se deben elaborar estudios en los suelos urbanos, de expansión urbana y rural para los fenómenos de inundación, avenidas torrenciales y movimientos en masa."
+      "contenido" : [
+          "Reglamenta la incorporación de la Gestión del riesgo en los planes de ordenamiento territorial, además de establecer lineamientos técnicos mínimos para la realización de las principales amenazas, como lo son los Movimientos en masa, Inundaciones y Avenidas Torrenciales.",
+          "De conformidad con lo dispuesto en el artículo 2 del Decreto 1807 de 2014, para la revisión de los contenidos de mediano y largo plazo de los planes de ordenamiento territorial o la expedición de nuevos planes, se deben elaborar estudios en los suelos urbanos, de expansión urbana y rural para los fenómenos de inundación, avenidas torrenciales y movimientos en masa."
+      ]
     }, 
     {
       "num" : 4,
       "titulo" : "DECRETO 1076 DE 2015",
-      "contenido" : "Artículo 2.2.1.1.17.6. Mediante el cual se establecen todas las áreas protectoras: (d) Todas las tierras con pendiente superior al ciento por ciento (100 %) en cualquier formación ecológica."
+      "contenido" : ["Artículo 2.2.1.1.17.6. Mediante el cual se establecen todas las áreas protectoras: (d) Todas las tierras con pendiente superior al ciento por ciento (100 %) en cualquier formación ecológica."]
     }, 
     {
       "num" : 5,
       "titulo" : "DECRETO 1077 DE 2015",
-      "contenido" : "Artículo 2.2.4.2.2.3.1.2 La Corporación Autónoma Regional o de Desarrollo Sostenible correspondiente, se pronunciará en la etapa de prefactibilidad únicamente sobre el análisis de amenaza y vulnerabilidad por inundación, crecientes súbitas y deslizamientos de origen hidrometeorológico.",
-      "contenido2" : "Artículo 2.3.2.3.2.2.5. Áreas inestables. Se deberá procurar que las áreas para disposición final de residuos sólidos, no se ubiquen en zonas que puedan generar asentamientos que desestabilicen la integridad de la infraestructura allí instalada, como estratos de suelos altamente compresibles, sitios susceptibles de deslizamientos y aquellos donde se pueda generar fenómenos de carsismo.",
-      "contenido3" : "Artículo 2.2.2.1.3.2.1.3. - 2.2 Estudio hidrológico de la cuenca, orientado al flujo torrencial, considerando el ciclo de sedimentos."
+      "contenido" : [
+          "Artículo 2.2.4.2.2.3.1.2 La Corporación Autónoma Regional o de Desarrollo Sostenible correspondiente, se pronunciará en la etapa de prefactibilidad únicamente sobre el análisis de amenaza y vulnerabilidad por inundación, crecientes súbitas y deslizamientos de origen hidrometeorológico.",
+          "Artículo 2.3.2.3.2.2.5. Áreas inestables. Se deberá procurar que las áreas para disposición final de residuos sólidos, no se ubiquen en zonas que puedan generar asentamientos que desestabilicen la integridad de la infraestructura allí instalada, como estratos de suelos altamente compresibles, sitios susceptibles de deslizamientos y aquellos donde se pueda generar fenómenos de carsismo.",
+          "Artículo 2.2.2.1.3.2.1.3. - 2.2 Estudio hidrológico de la cuenca, orientado al flujo torrencial, considerando el ciclo de sedimentos."
+      ]
     }
 
   ], 

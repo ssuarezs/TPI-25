@@ -5,75 +5,130 @@ const tertiary = '#ffcc29'
 const four = '#f8ede3'
 
 const styles = {
-  act: {
-    borderBottomWidth: 5,
+  center: {
+    flex: 15,
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    paddingBottom: 5,
+    margin: 8,
   },
-  tabBar : {
-    inactiveTintColor: four,
-    activeTintColor: tertiary,
-    inactiveTintColor: secondary,
-    showLabel: false,
-    pressOpacity: 1,
-    style: {
-      position: 'absolute',
-      height: 70,
-      bottom: 15,
-      left: 20,
-      right: 20,
-      elevation: 0,
-      borderRadius: 15,
-      backgroundColor: secondary,
-	shadowColor: '#7f5df0',
-	shadowOffset: {
-	  width: 0,
-	  height: 0,
-	},
-	shadowOpacity: 0.25,
-	shadowRadius: 3.5,
-	elevation: 5,
-    }
+  titleB: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: tertiary,
   },
-  stackBar: {
-    headerStyle: {
-      backgroundColor: secondary,
-    },
-    headerTintColor: four,
-  },
-  container : {
-    flex: 1,
+  buttonB: {
+    marginBottom: 5,
+    padding: 5,
+    paddingTop: 10,
+    paddingBottom: 10,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: secondary,
+    borderRadius: 10,
+    width: Dimensions.get('window').width-20,
+  },
+  item: {
     padding: 5,
-    paddingTop: 20,
-    paddingBottom: 120,
-    backgroundColor: four,
+    paddingTop: 10,
+    paddingBottom: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomWidth: 4,
+    borderColor: '#206a5d',
   },
-  item : {
-    flex: 1,
-    backgroundColor: primary,
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
-    margin: 15,
-    marginBottom: 0,
-    alignSelf: 'stretch',
-    borderRadius: 20,
-    padding: 20,
-  },
-  title : {
+  textI: {
+    fontSize: 16,
+    fontWeight: 'bold',
     textAlign: 'center',
-    color: secondary,
-    fontWeight: 'bold',
+    color: '#206a5d',
+  },
+  FlatList: {
+    alignSelf: 'stretch'
+  },
+  scroll: {
+    marginTop: 10,
+    padding: 5,
+    borderColor: '#ffcc29',
+    borderTopWidth: 4,
+  },
+  parraf: {
+    paddingTop: 8,
+    paddingLeft: 20,
+    paddingRight: 12,
+    textAlign: 'justify',
+    color: '#206a5d',
+  },
+  title: {
     fontSize: 18,
-  },
-  subtitle : {
-    color: secondary,
     fontWeight: 'bold',
-    fontSize: 15,
-    paddingRight: 5,
-    paddingLeft: 5,
+    textAlign: 'center',
+    color: '#206a5d',
+    paddingBottom: 10,
   },
-
-
+  subtitle: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#206a5d',
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  textA: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#ffcc29',
+  },
+  textB: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#206a5d',
+  },
+  space: {
+    height: 15,
+  },
+  button: {
+    margin: 10,
+    backgroundColor: '#81b214',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
+    padding: 5,
+    paddingTop: 15,
+    paddingBottom: 15,
+  },
+  button2: {
+    margin: 10,
+    height: 65,
+    width: 250,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
+    padding: 5,
+    backgroundColor: '#206a5d',
+  },
+  list: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#f8ede3',
+    height: 460,
+    padding: 15,
+    margin: 35,
+    borderRadius: 20,
+  },
+  section: {
+    marginTop: 20,
+    marginBottom: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    borderColor: '#206a5d',
+    borderWidth: 4,
+    borderRadius: 20,
+  },
 
 };
 
