@@ -1,0 +1,19 @@
+{
+    "data" : [ 
+        {
+            "name" : "lalala 1",
+            "coordinate" : {
+                "latitude" : 12.1342,
+                "longitude" : 36.93,
+            },
+        },  
+        {
+            "name" : "lalala 2",
+            "coordinate" : {
+                "latitude" : 12.1342,
+                "longitude" : 36.93,
+            },
+        }, 
+
+    ]
+}

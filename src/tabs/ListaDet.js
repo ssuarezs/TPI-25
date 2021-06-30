@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux'
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { TouchableOpacity, AsyncStorage, FlatList } from 'react-native';
+import { fetchLug } from '../reducers/listaL'
 import ItemLista from '../components/itemListaLug'
 import sty from '../styles.js'
 
-export default ({navigation}) => {
+const ListTab = ({ navigation, lista, fetchLug }) => {
 
   const [puntos, setPuntos] = useState([])
 
@@ -22,7 +24,8 @@ export default ({navigation}) => {
 
   return (
     <View style={sty.container}>
-      <Text style={{...sty.title, marginTop: 30}} >
+      <Text style={{...sty.title, marginTop: 30}}
+      onPress={() => fetchLug()}>
           LISTADO DE PUNTOS GUARDADOS ANTERIORMENTE
       </Text>
 
@@ -42,6 +45,16 @@ export default ({navigation}) => {
     </View>
   );
 }
+
+const mapStateToProps = state => {
+    return { lista: state.listaL }
+}
+
+const mapDispatchToProps = dispatch => ({
+    fetchLug: () => dispatch(fetchLug())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListTab)
 
 const styles = StyleSheet.create({
   list: {
