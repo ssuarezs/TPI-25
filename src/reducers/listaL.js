@@ -1,3 +1,4 @@
+import { AsyncStorage } from 'react-native';
 const makeType = mod => type => `${mod}/${type}`
 
 const mac = (type, ...argNames) => (...args) => {
@@ -22,10 +23,12 @@ const l = makeType('LISTA')
 const FETCH_START = l('fetch-start')
 const FETCH_SUCCESS = l('fetch-success')
 const FETCH_ERROR = l('fetch-error')
+const SUBMIT = l('submit')
 
 const startFetch = mac(FETCH_START)
 const successFetch = mac(FETCH_SUCCESS, 'payload')
 const errorFetch = mac(FETCH_ERROR, 'error')
+const submit = mac(SUBMIT, 'payload')
 
 const initialState = {
     data: [],
@@ -41,11 +44,18 @@ const fetchSuccessReduce = (state, action) => ({
         data: action.payload
     })
 const fetchErrorReduce = (state, action) => ({ ...state, fetching: false, error: action.error })
+const submitReduce = (state, action) => ({
+    ...state,
+    data: [action.payload].concat(state.data)
+})
+
+
 
 export default createReducer(initialState, {
     [FETCH_START]: fetchStartReduce,
     [FETCH_SUCCESS]: fetchSuccessReduce,
     [FETCH_ERROR]: fetchErrorReduce,
+    [SUBMIT]: submitReduce,
 })
 
 export const fetchLug = () =>
@@ -53,8 +63,21 @@ export const fetchLug = () =>
         dispatch(startFetch())
         try {
             const response = await require('./listaLugares.json')
-            const data = response.data
+            const obtenidos = await AsyncStorage.getItem('Puntos')
+            const data = JSON.parse(obtenidos)
             dispatch(successFetch(data))
+        } catch(e) {
+            dispatch(errorFetch(e))
+        }
+    }
+
+export const saveLug = lugar =>
+    async (dispatch, getState) => {
+        const state = getState()
+        dispatch(submit(lugar))
+        try {
+            const data = JSON.stringify(state.data);
+            await AsyncStorage.setItem('Puntos', data)
         } catch(e) {
             dispatch(errorFetch(e))
         }

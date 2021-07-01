@@ -1,39 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
-import { TouchableOpacity, AsyncStorage, FlatList } from 'react-native';
-import { fetchLug } from '../reducers/listaL'
+import { StyleSheet, Text, View, Dimensions, TouchableOpacity, FlatList } from 'react-native';
+import { fetchLug, saveLug } from '../reducers/listaL'
 import ItemLista from '../components/itemListaLug'
-import sty from '../styles.js'
+import sty from './styles.js'
 
-const ListTab = ({ navigation, lista, fetchLug }) => {
-
-  const [puntos, setPuntos] = useState([])
-
-  const obtenerPuntos = async () => {
-    const obtenidos = await AsyncStorage.getItem('Puntos')
-    const listaPuntos= JSON.parse(obtenidos)
-    if(listaPuntos != null){
-      setPuntos(listaPuntos)
-    }
-  }
+const ListTab = ({ navigation, lista, fetchLug, saveLug }) => {
 
   useEffect(() => {
-    obtenerPuntos()
-  }, [puntos])
+    fetchLug()
+  }, [])
 
   return (
     <View style={sty.container}>
-      <Text style={{...sty.title, marginTop: 30}}
-      onPress={() => fetchLug()}>
+      <Text style={{...sty.title, marginTop: 10}}>
           LISTADO DE PUNTOS GUARDADOS ANTERIORMENTE
       </Text>
 
-        {puntos ?
+        {lista.data ?
         <View style={styles.containList}>
           <FlatList
             style={styles.list}
-            data={puntos}
+            data={lista.data}
             keyExtractor={x => x.name}
             renderItem={({item}) =>
               <ItemLista navigation={navigation} item={item} />
@@ -51,7 +39,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    fetchLug: () => dispatch(fetchLug())
+    fetchLug: () => dispatch(fetchLug()),
+    saveLug: (lugar) => dispatch(saveLug(lugar)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListTab)

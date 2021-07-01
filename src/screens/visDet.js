@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
-import { TouchableOpacity, AsyncStorage } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux'
+import { saveLug } from '../reducers/listaL'
 
 import { Modal, Map, Input } from '../components/index'
 import DetMain from '../Determi/detMain'
 import sty from './styles'
 
-export default ({navigation}) => {
+const VisScreen = ({ navigation, lista, saveLug }) => {
 
   const location = navigation.getParam('location')
 
   const [nombre, setNombre] = useState('')
   const [resultado, setResultado] = useState('')
-  const [puntos, setPuntos] = useState([])
   const [mVisibility, setMVisibility] = useState(false)
   const [posicion, setPosicion] = useState({
     latitude: 0,
@@ -27,39 +27,20 @@ export default ({navigation}) => {
     setNombre(text)
   }
 
-  const obtenerPuntos = async () => {
-    const obtenidos = await AsyncStorage.getItem('Puntos')
-    const listaPuntos= JSON.parse(obtenidos)
-    if(listaPuntos !== null){
-      setPuntos(listaPuntos)
-    }
-      // listaPuntos ? setPuntos(listaPuntos) : null
-  }
-
-
   const submitPuntos = async () => {
-    const newPuntos = [{
+    const newPunt = {
       coordinate: posicion,
       name: nombre
-    }]
-    const treta= puntos.concat(newPuntos)
-    const guardados = JSON.stringify(treta)
-    await AsyncStorage.setItem(
-      'Puntos',
-      guardados
-    )
-    obtenerPuntos()
+    }
+    saveLug(newPunt)
     setNombre('')
     setMVisibility(false)
   }
 
-  useEffect(() => {
-    setPosicion({
+  useEffect(() => { setPosicion({
 	latitude: location.latitude,
 	longitude: location.longitude,
-      })
-    obtenerPuntos()
-  }, [])
+  })}, [])
 
 
    return (
@@ -88,4 +69,15 @@ export default ({navigation}) => {
     </View>
   );
 }
+
+const mapStateToProps = state => {
+    return { lista: state.listaL }
+}
+
+const mapDispatchToProps = dispatch => ({
+    saveLug: (lugar) => dispatch(saveLug(lugar)),
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(VisScreen)
 
