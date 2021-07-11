@@ -19,7 +19,7 @@ const ITEM = ({ D, title }) => {
 export default ({ posicion }) => {
 
   const [determ, setDeterm] = useState(0)
-  const [detE, setDetE] = useState('SELECCIONAR DETERMINANTE AMBIENTAL')
+  const [detE, setDetE] = useState('SELECCIONAR DETERMINANTE')
   const [visible, setVisible] = useState(false)
 
   return (

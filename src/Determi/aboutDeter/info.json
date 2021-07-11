@@ -1,0 +1,111 @@
+{"listInfo":[
+    {
+        "title" : "Determinantes Ambientales",
+        "data" : [ 
+            {
+                "key" : "1",
+                "subtitle" : "¿Qué son los determinantes ambientales?",
+                "content" : [
+                    {
+                        "type":"parrafo",
+                        "item":"Los Determinantes Ambientales son aquellas normas de orden superior destinadas a la protección de los recursos naturales, y que se utilizan para la elaboración, adopción y ajustes de los planes y esquemas de ordenamiento territorial. "
+                    },
+                    {
+                        "type":"parrafo",
+                        "item":"Son todas las normas que proveen restricciones y limitaciones a la hora de ejecutar actividades de construcción y gestión de recursos en un terreno específico. Por ello es importante el conocimiento de estos por parte de habitantes, entes administrativos y gubernamentales de la región, para garantizar la protección del ambiente."
+                    },
+                    {
+                        "type":"parrafo",
+                        "item":"Entre las características más importantes de estos determinantes, el Ministerio de Ambiente destaca el hecho de que cuentan con una vida jurídica propia, constituyendo normas de superior jerarquía y tienen un obligatorio cumplimiento. Estos determinantes son dictados por diferentes autoridades ambientales a partir de diferentes instrumentos de gestión ambiental y de planes de manejo."
+                    },
+                    {
+                        "type":"prueba",
+                        "item":""
+                    }
+                ]
+            }, 
+            {
+                "key" : "2",
+                "subtitle" : "¿Cómo se clasifican los determinantes ambientales?",
+                "content" : [
+                    {
+                        "type":"numeral",
+                        "item":"Los determinantes ambientales como Determinantes ambientales del medio natural, las cuales son aquellas que resultan en la conservación y protección de los ecosistemas estratégicos y el mantenimiento de los bienes y servicios ecosistémicos que soportan los modelos de ocupación de los distritos y municipios."
+                    },
+                    {
+                        "type":"numeral",
+                        "item":"Los Determinantes ambientales del medio transformado recogen todos aquellos elementos asociados al ordenamiento derivados de políticas, directrices, disposiciones, regulaciones, normas y reglamentos para prevenir, mitigar y manejar los efectos ambientales negativos derivados del desarrollo de las actividades humanas que intervienen en la definición del modelo de ocupación del municipio o distrito, buscando el cumplimiento de las obligaciones derivadas de ellos en armonía con el régimen de usos propuestos. "
+                    },
+                    {
+                        "type":"numeral",
+                        "item":"Los Determinantes ambientales de la gestión del riesgo y cambio climático, ya que la incorporación de la gestión del riesgo y del cambio climático como determinantes ambientales facilita la toma de decisiones en lo que se refiere a la definición de los regímenes de usos del suelo, garantizando el asentamiento de las poblaciones y sus actividades básicas de desarrollo, subsistencia y recreación en zonas con condiciones seguras. "
+                    },
+                    {
+                        "type":"numeral",
+                        "item":"Los Determinantes ambientales relacionados con densidades de ocupación en suelo rural se relacionan con aquellas consideraciones referidas a las densidades máximas de ocupación, extensión de corredores viales suburbanos y umbrales máximos de suburbanización."
+                    }
+                ]
+            }, 
+            {
+                "key" : "3",
+                "subtitle" : "¿Cuál es la importancia de los determinantes ambientales?",
+                "content" : [
+                    {
+                        "type":"parrafo",
+                        "item":"Los determinantes ambientales permiten realizar una restricción o acondicionamiento del uso del suelo, de manera que se pueda gestionar tanto el medio ambiente como los recursos naturales de forma integral a partir de los diferentes procesos de ordenamiento territorial. "
+                    },
+                    {
+                        "type":"parrafo",
+                        "item":"Este tipo de regulaciones reglamenta algunas actividades que deterioran el ambiente ya sea de manera directa o indirecta, con lo que se busca un cumplimiento de los estándares de calidad que permiten un ambiente sano. Además, contribuye a la construcción de territorios seguros a partir de la gestión del riesgo de desastres, y a la gestión de los efectos generados por la variabilidad y el cambio climático."
+                    }
+                ]
+            }
+
+        ]
+    },
+    {
+        "title" : "CORPOCHIVOR y Nosotros",
+        "data" : [  
+            {
+                "key" : "4",
+                "subtitle" : "¿Qué es Corpochivor?",
+                "content" : [
+                    {
+                        "type":"parrafo",
+                        "item":"La corporación se muestra como administradores de recursos naturales, quienes buscan generar una cultura en el territorio, de manera que se puedan articular e implementar diferentes políticas ambientales, buscando tener en el 2031 que el territorio bajo su jurisdicción presente un modelo de desarrollo sostenible y cultura ambiental, a partir del conocimiento de las interacciones entre los recursos naturales y las comunidades. "
+                    },
+                    {
+                        "type":"parrafo",
+                        "item":"Esta corporación se encuentra en el sur del departamento de Boyacá y cubre un área de 3.109,77 km2 representados en 25 municipios y 5 provincias. Además cuenta con una población de 192.238 personas en este territorio. En términos generales, debido a que se trata de una Corporación Autónoma Regional, Corpochivor debe encargarse de la ejecución de las políticas, planes, programas y proyectos sobre medio ambiente y recursos naturales renovables, así como dar cumplida y oportuna aplicación a las disposiciones legales vigentes sobre su disposición, administración, manejo y aprovechamiento, conforme a las regulaciones, pautas y directrices expedidas por El Ministerio Del Medio Ambiente. "
+                    },
+                    {
+                        "type":"parrafo",
+                        "item":"En particular, Corpochivor estaría encargada de la Función de fomento al desarrollo sostenible, la Función de autoridad ambiental y la Función de planificación y coordinación ambiental. En caso de que desee consultar más información sobre Corpochivor, lo invitamos a consultar el siguiente enlace. "
+                    },
+                    {
+                        "type":"link",
+                        "item":"https://www.corpochivor.gov.co/entidad-2/quienes-somos/objetivos-y-funciones/"
+                    }
+                ]
+            },  
+            {
+                "key" : "5",
+                "subtitle" : "¿Quiénes somos?",
+                "content" : [
+                    {
+                        "type":"parrafo",
+                        "item":"Las personas que realizamos las diferentes actividades que culminan en el desarrollo de esta aplicación, somos un grupo de estudiantes de diferentes carreras de la facultad de ingeniería de la Universidad Nacional de Colombia, los cuales, bajo la orientación de la docente Dolly Santos Barbosa, aprovechamos la oportunidad presentada en este proyecto de Corpochivor para cumplir con los diferentes requisitos académicos de la materia ‘Taller de Proyectos Interdisciplinarios’, la cual forma parte de nuestro plan de estudios. "
+                    },
+                    {
+                        "type":"parrafo",
+                        "item":"El propósito de este trabajo fue ayudar a Corpochivor a agilizar algunos trámites que tienen como tema principal la consulta de algunos determinantes ambientales, ya que ellos contaban con una información muy bien estructurada sobre este tema, pero no contaban con una herramienta que les permitiera a los usuarios o interesados en la misma acceder de manera eficaz a esta información sin necesidad de contar con un funcionario de la corporación. "
+                    },
+                    {
+                        "type":"parrafo",
+                        "item":"La principal motivación para este cambio en la forma de consulta de información se encuentra en utilizar los diferentes recursos de la corporación para desarrollar otras actividades que se encuentran bajo su responsabilidad. De esta manera planteamos desarrollar una aplicación que fuese sencilla de manejar y lo más intuitiva posible, para que no existieran mayores dificultades en su uso, sin importar el tipo de usuario que acceda a ella. Además, buscamos realizar una aplicación que pueda presentar la información sin necesidad de que se cuente con una conexión a internet, para que se pueda acceder a ella desde lugares que puedan no tener una buena cobertura para datos móviles."
+                    }
+                ]
+            }
+        ]
+    }
+]}

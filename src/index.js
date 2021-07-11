@@ -12,7 +12,7 @@ const TabNavigator = createBottomTabNavigator({
   HallarDeterm: HallarDet,
   ListadoDeterm: ListaDet,
   InfoDeterm: InfoDet,
-  menu: Menu,
+  //menu: Menu,
 }, {
   initialRouteName: 'HallarDeterm',
   defaultNavigationOptions: ({ navigation }) => ({

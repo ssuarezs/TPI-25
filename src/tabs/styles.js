@@ -37,9 +37,6 @@ const styles = {
     paddingRight: 5,
     paddingLeft: 5,
   },
-
-
-
 };
 
 export default styles

@@ -22,6 +22,7 @@ const ListTab = ({ navigation, lista, fetchLug, saveLug }) => {
               <FlatList
                 style={styles.list}
                 data={lista.data}
+          showsVerticalScrollIndicator={false}
                 keyExtractor={x => x.name}
                 renderItem={({item}) =>
                   <ItemLista

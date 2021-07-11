@@ -35,6 +35,7 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
     saveLug(newPunt)
     setNombre('')
     setMVisibility(false)
+    navigation.navigate('TabNavigator')
   }
 
   useEffect(() => { setPosicion({

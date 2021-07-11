@@ -11,8 +11,11 @@ export default ({ posicion }) => {
 
   return (
     <View style={styles.center}>
-        <Text style={styles.subtitle} >
-          NIVEL DE RIESGO{':'} {resDeter}</Text>
+      {resDeter ?
+        <Text style={styles.subtitle} >NIVEL DE AMENAZA{':'} {resDeter}</Text>
+      :
+        <Text style={styles.subtitle} >La zona elegida no tiene cobertura</Text>
+      }
         <InfoView info={info} />
     </View>
   );

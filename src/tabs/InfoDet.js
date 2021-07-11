@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import sty from '../styles.js'
+import VisInfo from '../Determi/aboutDeter/visInfo'
+import sty from './styles.js'
 
 export default ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text>Pagina de la info Determinantes</Text>
+      <VisInfo/>
     </View>
   );
 }

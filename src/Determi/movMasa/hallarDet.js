@@ -18,7 +18,7 @@ export default ( posicion ) => {
   let pointInm = turf.booleanPointInPolygon(point, medio.features[0]);
   let pointInA = turf.booleanPointInPolygon(point, alta.features[0]);
 
-  let detHallado = 'El punto elegido no tiene ningun Determinante Ambiental relacionado'
+  let detHallado = null
 
   if (pointInB) {
     detHallado = 'BAJO'

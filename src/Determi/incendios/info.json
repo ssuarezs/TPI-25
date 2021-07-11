@@ -2,7 +2,6 @@
   "titulo" : "RIESGO DE INCENDIO",
   "parrafos" : [
     "Definicion de Incendio forestal: Fuego que se extiende sin control, cuyo combustible principal es la vegetación viva o muerta.",
-    "Los incendios de la cobertura vegetal son fuegos que se propagan sin control y consumen diversos tipos de material vegetal. Aunque el fuego es un elemento esencial y natural en el funcionamiento de numerosos ecosistemas, las actividades humanas y la mayor frecuencia del fenómeno de El Niño han dado lugar a que los incendios se constituyan en un riesgo ecológico que genera pérdidas de la biodiversidad, desestabilización de los hábitats naturales y sus ciclos y, por ende, graves afectaciones directas al ambiente y al ser humano.",
     "Los incendios de la cobertura vegetal son fuegos que se propagan sin control y consumen diversos tipos de material vegetal. Aunque el fuego es un elemento esencial y natural en el funcionamiento de numerosos ecosistemas, las actividades humanas y la mayor frecuencia del fenómeno de El Niño han dado lugar a que los incendios se constituyan en un riesgo ecológico que genera pérdidas de la biodiversidad, desestabilización de los hábitats naturales y sus ciclos y, por ende, graves afectaciones directas al ambiente y al ser humano."
   ], 
   "Leyes" : [  
@@ -34,22 +33,27 @@
   ], 
   "Recursos" : [  
     {
+      "key" : "1",
       "titulo" : "ORIENTACIONES PARA LA DEFINICIÓN Y ACTUALIZACIÓN DE LAS DETERMINANTES AMBIENTALES",
       "link" : "https://www.minambiente.gov.co/images/OrdenamientoAmbientalTerritorialyCoordinaciondelSIN/pdf/La_dimension_ambiental_en_los_planes_de_desarrollo/CARTILLA_DETERMINANTES_AMBIENTALES_V2.0_22022021.pdf"
     }, 
     {
+      "key" : "2",
       "titulo" : "CARTILLA ORIENTADORA PARA LA GESTIÓN DEL RIESGO EN INCENDIOS FORESTALES ",
       "link" : "https://www.minambiente.gov.co/images/Articulos-slider-destacados/Incendios_Forestales/071212_cartilla_incendios_forestales_ley_1523_2012_2.pdf"
     }, 
     {
-      "titulo" : "CARTILLA ORIENTADORA PARA LA GESTIÓN DEL RIESGO EN INCENDIOS FORESTALES ",
+      "key" : "3",
+      "titulo" : "IDENTIFICACION DE RIESGOS, AMENAZAS Y VULNERABILIDADES ",
       "link" : "http://webanterior.corpochivor.gov.co/sites/default/files/attach/19_Riesgos_amenazas_vulnerabilidad.pdf"
     }, 
     {
+      "key" : "4",
       "titulo" : "PLAN DE ACCION CUATRIENAL DE CORPOCHIVOR 2020-2023",
       "link" : "https://www.corpochivor.gov.co/wp-content/uploads/2020/06/CORPOCHIVOR-PLAN-DE-ACCION-CUATRIENAL-2020-2023.pdf"
     }, 
     {
+      "key" : "5",
       "titulo" : "PLAN DE EMERGENCIAS Y CONTINGENCIAS",
       "link" : "https://www.icbf.gov.co/sites/default/files/procesos/pl8.p9.gth_plan_de_emergencias_y_contingencias_centro_zonal_miraflores_v1.pdf"
     } 
