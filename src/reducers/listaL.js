@@ -31,7 +31,15 @@ const errorFetch = mac(FETCH_ERROR, 'error')
 const submit = mac(SUBMIT, 'payload')
 
 const initialState = {
-    data: [],
+    data: [
+        {
+            "coordinate": {
+              "latitude": 4.2120368,
+              "longitude": -74.6340045,
+            },
+            "name": "Tu Primera Ubicacion",
+        },
+    ],
     fetched: false,
     fetching: false,
 }
@@ -59,13 +67,17 @@ export default createReducer(initialState, {
 })
 
 export const fetchLug = () =>
-    async (dispatch) => {
+    async (dispatch, getState) => {
         dispatch(startFetch())
         try {
-            const response = await require('./listaLugares.json')
             const obtenidos = await AsyncStorage.getItem('Puntos')
             const data = JSON.parse(obtenidos)
-            dispatch(successFetch(data))
+            if(data){
+                dispatch(successFetch(data))
+            }else{
+                const data = JSON.stringify(initialState.data);
+                await AsyncStorage.setItem('Puntos', data)
+            }
         } catch(e) {
             dispatch(errorFetch(e))
         }
@@ -73,10 +85,10 @@ export const fetchLug = () =>
 
 export const saveLug = lugar =>
     async (dispatch, getState) => {
-        const state = getState()
         dispatch(submit(lugar))
+        const state = getState()
         try {
-            const data = JSON.stringify(state.data);
+            const data = JSON.stringify(state.listaL.data);
             await AsyncStorage.setItem('Puntos', data)
         } catch(e) {
             dispatch(errorFetch(e))

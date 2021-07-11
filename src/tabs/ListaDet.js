@@ -18,18 +18,21 @@ const ListTab = ({ navigation, lista, fetchLug, saveLug }) => {
       </Text>
 
         {lista.data ?
-        <View style={styles.containList}>
-          <FlatList
-            style={styles.list}
-            data={lista.data}
-            keyExtractor={x => x.name}
-            renderItem={({item}) =>
-              <ItemLista navigation={navigation} item={item} />
-            }
-          />
-        </View>
+            <View style={styles.containList}>
+              <FlatList
+                style={styles.list}
+                data={lista.data}
+                keyExtractor={x => x.name}
+                renderItem={({item}) =>
+                  <ItemLista
+                    navigation={navigation}
+                    item={item} />
+                }
+              />
+            </View>
           :null
         }
+
     </View>
   );
 }

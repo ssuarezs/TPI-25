@@ -526,6 +526,13 @@ const propTypes = {
    * Callback that is called when a Building is focused.
    */
   onIndoorBuildingFocused: PropTypes.func,
+
+  /**
+   * Sets the tint color of the map. (Changes the color of the position indicator) Defaults to system blue.
+   *
+   * @platform ios
+   */
+  tintColor: ColorPropType,
 };
 
 class MapView extends React.Component {
@@ -540,6 +547,10 @@ class MapView extends React.Component {
     this._onMarkerPress = this._onMarkerPress.bind(this);
     this._onChange = this._onChange.bind(this);
     this._onLayout = this._onLayout.bind(this);
+  }
+
+  setNativeProps(props) {
+    this.map.setNativeProps(props);
   }
 
   getChildContext() {
@@ -627,14 +638,17 @@ class MapView extends React.Component {
     }
   }
 
-  _onChange(event) {
-    this.__lastRegion = event.nativeEvent.region;
-    if (event.nativeEvent.continuous) {
+  _onChange({ nativeEvent }) {
+    this.__lastRegion = nativeEvent.region;
+    const isGesture = nativeEvent.isGesture;
+    const details = { isGesture };
+
+    if (nativeEvent.continuous) {
       if (this.props.onRegionChange) {
-        this.props.onRegionChange(event.nativeEvent.region);
+        this.props.onRegionChange(nativeEvent.region, details);
       }
     } else if (this.props.onRegionChangeComplete) {
-      this.props.onRegionChangeComplete(event.nativeEvent.region);
+      this.props.onRegionChangeComplete(nativeEvent.region, details);
     }
   }
 
@@ -652,7 +666,7 @@ class MapView extends React.Component {
   }
 
   animateCamera(camera, opts) {
-    this._runCommand('animateCamera', [camera, (opts && opts.duration) || 500]);
+    this._runCommand('animateCamera', [camera, opts ? opts.duration : 500]);
   }
 
   animateToNavigation(location, bearing, angle, duration) {
