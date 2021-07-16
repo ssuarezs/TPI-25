@@ -28,11 +28,10 @@ export const SectionFrame = ({ D, title }) => {
   )
 }
 
-
 export const ItemTitle = ({ D, title }) => {
   return (
 	    <TouchableOpacity key={title} style={styles.button} onPress={D} >
-		<Text style={styles.title} >{title}</Text>
+		<Text style={styles.subtitle} >{title}</Text>
 	    </TouchableOpacity>
   )
 }

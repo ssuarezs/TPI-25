@@ -52,7 +52,7 @@ export default ({navigation, item}) => {
 
   return (
 	<TouchableOpacity style={sty.item} onPress={ruta} >
-	  <View style={sty.div}>
+	  <View key={item.key} style={sty.div}>
           <View style={sty.center}>
             <Text style={sty.title} >{item.titulo}</Text>
             <Text style={{...sty.subtitle, fontSize: 14,}}>

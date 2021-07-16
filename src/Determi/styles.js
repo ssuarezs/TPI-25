@@ -11,6 +11,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-start',
     marginTop: 8,
+    marginBottom: 8,
     },
     titleB: {
     fontSize: 14,
@@ -97,9 +98,9 @@ const styles = {
     justifyContent: 'center',
     borderRadius: 20,
     padding: 15,
-    paddingHorizontal: 5,
+    paddingHorizontal: 10,
     margin: 10,
-    marginTop: 5,
+    marginTop: 0,
     },
     button2: {
     margin: 10,
@@ -130,15 +131,15 @@ const styles = {
     borderRadius: 20,
     },
     seccionFrame: {
-    marginTop: 10,
     marginBottom: 10,
     padding: 10,
     paddingHorizontal: 5,
-    width: Dimensions.get('window').width-30,
+    width: Dimensions.get('window').width-80,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: secondary,
     borderRadius: 20,
+    alignSelf: 'center',
     },
     mapImage: {
         flex:1,

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 import { StyleSheet, Text, View, Dimensions, TouchableOpacity, FlatList } from 'react-native';
-import { fetchLug, saveLug } from '../reducers/listaL'
-import ItemLista from '../components/itemListaLug'
+import { fetchLug, saveLug } from '../../reducers/listaL'
+import ItemLista from '../../components/itemListaLug'
 import sty from './styles.js'
 
 const ListTab = ({ navigation, lista, fetchLug, saveLug }) => {
@@ -13,8 +13,8 @@ const ListTab = ({ navigation, lista, fetchLug, saveLug }) => {
 
   return (
     <View style={sty.container}>
-      <Text style={{...sty.title, marginTop: 10}}>
-          LISTADO DE PUNTOS GUARDADOS ANTERIORMENTE
+      <Text style={sty.title}>
+          LUGARES GUARDADOS
       </Text>
 
         {lista.data ?
@@ -31,9 +31,11 @@ const ListTab = ({ navigation, lista, fetchLug, saveLug }) => {
                 }
               />
             </View>
-          :null
+          :
+        <Text style={sty.subtitle}>
+          Aun no has guardado ningun punto
+        </Text>
         }
-
     </View>
   );
 }
@@ -55,10 +57,6 @@ const styles = StyleSheet.create({
   },
   containList: {
     alignSelf: 'stretch',
-    marginTop: 15,
     marginBottom: 30,
-    borderColor : '#ffcc29',
-    borderBottomWidth : 3,
-    borderTopWidth : 3,
   }
 });

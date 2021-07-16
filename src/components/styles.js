@@ -49,11 +49,11 @@ const styles = {
     borderRadius: 20,
     padding: 10,
   },
-
   title : {
     color: secondary,
     fontWeight: 'bold',
     fontSize: 18,
+    top: 10
   },
   subtitle : {
     color: secondary,
@@ -61,6 +61,7 @@ const styles = {
     fontSize: 15,
     paddingRight: 5,
     paddingLeft: 10,
+    top: 10,
   },
   buttonText : {
     color: secondary,
