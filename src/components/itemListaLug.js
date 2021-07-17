@@ -21,7 +21,7 @@ export default ({ navigation, item }) => {
             {item.name}
           </Text>
           <Text style={sty.subtitle}>
-            Fecha {':'}
+            {item.fecha}
           </Text>
       </TouchableOpacity>
   );

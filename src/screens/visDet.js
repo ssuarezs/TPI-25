@@ -27,10 +27,20 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
     setNombre(text)
   }
 
+    const obtenerFecha = () => {
+        const day = new Date().getDate()
+        const month = new Date().getMonth()
+        const year = new Date().getFullYear()
+        const date = `${day}-${month}-${year}`
+        return date
+    }
+
   const submitPuntos = async () => {
+
     const newPunt = {
       coordinate: posicion,
       name: nombre,
+      fecha: obtenerFecha(),
       key: Math.random().toString(36)
     }
     saveLug(newPunt)
