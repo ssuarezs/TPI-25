@@ -1,4 +1,10 @@
-import { Dimensions } from 'react-native'
+
+import { StatusBar } from 'expo-status-bar';
+import { Dimensions, NativeModules, } from 'react-native'
+const {width, height} = Dimensions.get('screen');
+const { StatusBarManager } = NativeModules;
+const STATUSBAR_HEIGHT = StatusBarManager.HEIGHT;
+
 const primary = '#81b214'
 const secondary = '#206a5d'
 const tertiary = '#ffcc29'
@@ -9,8 +15,9 @@ const styles = {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 5,
     backgroundColor: four,
+    marginTop: STATUSBAR_HEIGHT,
+    padding: 5,
   },
   item : {
     flex: 1,

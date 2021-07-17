@@ -10,10 +10,13 @@ import {
     Animated,
     Image,
     TouchableOpacity,
+    NativeModules,
 } from 'react-native';
 import { HallarDet, ListaDet, InfoDet } from './tabs'
 
-const {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('screen');
+const { StatusBarManager } = NativeModules;
+const STATUSBAR_HEIGHT = StatusBarManager.HEIGHT;
 
 
 const Tab = React.forwardRef(({data, item, onItemPress}, ref) => {
@@ -84,13 +87,13 @@ const Tabs = ({ data, scrollX, onItemPress }) => {
     })
 
     return (
-    <View style={{ position: 'absolute', bottom: 40, width }} >
+    <View style={{ position: 'absolute', bottom: 30, width }} >
         <View
             ref={containerRef}
             style={{
-                justifyContent: 'space-evenly',
                 flex: 1,
                 flexDirection: 'row',
+                justifyContent: 'space-evenly',
             }}>
         {data.map((item, index) => {
             return <Tab
@@ -138,9 +141,11 @@ export default ({navigation}) => {
         })
     })
 
+    console.log(STATUSBAR_HEIGHT)
+
   return (
     <View style={styles.container}>
-      <StatusBar hidden />
+      <StatusBar backgroundColor="rgba(255,255,255,0.8)"  />
       <View
           style={[
               StyleSheet.absoluteFillObject,
@@ -171,16 +176,24 @@ export default ({navigation}) => {
                       style={[
                           StyleSheet.absoluteFillObject,
                           {backgroundColor: 'rgba(0,0,0,0.2)',
-                          alignItems: 'center'},
+                          alignItems: 'center',
+                          paddingTop: STATUSBAR_HEIGHT,
+                          paddingBottom: width*0.4,
+                          },
                       ]}
                 >
+                    <View style={{
+                        flex: 1,
+                        width: width,
+                        backgroundColor:'rgba(255,255,255,0.8)',
+                        marginBottom:  width*0.1,
+                    }}/>
                     <View
                         style={{
-                            top: 70,
-                            left: 2,
-                            width: width*0.9,
-                            height: height*0.75,
+                            flex:12,
+                            width: width*0.85,
                             justifyContent: 'space-evenly',
+                            paddingTop: width*0
                         }}
                     >
                         {item.pag}

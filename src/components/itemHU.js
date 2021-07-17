@@ -55,7 +55,7 @@ export default ({navigation, item}) => {
 	  <View key={item.title}  style={sty.rowView}>
           <View style={sty.center}>
             <Text style={sty.title} >{item.titulo}</Text>
-            <Text style={{...sty.subtitle, fontSize: 14,}}>
+            <Text style={sty.subtitle}>
               {item.descripcion}
             </Text>
           </View>

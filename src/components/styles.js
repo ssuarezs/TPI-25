@@ -54,12 +54,12 @@ const styles = {
   title : {
     color: secondary,
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 16,
   },
   subtitle : {
     color: secondary,
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: 12,
     left: 10,
   },
   buttonText : {
