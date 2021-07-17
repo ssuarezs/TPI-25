@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 import { StyleSheet, Text, View, Dimensions, TouchableOpacity, FlatList } from 'react-native';
-import { fetchLug, saveLug } from '../../reducers/listaL'
+import { fetchLug, saveLug, deleteLug } from '../../reducers/listaL'
 import ItemLista from '../../components/itemListaLug'
 import sty from './styles.js'
 const {width, height} = Dimensions.get('screen')
 
-const ListTab = ({ navigation, lista, fetchLug, saveLug }) => {
+const ListTab = ({ navigation, lista, fetchLug, saveLug, deleteLug }) => {
 
   useEffect(() => {
     fetchLug()
@@ -26,9 +26,17 @@ const ListTab = ({ navigation, lista, fetchLug, saveLug }) => {
           showsVerticalScrollIndicator={false}
                 keyExtractor={x => x.name}
                 renderItem={({item}) =>
+                  <View>
                   <ItemLista
                     navigation={navigation}
                     item={item} />
+                  <TouchableOpacity onPress={() => {
+                      deleteLug(item.key)
+                      fetchLug()
+                  }}>
+                      <Text style={sty.title}>XXXX</Text>
+                  </TouchableOpacity>
+                  </View>
                 }
               />
             </View>
@@ -48,6 +56,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
     fetchLug: () => dispatch(fetchLug()),
     saveLug: (lugar) => dispatch(saveLug(lugar)),
+    deleteLug: (itemKey) => dispatch(deleteLug(itemKey)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListTab)

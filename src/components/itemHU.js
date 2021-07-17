@@ -51,8 +51,8 @@ export default ({navigation, item}) => {
     }
 
   return (
-	<TouchableOpacity key={item.key} style={sty.item} onPress={ruta} >
-	  <View key={item.key}  style={sty.rowView}>
+	<TouchableOpacity key={item.title} style={sty.item} onPress={ruta} >
+	  <View key={item.title}  style={sty.rowView}>
           <View style={sty.center}>
             <Text style={sty.title} >{item.titulo}</Text>
             <Text style={{...sty.subtitle, fontSize: 14,}}>

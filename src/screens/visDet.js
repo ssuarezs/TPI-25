@@ -30,12 +30,12 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
   const submitPuntos = async () => {
     const newPunt = {
       coordinate: posicion,
-      name: nombre
+      name: nombre,
+      key: Math.random().toString(36)
     }
     saveLug(newPunt)
     setNombre('')
     setMVisibility(false)
-    navigation.navigate('TabNavigator')
   }
 
   useEffect(() => { setPosicion({
