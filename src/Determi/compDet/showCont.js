@@ -9,7 +9,7 @@ export default ({ item }) => {
     return (
         <View style={styles.center}>
         {item.type=='parrafo' ?
-            <Text>{item.item}</Text> : null
+            <Text style={styles.parraf}>{item.item}</Text> : null
         }
         </View>
     );

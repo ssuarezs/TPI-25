@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Dimensions } from 'react-native';
 import sty from './styles'
 import { ItemHU } from '../../components/index';
+const {width, height} = Dimensions.get('screen')
 
 const items = [
     {
@@ -34,6 +35,8 @@ export default ({navigation}) => {
       <Text style={sty.title}>
           EXPLORA LOS DETERMINANTES
       </Text>
+      <View style={{height:3 , backgroundColor: '#206a5d', width: width*0.7 }} />
+      <View style={{height:6}} />
       {items.map( i =>
           <ItemHU navigation={navigation} item={i} />
       )}

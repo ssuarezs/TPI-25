@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Text, View, SectionList, FlatList } from 'react-native';
+import { Text, View, SectionList, FlatList, Dimensions } from 'react-native';
 import { Modal } from '../../components/index'
 import { ItemTitle, SectionFrame } from '../compDet/BOOitems'
 import ShowCont from '../compDet/showCont'
 import styles from '../styles'
 import info from './info.json'
+const {width, height} = Dimensions.get('screen')
 
 
 export default ({navigation}) => {
@@ -21,7 +22,7 @@ export default ({navigation}) => {
               renderItem={({item}) => (
                   <ItemTitle title={item.subtitle} D={() => {
                     setVisible(true)
-                    setData(item.content)
+                    setData(item)
                   }} />
               )}
               renderSectionHeader={({section}) => (
@@ -30,11 +31,21 @@ export default ({navigation}) => {
           />
 
         <Modal visibility={visible}>
-            <ItemTitle title={'Cerrar'} D={() => {
-                setVisible(false)}} />
+            <View style={{
+                flexDirection: 'row',
+                width: width*0.8,
+                paddingHorizontal: 10
+            }}>
+            <Text style={styles.title} onPress={() => {
+                setVisible(false)}}>X</Text>
+                <Text style={styles.textC}>{data.subtitle}</Text>
+            </View>
+              <View style={{height:3 , backgroundColor: '#206a5d', width: width*0.85, marginTop: 5 }} />
             <FlatList
               style={styles.FlatList}
-              data={data}
+              data={data.content}
+              showsVerticalScrollIndicator={false}
+              bounces={false}
               keyExtractor={x => x.contentKey}
               renderItem={({item}) => (
                   <ShowCont item={item} />

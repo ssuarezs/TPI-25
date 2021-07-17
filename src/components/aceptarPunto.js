@@ -8,7 +8,7 @@ export default ({ onPress, onPressLeft }) => {
 	      <Text style={{...sty.title, textAlign: 'center'}}>
             ¿ Este es el punto que deseas elegir ?
           </Text>
-        <View style={sty.div}>
+        <View style={sty.rowView}>
              <TouchableOpacity
                 style={sty.button}
                 onPress={onPress} >

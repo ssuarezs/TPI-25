@@ -89,6 +89,12 @@ const styles = {
     textAlign: 'center',
     color: '#206a5d',
     },
+    textC: {
+    left: 30,
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#206a5d',
+    },
     space: {
     height: 15,
     },

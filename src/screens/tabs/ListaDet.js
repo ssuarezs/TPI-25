@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Dimensions, TouchableOpacity, FlatList } from '
 import { fetchLug, saveLug } from '../../reducers/listaL'
 import ItemLista from '../../components/itemListaLug'
 import sty from './styles.js'
+const {width, height} = Dimensions.get('screen')
 
 const ListTab = ({ navigation, lista, fetchLug, saveLug }) => {
 
@@ -16,7 +17,7 @@ const ListTab = ({ navigation, lista, fetchLug, saveLug }) => {
       <Text style={sty.title}>
           LUGARES GUARDADOS
       </Text>
-
+      <View style={{height:3 , backgroundColor: '#206a5d', width: width*0.8 }} />
         {lista.data ?
             <View style={styles.containList}>
               <FlatList

@@ -5,11 +5,16 @@
             {
                 "key" : "1",
                 "subtitle" : "¿Qué son los determinantes ambientales?",
-                "content" : [
+                "content" : [ 
+                    {
+                        "contentKey" : "0",
+                        "type":"parrafo",
+                        "item":"Son aquellas leyes o normas que buscan proteger los recursos naturales y que además presentan información sobre algunos fenómenos naturales sobre los territorios."
+                    },
                     {
                         "contentKey" : "1",
                         "type":"parrafo",
-                        "item":"Los Determinantes Ambientales son aquellas normas de orden superior destinadas a la protección de los recursos naturales, y que se utilizan para la elaboración, adopción y ajustes de los planes y esquemas de ordenamiento territorial. "
+                        "item":"Los Determinantes Ambientales son normas de orden superior y que se utilizan para la elaboración, adopción y ajustes de los planes y esquemas de ordenamiento territorial. "
                     },
                     {
                         "contentKey" : "2",
@@ -20,7 +25,7 @@
                         "contentKey" : "3",
                         "type":"parrafo",
                         "item":"Entre las características más importantes de estos determinantes, el Ministerio de Ambiente destaca el hecho de que cuentan con una vida jurídica propia, constituyendo normas de superior jerarquía y tienen un obligatorio cumplimiento. Estos determinantes son dictados por diferentes autoridades ambientales a partir de diferentes instrumentos de gestión ambiental y de planes de manejo."
-                    },
+                    }, 
                     {
                         "contentKey" : "100",
                         "type":"prueba",
@@ -32,6 +37,11 @@
                 "key" : "2",
                 "subtitle" : "¿Cómo se clasifican los determinantes ambientales?",
                 "content" : [
+                    {
+                        "contentKey" : "0",
+                        "type":"parrafo",
+                        "item":"Pueden clasificarse de acuerdo a las características del territorio sobre el que se utilizan. Sin embargo, también pueden dividirse de acuerdo a los fenómenos que son de su interés."
+                    },
                     {
                         "contentKey" : "1",
                         "type":"parrafo",
@@ -59,6 +69,11 @@
                 "subtitle" : "¿Cuál es la importancia de los determinantes ambientales?",
                 "content" : [
                     {
+                        "contentKey" : "0",
+                        "type":"parrafo",
+                        "item":"Estos determinantes ayudan a preservar el medio ambiente y ayuda a las autoridades a tener un mejor control sobre las actividades desarrolladas en un territorio."
+                    },
+                    {
                         "contentKey" : "1",
                         "type":"parrafo",
                         "item":"Los determinantes ambientales permiten realizar una restricción o acondicionamiento del uso del suelo, de manera que se pueda gestionar tanto el medio ambiente como los recursos naturales de forma integral a partir de los diferentes procesos de ordenamiento territorial. "
@@ -74,12 +89,17 @@
         ]
     },
     {
-        "title" : "CORPOCHIVOR y Nosotros",
+        "title" : "CORPOCHIVOR y NOSOTROS",
         "data" : [  
             {
                 "key" : "4",
                 "subtitle" : "¿Qué es Corpochivor?",
                 "content" : [
+                    {
+                        "contentKey" : "0",
+                        "type":"parrafo",
+                        "item":"Corpochivor es una autoridad ambiental con presencia en algunos municipios de Boyacá que busca enfocar las relaciones presentes entre las comunidades y territorios. Su principal objetivo es la conservación del medio ambiente y los recursos naturales."
+                    },
                     {
                         "contentKey" : "1",
                         "type":"parrafo",
@@ -106,6 +126,11 @@
                 "key" : "5",
                 "subtitle" : "¿Quiénes somos?",
                 "content" : [
+                    {
+                        "contentKey" : "0",
+                        "type":"parrafo",
+                        "item":"Somos un grupo conformado por estudiantes de la Universidad Nacional de Colombia y su docente mentora, pertenecientes a diferentes carreras de la Facultad de Ingeniería, quienes desarrollamos la presente aplicación en el marco de la materia Taller de Proyectos Interdisciplinarios."
+                    },
                     {
                         "contentKey" : "1",
                         "type":"parrafo",

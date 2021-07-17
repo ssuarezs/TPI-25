@@ -11,6 +11,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-start',
     padding: 10,
+    paddingBottom: 20,
     backgroundColor: 'rgba(255,255,255,0.85)',
     borderRadius: 40,
   },

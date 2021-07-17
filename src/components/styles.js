@@ -3,6 +3,7 @@ const primary = '#81b214'
 const secondary = '#206a5d'
 const tertiary = '#ffcc29'
 const four = '#f8ede3'
+const {width, height} = Dimensions.get('screen')
 
 
 const styles = {
@@ -15,7 +16,7 @@ const styles = {
     paddingBottom: 120,
     backgroundColor: four,
   },
-  div: {
+  rowView: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
@@ -31,12 +32,13 @@ const styles = {
     backgroundColor: primary,
     alignItems: 'flex-start',
     justifyContent: 'center',
-    margin: 10,
-    marginBottom: 5,
+    marginBottom: 8,
     marginHorizontal: 10,
     alignSelf: 'stretch',
-    borderRadius: 20,
-    padding: 20,
+    borderRadius: 25,
+    padding: 15,
+    paddingHorizontal: 25,
+    top: 5,
   },
   button : {
     flex: 1,
@@ -53,15 +55,12 @@ const styles = {
     color: secondary,
     fontWeight: 'bold',
     fontSize: 18,
-    top: 10
   },
   subtitle : {
     color: secondary,
     fontWeight: 'bold',
     fontSize: 15,
-    paddingRight: 5,
-    paddingLeft: 10,
-    top: 10,
+    left: 10,
   },
   buttonText : {
     color: secondary,
@@ -71,8 +70,8 @@ const styles = {
   },
   img : {
     flex: 1,
-    height: 140,
-    width: 140,
+    height: width/3,
+    width: width/3,
   },
 };
 

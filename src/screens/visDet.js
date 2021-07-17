@@ -61,7 +61,7 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
          <TouchableOpacity style={sty.button}
            onPress={() => {setMVisibility(true)}} >
            <Text style={sty.subtitle}>
-               G U A R D A R   P U N T O</Text>
+               G U A R D A R </Text>
          </TouchableOpacity>
         <View style={sty.mapa}>
           <Map posicion={posicion} />

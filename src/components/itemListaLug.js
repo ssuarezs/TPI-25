@@ -18,13 +18,10 @@ export default ({ navigation, item }) => {
         onPress={()=>irLocacion()}
       >
           <Text style={sty.title}>
-            Nombre {':'} {item.name}
+            {item.name}
           </Text>
           <Text style={sty.subtitle}>
-            Lat {':'} {item.coordinate.latitude}
-          </Text>
-          <Text style={sty.subtitle}>
-            Long {':'} {item.coordinate.longitude}
+            Fecha {':'}
           </Text>
       </TouchableOpacity>
   );

@@ -9,7 +9,7 @@ export default ({navigation, item}) => {
     const avisoLoc = 'No tenemos permisos necesarios para acceder a la localizacion'
 
   const buscaLocation = async () => {
-    const { status } = await Location.requestPermissionsAsync()
+    const { status } = await Location.requestForegroundPermissionsAsync()
     if (status !== 'granted'){
       return Alert.alert(avisoLoc)
     }
@@ -51,8 +51,8 @@ export default ({navigation, item}) => {
     }
 
   return (
-	<TouchableOpacity style={sty.item} onPress={ruta} >
-	  <View key={item.key} style={sty.div}>
+	<TouchableOpacity key={item.key} style={sty.item} onPress={ruta} >
+	  <View key={item.key}  style={sty.rowView}>
           <View style={sty.center}>
             <Text style={sty.title} >{item.titulo}</Text>
             <Text style={{...sty.subtitle, fontSize: 14,}}>
