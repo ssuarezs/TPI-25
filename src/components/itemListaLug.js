@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import sty from './styles.js'
 
 
-export default ({ navigation, item }) => {
+export default ({ navigation, item, deleteElement }) => {
 
   const irLocacion = () => {
     if(item){
@@ -13,6 +13,7 @@ export default ({ navigation, item }) => {
   }
 
   return (
+    <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
       <TouchableOpacity
         style={sty.item}
         onPress={()=>irLocacion()}
@@ -24,6 +25,12 @@ export default ({ navigation, item }) => {
             {item.fecha}
           </Text>
       </TouchableOpacity>
+          <TouchableOpacity
+            style={sty.deletemark}
+            onPress={deleteElement}>
+              <Text style={sty.title}>X</Text>
+          </TouchableOpacity>
+    </View>
   );
 
 }

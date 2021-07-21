@@ -148,8 +148,11 @@ const styles = {
     alignSelf: 'center',
     },
     mapImage: {
-        flex:1,
-        width:Dimensions.get('window').width,
+        resizeMode: 'cover',
+        width:Dimensions.get('screen').width*0.95,
+        height:Dimensions.get('screen').height*0.55,
+        margin: 10,
+        borderRadius: 20,
     }
 };
 

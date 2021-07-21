@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Dimensions, Modal, TouchableOpacity } from 'rea
 export default ({ visibility, children, bajarModal, subirModal }) => {
   return (
     <Modal
+      position='absolute'
       visible={visibility}
       animationType= "fade"
       transparent={true}
@@ -29,10 +30,10 @@ const styles = StyleSheet.create({
   ModalView: {
     alignItems: 'center',
     justifyContent: 'center',
-    minWidth: Dimensions.get('window').width-100,
-    maxWidth: Dimensions.get('window').width-30,
-    minHeight: Dimensions.get('window').height-600,
-    maxHeight: Dimensions.get('window').height-80,
+    minWidth: Dimensions.get('screen').width-150,
+    maxWidth: Dimensions.get('screen').width-30,
+    minHeight: Dimensions.get('screen').width-150,
+    maxHeight: Dimensions.get('screen').height-120,
     backgroundColor: '#f8ede3',
     borderRadius: 40,
     padding: 8,

@@ -29,13 +29,11 @@ const ListTab = ({ navigation, lista, fetchLug, saveLug, deleteLug }) => {
                   <View>
                   <ItemLista
                     navigation={navigation}
-                    item={item} />
-                  <TouchableOpacity onPress={() => {
+                    item={item}
+                    deleteElement={() => {
                       deleteLug(item.key)
                       fetchLug()
-                  }}>
-                      <Text style={sty.title}>XXXX</Text>
-                  </TouchableOpacity>
+                    }} />
                   </View>
                 }
               />

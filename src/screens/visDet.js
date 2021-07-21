@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-nati
 import { connect } from 'react-redux'
 import { saveLug } from '../reducers/listaL'
 
-import { Modal, Map, Input } from '../components/index'
+import { Modal, Map, Input, GuardarPunto } from '../components/index'
 import DetMain from '../Determi/detMain'
 import sty from './styles'
 
@@ -36,7 +36,6 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
     }
 
   const submitPuntos = async () => {
-
     const newPunt = {
       coordinate: posicion,
       name: nombre,
@@ -46,6 +45,7 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
     saveLug(newPunt)
     setNombre('')
     setMVisibility(false)
+    navigation.navigate('Main')
   }
 
   useEffect(() => { setPosicion({
@@ -57,17 +57,15 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
    return (
     <View style={sty.container}>
          <Modal visibility={mVisibility}>
-           <Text>Quieres guardar este Punto?</Text>
-        <Input title="Nombre Punto" placeholder="Escribe nombre..." onChangeText={handleName}  />
-         <TouchableOpacity onPress={submitPuntos} >
-           <Text>Aceptar</Text>
-         </TouchableOpacity>
-         <TouchableOpacity
-           onPress={() => {setMVisibility(false)}} >
-           <Text>Cancelar</Text>
-         </TouchableOpacity>
+            <GuardarPunto
+                onSubmit={submitPuntos}
+               close={() => {
+                   setMVisibility(false)
+                   setNombre('')
+               }}
+                handleName={handleName}
+            />
          </Modal>
-
          <TouchableOpacity style={sty.button}
            onPress={() => {setMVisibility(true)}} >
            <Text style={sty.subtitle}>

@@ -40,6 +40,16 @@ const styles = {
     paddingHorizontal: 25,
     top: 5,
   },
+  deletemark : {
+    flex: 0.2,
+    backgroundColor: primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 40,
+    width: 40,
+    marginRight: 10,
+    borderRadius: 20,
+  },
   button : {
     flex: 1,
     backgroundColor: primary,
