@@ -12,20 +12,16 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
   const location = navigation.getParam('location')
 
   const [nombre, setNombre] = useState('')
-  const [resultado, setResultado] = useState('')
   const [mVisibility, setMVisibility] = useState(false)
   const [posicion, setPosicion] = useState({
     latitude: 0,
     longitude: 0,
   })
 
-  const confResultado = (text) => {
-    setResultado(text)
-  }
-
   const handleName = (text) => {
     setNombre(text)
   }
+    console.log(location)
 
     const obtenerFecha = () => {
         const day = new Date().getDate()

@@ -38,8 +38,6 @@ const Tab = React.forwardRef(({data, item, onItemPress}, ref) => {
     )
 })
 
-
-
 const Indicator = ({data, measures, scrollX}) => {
     const inputRange =  data.map((_, i) => i*width)
     const indicatorWidth = scrollX.interpolate({
@@ -94,44 +92,35 @@ const Tabs = ({ data, scrollX, onItemPress }) => {
                 flex: 1,
                 flexDirection: 'row',
                 justifyContent: 'space-evenly',
-            }}>
-        {data.map((item, index) => {
-            return <Tab
-                data={data}
-                key={item.key}
-                item={item}
-                ref={item.ref}
-                onItemPress={() => onItemPress(index)}
-            />
-        })}
+        }}>
+            {data.map((item, index) => {
+                return <Tab
+                    data={data}
+                    key={item.key}
+                    item={item}
+                    ref={item.ref}
+                    onItemPress={() => onItemPress(index)}
+                />
+            })}
         </View>
-        {measures.length > 0 &&
-            (<Indicator data={data} measures={measures} scrollX={scrollX} />
-        )}
+        {measures.length > 0 && (<Indicator data={data} measures={measures} scrollX={scrollX} />)}
     </View>
     )
 }
 
-
-
 export default ({navigation}) => {
 
     const background = require('../assets/tabsBackground/tabs.png')
-
     const screens = {
         explorar:  <HallarDet navigation={navigation} />,
         lugares: <ListaDet navigation={navigation} />,
         conoce: <InfoDet navigation={navigation} />,
     };
-
     const data = Object.keys(screens).map((i) => ({
       key: i,
-      title: i,
       pag: screens[i],
       ref: React.createRef()
     }));
-
-
 
     const scrollX = React.useRef(new Animated.Value(0)).current;
     const ref = React.useRef()
@@ -140,8 +129,6 @@ export default ({navigation}) => {
             offset: itemIndex*width,
         })
     })
-
-    console.log(STATUSBAR_HEIGHT)
 
   return (
     <View style={styles.container}>

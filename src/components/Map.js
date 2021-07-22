@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Geojson } from 'react-native-maps';
+import mapazona from '../Determi/municipios/ramiriquiri/ramiriquiri'
 
 export default ({ posicion, onLongPress, children }) => {
 
@@ -15,11 +16,10 @@ export default ({ posicion, onLongPress, children }) => {
       region = {
 	latitude : posicion.latitude,
 	longitude : posicion.longitude,
-	latitudeDelta : 0.1,
-	longitudeDelta : 0.1,
+	latitudeDelta : 0.05,
+	longitudeDelta : 0.05,
       }
    }
-
 
   return (
     <View style={styles.center}>
@@ -36,6 +36,9 @@ export default ({ posicion, onLongPress, children }) => {
             : null
         }
         {children}
+        <Geojson geojson={mapazona}
+            strokeColor='green'
+            strokeWidth={2} />
       </MapView>
     </View>
   );
