@@ -37,8 +37,8 @@ export default ({navigation}) => {
       </Text>
       <View style={{height:3 , backgroundColor: '#206a5d', width: width*0.7 }} />
       <View style={{height:6}} />
-      {items.map( i =>
-          <ItemHU navigation={navigation} item={i} />
+      {items.map( (item, index) =>
+          <ItemHU key={index} navigation={navigation} item={item} />
       )}
     </View>
   );

@@ -56,7 +56,7 @@ export default ({ info }) => {
 
 	  <View style={styles.section}>
         <Text style={styles.subtitle} >RECURSOS DISPONIBLES EN INTERNET</Text>
-        {info.Recursos.map(t => <BOO title={t.titulo} D={() => URL(t.link)} />)}
+        {info.Recursos.map(t => <BOO key={t.titulo} title={t.titulo} D={() => URL(t.link)} />)}
 	  </View>
 
 	  <View style={styles.space} />

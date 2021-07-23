@@ -8,7 +8,7 @@
                 "content" : [ 
                     {
                         "contentKey" : "0",
-                        "type":"parrafo",
+                        "type":"intro",
                         "item":"Son aquellas leyes o normas que buscan proteger los recursos naturales y que además presentan información sobre algunos fenómenos naturales sobre los territorios."
                     },
                     {
@@ -39,7 +39,7 @@
                 "content" : [
                     {
                         "contentKey" : "0",
-                        "type":"parrafo",
+                        "type":"intro",
                         "item":"Pueden clasificarse de acuerdo a las características del territorio sobre el que se utilizan. Sin embargo, también pueden dividirse de acuerdo a los fenómenos que son de su interés."
                     },
                     {
@@ -70,7 +70,7 @@
                 "content" : [
                     {
                         "contentKey" : "0",
-                        "type":"parrafo",
+                        "type":"intro",
                         "item":"Estos determinantes ayudan a preservar el medio ambiente y ayuda a las autoridades a tener un mejor control sobre las actividades desarrolladas en un territorio."
                     },
                     {
@@ -97,7 +97,7 @@
                 "content" : [
                     {
                         "contentKey" : "0",
-                        "type":"parrafo",
+                        "type":"intro",
                         "item":"Corpochivor es una autoridad ambiental con presencia en algunos municipios de Boyacá que busca enfocar las relaciones presentes entre las comunidades y territorios. Su principal objetivo es la conservación del medio ambiente y los recursos naturales."
                     },
                     {
@@ -128,7 +128,7 @@
                 "content" : [
                     {
                         "contentKey" : "0",
-                        "type":"parrafo",
+                        "type":"intro",
                         "item":"Somos un grupo conformado por estudiantes de la Universidad Nacional de Colombia y su docente mentora, pertenecientes a diferentes carreras de la Facultad de Ingeniería, quienes desarrollamos la presente aplicación en el marco de la materia Taller de Proyectos Interdisciplinarios."
                     },
                     {

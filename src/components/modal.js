@@ -6,7 +6,7 @@ export default ({ visibility, children, bajarModal, subirModal }) => {
     <Modal
       position='absolute'
       visible={visibility}
-      animationType= "fade"
+      animationType= "slide"
       transparent={true}
     >
       {bajarModal ? <View style={styles.center}/> : null}
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     maxWidth: Dimensions.get('screen').width-30,
     minHeight: Dimensions.get('screen').width-150,
     maxHeight: Dimensions.get('screen').height-120,
-    backgroundColor: '#f8ede3',
+    backgroundColor: '#fff',
     borderRadius: 40,
     padding: 8,
     paddingTop: 20,

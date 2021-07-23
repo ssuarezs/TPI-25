@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
-import { Text, View, SectionList, FlatList, Dimensions } from 'react-native';
-import { Modal } from '../../components/index'
+import { Text, View, Image, SectionList, FlatList, TouchableOpacity, Dimensions } from 'react-native';
 import { ItemTitle, SectionFrame } from '../compDet/BOOitems'
-import ShowCont from '../compDet/showCont'
+import { Modal } from '../../components/index'
+import { Entypo } from '@expo/vector-icons';
+import ShowCont from './showCont'
 import styles from '../styles'
 import info from './info.json'
 const {width, height} = Dimensions.get('screen')
 
+const images = {
+    "¿Qué son los determinantes ambientales?": require('./images/A.png'),
+    "¿Cómo se clasifican los determinantes ambientales?": require('./images/B.png'),
+    "¿Cuál es la importancia de los determinantes ambientales?": require('./images/C.png'),
+    "¿Qué es Corpochivor?": require('./images/D.png'),
+    "¿Quiénes somos?": require('./images/E.png'),
+}
 
 export default ({navigation}) => {
 
@@ -15,7 +23,7 @@ export default ({navigation}) => {
 
     return (
         <View style={styles.center}>
-          <SectionList
+            <SectionList
               style={styles.FlatList}
               showsVerticalScrollIndicator={false}
               sections={info.listInfo}
@@ -28,32 +36,33 @@ export default ({navigation}) => {
               renderSectionHeader={({section}) => (
                     <SectionFrame title={section.title} />
               )}
-          />
-
-        <Modal visibility={visible}>
-            <View style={{
-                flexDirection: 'row',
-                width: width*0.8,
-                paddingHorizontal: 10
-            }}>
-            <Text style={styles.title} onPress={() => {
-                setVisible(false)}}>X</Text>
-                <Text style={styles.textC}>{data.subtitle}</Text>
-            </View>
-              <View style={{height:3 , backgroundColor: '#206a5d', width: width*0.85, marginTop: 5 }} />
-            <FlatList
-              style={styles.FlatList}
-              data={data.content}
-              showsVerticalScrollIndicator={false}
-              bounces={false}
-              keyExtractor={x => x.contentKey}
-              renderItem={({item}) => (
-                  <ShowCont item={item} />
-            )}
             />
-        </Modal>
-
-
+            <Modal visibility={visible}>
+                <View style={{
+                    flexDirection: 'row',
+                    width: width*0.8,
+                    paddingHorizontal: 8,
+                }}>
+                <TouchableOpacity style={styles.centro} onPress={() => setVisible(false)}>
+                    <Entypo name="circle-with-cross" size={28} color='#206a5d' />
+                </TouchableOpacity>
+                    <Text style={styles.textC}>{data.subtitle}</Text>
+                </View>
+                  <View style={{height:3 , backgroundColor: '#206a5d', width: width*0.85, marginTop: 5 }} />
+                <FlatList
+                  style={styles.FlatList}
+                  data={data.content}
+                  showsVerticalScrollIndicator={false}
+                  bounces={false}
+                  keyExtractor={x => x.contentKey}
+                  renderItem={({item, index}) => (
+                      <View>
+                      <ShowCont item={item} />
+                      {index === 0 && (<Image source={images[data.subtitle]} style={styles.image}/>)}
+                      </View>
+                )}
+                />
+            </Modal>
         </View>
     );
 }

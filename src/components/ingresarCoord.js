@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
-import { Input } from './index';
+import Input from './input';
 import sty from './styles'
 
 const {width, height} = Dimensions.get('screen')

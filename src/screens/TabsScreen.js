@@ -132,6 +132,13 @@ export default ({navigation}) => {
         })
     })
 
+    const inputRange =  data.map((_, i) => i*width)
+    const translateX = scrollX.interpolate({
+        inputRange,
+        outputRange: [0, 20, 40]
+    })
+
+
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="rgba(255,255,255,0.8)"  />
@@ -141,10 +148,22 @@ export default ({navigation}) => {
               {alignItems: 'flex-start'},
           ]}
       >
+          <Animated.View style={{
+              flex:1,
+              width: width*1.2,
+              left: translateX,
+              alignItems: 'flex-end'
+            }}
+          >
           <Image
               source={background}
-              style={{flex:1, width: width}}
+              style={{
+                  flex:1,
+                  width: width*1.3,
+                  left: -60,
+              }}
           />
+        </Animated.View>
       </View>
       <Animated.FlatList
           ref={ref}

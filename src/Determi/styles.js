@@ -3,6 +3,7 @@ const primary = '#81b214'
 const secondary = '#206a5d'
 const tertiary = '#ffcc29'
 const four = '#f8ede3'
+const {width, height} = Dimensions.get('screen')
 
 const styles = {
     center: {
@@ -90,10 +91,16 @@ const styles = {
     color: '#206a5d',
     },
     textC: {
-    left: 30,
-    fontSize: 16,
+    marginLeft: 15,
+    fontSize: 15,
     fontWeight: 'bold',
     color: '#206a5d',
+    },
+    textD: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#206a5d',
+    marginHorizontal: 4,
     },
     space: {
     height: 15,
@@ -153,7 +160,19 @@ const styles = {
         height:Dimensions.get('screen').height*0.55,
         margin: 10,
         borderRadius: 20,
-    }
+    },
+    image: {
+        width:width*0.8,
+        height: width*0.4,
+        resizeMode:'cover',
+    },
+    centro: {
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 8,
+    marginBottom: 8,
+    },
 };
 
 export default styles

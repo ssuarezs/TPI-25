@@ -16,7 +16,7 @@ const ITEM = ({ D, title }) => {
 
 export default ({ posicion }) => {
 
-    const [deterMap, setDeterm] = useState(null)
+    const [deterMap, setDeterMap] = useState(null)
     const [detE, setDetE] = useState('SELECCIONAR DETERMINANTE AMBIENTAL')
     const [visible, setVisible] = useState(false)
 
@@ -29,7 +29,7 @@ export default ({ posicion }) => {
               keyExtractor={x => x.titulo}
               renderItem={({item}) => (
                   <ITEM title={item.titulo} D={() => {
-                  setDeterm(item.map)
+                  setDeterMap(item.map)
                   setDetE(item.titulo)
                   setVisible(false)
                 }} />
