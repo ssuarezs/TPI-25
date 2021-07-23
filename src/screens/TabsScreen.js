@@ -49,6 +49,7 @@ const Indicator = ({data, measures, scrollX}) => {
         outputRange: measures.map(measures => measures.x)
     })
 
+
     return <Animated.View
         style={{
             position: 'absolute',
@@ -118,6 +119,7 @@ export default ({navigation}) => {
     };
     const data = Object.keys(screens).map((i) => ({
       key: i,
+      title: i,
       pag: screens[i],
       ref: React.createRef()
     }));

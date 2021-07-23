@@ -21,6 +21,17 @@ const styles = {
     fontWeight: 'bold',
     fontSize: 14,
   },
+  button: {
+    flex: 1,
+    backgroundColor: primary,
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: 15,
+    marginBottom: 0,
+    alignSelf: 'stretch',
+    borderRadius: 20,
+    padding: 10,
+  },
 };
 
 export default styles

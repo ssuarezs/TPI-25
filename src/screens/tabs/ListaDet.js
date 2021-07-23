@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux'
 import { StyleSheet, Text, View, Dimensions, TouchableOpacity, FlatList } from 'react-native';
 import { fetchLug, saveLug, deleteLug } from '../../reducers/listaL'
-import ItemLista from '../../components/itemListaLug'
+import {ItemLista, Modal} from '../../components'
 import sty from './styles.js'
 const {width, height} = Dimensions.get('screen')
 
 const ListTab = ({ navigation, lista, fetchLug, saveLug, deleteLug }) => {
+
+  const [visibility, setVisibility] = useState(false)
+  const [itemKey, setItemKey] = useState(null)
 
   useEffect(() => {
     fetchLug()
@@ -26,13 +29,13 @@ const ListTab = ({ navigation, lista, fetchLug, saveLug, deleteLug }) => {
           showsVerticalScrollIndicator={false}
                 keyExtractor={x => x.name}
                 renderItem={({item}) =>
-                  <View>
+                  <View key={item.key}>
                   <ItemLista
                     navigation={navigation}
                     item={item}
                     deleteElement={() => {
-                      deleteLug(item.key)
-                      fetchLug()
+                      setVisibility(true)
+                      setItemKey(item.key)
                     }} />
                   </View>
                 }
@@ -43,6 +46,33 @@ const ListTab = ({ navigation, lista, fetchLug, saveLug, deleteLug }) => {
           Aun no has guardado ningun punto
         </Text>
         }
+        <Modal
+            visibility={visibility}
+        >
+            <View style={{width: width*0.8, height: width*0.3}}>
+            <View>
+              <Text style={{...sty.title, textAlign: 'center'}}>
+                ¿ Estas seguro de querer eliminar este lugar guardado ?
+              </Text>
+            </View>
+           <View style={{flexDirection: 'row'}}>
+                <TouchableOpacity
+                   style={sty.button}
+                   onPress={() => setVisibility(false)} >
+                    <Text style={sty.title}>CANCELAR</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                   style={sty.button}
+                   onPress={() => {
+                        deleteLug(itemKey)
+                        fetchLug()
+                        setVisibility(false)
+                   }} >
+                    <Text style={sty.title}>ACEPTAR</Text>
+                </TouchableOpacity>
+               </View>
+            </View>
+       </Modal>
     </View>
   );
 }
