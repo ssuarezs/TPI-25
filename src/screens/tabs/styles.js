@@ -1,8 +1,7 @@
 import { Dimensions } from 'react-native'
-const primary = '#81b214'
+const primary = '#90cc3e'
 const secondary = '#206a5d'
 const tertiary = '#ffcc29'
-const four = '#f8ede3'
 
 const styles = {
   container : {
@@ -16,21 +15,21 @@ const styles = {
     borderRadius: 40,
   },
   title : {
-    textAlign: 'center',
-    color: secondary,
-    fontWeight: 'bold',
     fontSize: 14,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    color: secondary,
   },
   button: {
     flex: 1,
     backgroundColor: primary,
     alignItems: 'center',
     justifyContent: 'center',
+    alignSelf: 'stretch',
     margin: 15,
     marginBottom: 0,
-    alignSelf: 'stretch',
-    borderRadius: 20,
     padding: 10,
+    borderRadius: 20,
   },
 };
 

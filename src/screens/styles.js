@@ -5,23 +5,34 @@ const {width, height} = Dimensions.get('screen');
 const { StatusBarManager } = NativeModules;
 const STATUSBAR_HEIGHT = StatusBarManager.HEIGHT;
 
-const primary = '#81b214'
-const secondary = '#206a5d'
-const tertiary = '#ffcc29'
-const four = '#f8ede3'
+const verdeO = '#206a5d'
+const verde = '#80B314'
+const cian = '#3ecc90'
+const azul = '#4c73c2'
+const rojo = '#c25a48'
+const naranja = '#cc9e39'
 
 const styles = {
   container : {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: four,
+    backgroundColor: '#fff',
     marginTop: STATUSBAR_HEIGHT,
     padding: 5,
   },
+  center : {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    padding: 5,
+    marginTop: 15,
+    marginBottom: 15,
+  },
   item : {
     flex: 1,
-    backgroundColor: primary,
+    backgroundColor: verde,
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     margin: 15,
@@ -32,7 +43,7 @@ const styles = {
   },
   button: {
     flex: 1.5,
-    backgroundColor: primary,
+    backgroundColor: verde,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 15,
@@ -41,12 +52,12 @@ const styles = {
   },
   title : {
     textAlign: 'center',
-    color: secondary,
+    color: verdeO,
     fontWeight: 'bold',
     fontSize: 18,
   },
   subtitle : {
-    color: secondary,
+    color: verdeO,
     fontWeight: 'bold',
     fontSize: 15,
     paddingRight: 5,
@@ -55,8 +66,6 @@ const styles = {
   mapa: {
     flex: 6,
   },
-
-
 };
 
 export default styles

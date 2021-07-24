@@ -41,12 +41,19 @@ export default ({ posicion }) => {
               onPress={() => {setVisible(true)}}  >
                 <Text style={styles.titleB} >{detE}</Text>
             </TouchableOpacity>
-          {deterMap ?
+          {deterMap && (
+            <View style={{
+                justifyContent: 'center',
+                backgroundColor: '#80b314',
+                paddingVertical: 5,
+                borderRadius: 40,
+            }}>
             <Image
                 source={deterMap}
-                style={styles.mapImage}/>
-          : null
-          }
+                style={styles.mapImage}
+            />
+            </View>
+          )}
     </View>
   );
 }

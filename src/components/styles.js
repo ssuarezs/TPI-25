@@ -1,9 +1,11 @@
 import { Dimensions } from 'react-native'
-const primary = '#81b214'
-const secondary = '#206a5d'
-const tertiary = '#ffcc29'
-const four = '#f8ede3'
 const {width, height} = Dimensions.get('screen')
+const verdeO = '#206a5d'
+const verde = '#80B314'
+const cian = '#3ecc90'
+const azul = '#4c73c2'
+const rojo = '#c25a48'
+const naranja = '#cc9e39'
 
 
 const styles = {
@@ -14,7 +16,7 @@ const styles = {
     padding: 5,
     paddingTop: 20,
     paddingBottom: 120,
-    backgroundColor: four,
+    backgroundColor: 'white',
   },
   rowView: {
     flex: 1,
@@ -29,20 +31,20 @@ const styles = {
   },
   item : {
     flex: 1,
-    backgroundColor: primary,
+    backgroundColor: verde,
     alignItems: 'flex-start',
     justifyContent: 'center',
+    alignSelf: 'stretch',
     marginBottom: 8,
     marginHorizontal: 10,
-    alignSelf: 'stretch',
-    borderRadius: 25,
     padding: 15,
     paddingHorizontal: 25,
+    borderRadius: 25,
     top: 5,
   },
   deletemark : {
     flex: 0.2,
-    backgroundColor: primary,
+    backgroundColor: verde,
     justifyContent: 'center',
     alignItems: 'center',
     height: 40,
@@ -52,28 +54,28 @@ const styles = {
   },
   button : {
     flex: 1,
-    backgroundColor: primary,
+    backgroundColor: verde,
     alignItems: 'center',
     justifyContent: 'center',
+    alignSelf: 'stretch',
     margin: 15,
     marginBottom: 0,
-    alignSelf: 'stretch',
-    borderRadius: 20,
     padding: 10,
+    borderRadius: 20,
   },
   title : {
-    color: secondary,
+    color: verdeO,
     fontWeight: 'bold',
     fontSize: 16,
   },
   subtitle : {
-    color: secondary,
+    color: verdeO,
     fontWeight: 'bold',
     fontSize: 12,
     left: 10,
   },
   buttonText : {
-    color: secondary,
+    color: verdeO,
     fontWeight: 'bold',
     fontSize: 14,
     paddingHorizontal: 5,

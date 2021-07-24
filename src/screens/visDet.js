@@ -4,8 +4,10 @@ import { connect } from 'react-redux'
 import { saveLug } from '../reducers/listaL'
 
 import { Modal, Map, Input, GuardarPunto } from '../components/index'
+import { Entypo } from '@expo/vector-icons';
 import DetMain from '../Determi/detMain'
 import sty from './styles'
+const {width, height} = Dimensions.get('screen');
 
 const VisScreen = ({ navigation, lista, saveLug }) => {
 
@@ -52,6 +54,28 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
 
    return (
     <View style={sty.container}>
+       <View style={{
+            width: width,
+            height: width*0.14,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: 4,
+            paddingHorizontal: 15,
+            marginBottom: 5,
+       }}>
+            <TouchableOpacity onPress={()=> navigation.goBack()} >
+                <Entypo name="chevron-left" size={35} color="#206a5d" />
+            </TouchableOpacity>
+            <Text style={sty.subtitle}>EXPLORANDO</Text>
+            <TouchableOpacity
+                onPress={() => setMVisibility(true)}
+                style={{alignItems: 'center', borderWidth: 2, borderColor: '#206a5d', borderRadius: 10,}}
+            >
+                <Entypo name="save" size={30} color="#206a5d" />
+                <Text style={{...sty.subtitle, fontSize: 8,}}>GUARDAR</Text>
+            </TouchableOpacity>
+       </View>
          <Modal visibility={mVisibility}>
             <GuardarPunto
                 onSubmit={submitPuntos}
@@ -62,14 +86,6 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
                 handleName={handleName}
             />
          </Modal>
-         <TouchableOpacity style={sty.button}
-           onPress={() => {setMVisibility(true)}} >
-           <Text style={sty.subtitle}>
-               G U A R D A R </Text>
-         </TouchableOpacity>
-        <View style={sty.mapa}>
-          <Map posicion={posicion} />
-        </View>
          <DetMain posicion={posicion} />
     </View>
   );

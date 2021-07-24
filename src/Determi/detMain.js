@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, FlatList } from 'react-native';
-import { Modal } from '../components/index'
+import { View, Text, TouchableOpacity, FlatList, ScrollView } from 'react-native';
+import { Modal, Map } from '../components/index'
 import { dets } from './dets'
 
 import styles from './styles'
@@ -45,9 +45,16 @@ export default ({ posicion }) => {
         <Text style={styles.titleB} >{detE}</Text>
       </TouchableOpacity>
 
-	{(determ == 1) ? <DetIncendio posicion={posicion} /> : null  }
-	{(determ == 2) ? <DetMovMasa posicion={posicion} /> : null  }
-
+    <ScrollView
+      style={styles.scroll}
+      showsVerticalScrollIndicator={false}
+    >
+        <View style={{ height: 200, marginTop: 20 }}>
+          <Map posicion={posicion} />
+        </View>
+        {(determ == 1) && (<DetIncendio posicion={posicion} />)}
+        {(determ == 2) && (<DetMovMasa posicion={posicion} />)}
+    </ScrollView>
     </View>
   );
 }

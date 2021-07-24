@@ -1,7 +1,20 @@
+import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'react-native';
+import {
+    StyleSheet,
+    Text,
+    View,
+    TouchableOpacity,
+    Dimensions,
+    NativeModules,
+} from 'react-native';
 import sty from './styles.js'
 import { Modal, Map, AceptarPunto, IngresarCoord } from '../components/index'
+import { Entypo } from '@expo/vector-icons';
+
+const {width, height} = Dimensions.get('screen');
+const { StatusBarManager } = NativeModules;
+const STATUSBAR_HEIGHT = StatusBarManager.HEIGHT;
 
 
 export default ({navigation}) => {
@@ -52,6 +65,20 @@ export default ({navigation}) => {
 
    return (
     <View style={sty.container}>
+       <View style={{
+            width: width,
+            height: width*0.14,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            paddingHorizontal: 15,
+       }}>
+            <TouchableOpacity onPress={()=> navigation.goBack()} >
+            <Entypo name="chevron-left" size={35} color="#206a5d" />
+            </TouchableOpacity>
+            <Text style={sty.subtitle}>ELIGE TU PUNTO DE INTERES</Text>
+            <Entypo name="chevron-left" size={35} color="white" />
+       </View>
        {tipoModal ?
          <Modal visibility={visibility} bajarModal={true} >
             <AceptarPunto onPress={elegirPunto} onPressLeft={cerrarModal} />
@@ -68,7 +95,7 @@ export default ({navigation}) => {
         <View style={styles.mapa}>
             <Map posicion={posicion} onLongPress={obtenerPunto} />
         </View>
-        <View style={sty.container}>
+        <View style={sty.center}>
             <Text style={sty.subtitle} > Manten presionado un punto en el mapa </Text>
             <Text style={sty.subtitle} > O ingresa sus coordinadas {':'} </Text>
             <TouchableOpacity style={sty.button} onPress={ingresaPunto} >

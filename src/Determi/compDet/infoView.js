@@ -24,11 +24,6 @@ export default ({ info }) => {
 
   return (
     <View style={styles.center}>
-
-    <ScrollView style={styles.scroll}
-      showsVerticalScrollIndicator={false}
-      >
-
 	  <View style={styles.section}>
         <Text style={styles.subtitle} >DEFINICIONES</Text>
         {info.parrafos.map(t => <Text key={t} style={styles.parraf} >{t}</Text>)}
@@ -61,7 +56,6 @@ export default ({ info }) => {
 
 	  <View style={styles.space} />
 	  <View style={styles.space} />
-    </ScrollView>
 
     <Modal visibility={visible}>
         <FlatList

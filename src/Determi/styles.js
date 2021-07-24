@@ -1,9 +1,11 @@
 import { Dimensions } from 'react-native'
-const primary = '#81b214'
-const secondary = '#206a5d'
-const tertiary = '#ffcc29'
-const four = '#f8ede3'
 const {width, height} = Dimensions.get('screen')
+const verdeO = '#206a5d'
+const verde = '#80B314'
+const cian = '#3ecc90'
+const azul = '#4c73c2'
+const rojo = '#c25a48'
+const naranja = '#cc9e39'
 
 const styles = {
     center: {
@@ -18,7 +20,7 @@ const styles = {
     fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: tertiary,
+    color: naranja,
     },
     buttonB: {
     marginBottom: 5,
@@ -27,7 +29,7 @@ const styles = {
     paddingBottom: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: secondary,
+    backgroundColor: verdeO,
     borderRadius: 20,
     width: Dimensions.get('window').width-30,
     },
@@ -38,13 +40,13 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomWidth: 4,
-    borderColor: '#206a5d',
+    borderColor: verdeO,
     },
     textI: {
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#206a5d',
+    color: verdeO,
     },
     FlatList: {
     alignSelf: 'stretch',
@@ -52,29 +54,26 @@ const styles = {
     },
     scroll: {
     alignSelf: 'stretch',
-    padding: 8,
-    borderColor: '#ffcc29',
-    borderTopWidth: 4,
     },
     parraf: {
     paddingTop: 8,
     paddingLeft: 20,
     paddingRight: 12,
     textAlign: 'justify',
-    color: '#206a5d',
+    color: verdeO,
     },
     title: {
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#206a5d',
+    color: verdeO,
     paddingBottom: 10,
     },
     subtitle: {
     fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#206a5d',
+    color: verdeO,
     marginLeft: 10,
     marginRight: 10,
     },
@@ -82,31 +81,31 @@ const styles = {
     fontSize: 12,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#ffcc29',
+    color: naranja,
     },
     textB: {
     fontSize: 12,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#206a5d',
+    color: verdeO,
     },
     textC: {
     marginLeft: 15,
     fontSize: 15,
     fontWeight: 'bold',
-    color: '#206a5d',
+    color: verdeO,
     },
     textD: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#206a5d',
+    color: verdeO,
     marginHorizontal: 4,
     },
     space: {
     height: 15,
     },
     button: {
-    backgroundColor: '#81b214',
+    backgroundColor: verde,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 20,
@@ -123,12 +122,12 @@ const styles = {
     justifyContent: 'center',
     borderRadius: 8,
     padding: 5,
-    backgroundColor: '#206a5d',
+    backgroundColor: verdeO,
     },
     list: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#f8ede3',
+    backgroundColor: '#fff',
     height: 460,
     padding: 15,
     margin: 35,
@@ -139,7 +138,7 @@ const styles = {
     marginBottom: 10,
     paddingTop: 10,
     paddingBottom: 10,
-    borderColor: '#206a5d',
+    borderColor: verdeO,
     borderWidth: 4,
     borderRadius: 20,
     },
@@ -150,14 +149,14 @@ const styles = {
     width: Dimensions.get('window').width-100,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: secondary,
+    backgroundColor: verdeO,
     borderRadius: 20,
     alignSelf: 'center',
     },
     mapImage: {
         resizeMode: 'cover',
-        width:Dimensions.get('screen').width*0.95,
-        height:Dimensions.get('screen').height*0.55,
+        width: width,
+        height: height*0.65,
         margin: 10,
         borderRadius: 20,
     },

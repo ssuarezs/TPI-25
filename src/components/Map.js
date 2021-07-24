@@ -3,6 +3,8 @@ import { StyleSheet, View, Dimensions } from 'react-native';
 import MapView, { Marker, Geojson } from 'react-native-maps';
 import mapazona from '../Determi/municipios/ramiriquiri/ramiriquiri'
 
+const {width, height} = Dimensions.get('screen')
+
 export default ({ posicion, onLongPress, children }) => {
 
   let region = {
@@ -49,12 +51,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 15,
-    backgroundColor: '#81b214',
+    backgroundColor: '#80b314',
+    padding: 5,
   },
   map: {
     flex: 1,
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    width: width,
   }
 });

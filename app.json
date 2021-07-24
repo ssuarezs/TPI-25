@@ -23,7 +23,7 @@
       "package": "com.tpi25.rda",
       "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/RDA-icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "config": {

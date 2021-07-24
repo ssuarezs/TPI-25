@@ -142,12 +142,12 @@ export default ({navigation}) => {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="rgba(255,255,255,0.8)"  />
-      <View
+        <View
           style={[
               StyleSheet.absoluteFillObject,
               {alignItems: 'flex-start'},
           ]}
-      >
+        >
           <Animated.View style={{
               flex:1,
               width: width*1.2,
@@ -155,17 +155,45 @@ export default ({navigation}) => {
               alignItems: 'flex-end'
             }}
           >
-          <Image
-              source={background}
-              style={{
-                  flex:1,
-                  width: width*1.3,
-                  left: -60,
-              }}
-          />
-        </Animated.View>
-      </View>
-      <Animated.FlatList
+              <Image
+                  source={background}
+                  style={{
+                      flex:1,
+                      width: width*1.3,
+                      left: -60,
+                  }}
+              />
+          </Animated.View>
+        </View>
+        <View style={[
+          StyleSheet.absoluteFillObject,
+          {
+            flex: 1,
+            width: width,
+            height: width*0.14,
+            flexDirection: 'row',
+            marginTop: STATUSBAR_HEIGHT+10,
+        }]}>
+            <View style={{
+              width: width*0.7,
+              height: width*0.13,
+              marginLeft: 20,
+              backgroundColor:'rgba(255,255,255,0.8)',
+              borderRadius: 20,
+            }}>
+            </View>
+            <View style={{
+              margin: 1,
+              marginLeft: 15,
+              marginRight: 20,
+              width: 50,
+              backgroundColor:'rgba(255,255,255,0.8)',
+              borderRadius: 25,
+            }}>
+            </View>
+        </View>
+
+        <Animated.FlatList
           ref={ref}
           data={data}
           keystractor={item => item.key}
@@ -185,23 +213,16 @@ export default ({navigation}) => {
                           StyleSheet.absoluteFillObject,
                           {backgroundColor: 'rgba(0,0,0,0.2)',
                           alignItems: 'center',
-                          paddingTop: STATUSBAR_HEIGHT,
+                          paddingTop: STATUSBAR_HEIGHT+width*0.2,
                           paddingBottom: width*0.4,
                           },
                       ]}
                 >
-                    <View style={{
-                        flex: 1,
-                        width: width,
-                        backgroundColor:'rgba(255,255,255,0.8)',
-                        marginBottom:  width*0.1,
-                    }}/>
                     <View
                         style={{
-                            flex:12,
+                            flex:1,
                             width: width*0.85,
                             justifyContent: 'space-evenly',
-                            paddingTop: width*0
                         }}
                     >
                         {item.pag}
