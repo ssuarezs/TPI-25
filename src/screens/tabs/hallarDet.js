@@ -7,7 +7,7 @@ const {width, height} = Dimensions.get('screen')
 const items = [
     {
       key: '1',
-      titulo: 'HALLAR TU UBICACION',
+      titulo: 'HALLAR TU UBICACIÓN',
       ruta: 'HallarP',
       img: '../assets/ubicacion.png',
       descripcion: 'Determinante Ambiental relacionado a tu ubicacion actual'
