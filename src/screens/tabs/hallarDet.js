@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Dimensions } from 'react-native';
 import sty from './styles'
-import { ItemHU } from '../../components/index';
+import { ItemHU, Modal } from '../../components/index';
 const {width, height} = Dimensions.get('screen')
 
 const items = [
@@ -27,8 +27,11 @@ const items = [
       descripcion: 'Mapa del Determinante Ambiental en la zona de interes'
     }
  ]
+const verdeO = '#206a5d'
 
 export default ({navigation}) => {
+
+  const [visible, setVisible] = React.useState(false)
 
   return (
     <View style={sty.container}>

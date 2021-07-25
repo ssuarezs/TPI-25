@@ -1,10 +1,14 @@
 import React from 'react';
-import { Text, View, Image, TouchableOpacity } from 'react-native';
+import { Text, View, Image, TouchableOpacity, ActivityIndicator } from 'react-native';
+import Modal from './modal';
 import * as Location from 'expo-location'
 import sty from './styles.js'
 
+const verdeO = '#206a5d'
 
-export default ({navigation, item}) => {
+export default ({navigation, item, modCarga}) => {
+
+  const [visible, setVisible] = React.useState(false)
 
     const avisoLoc = 'No tenemos permisos necesarios para acceder a la localizacion'
 
@@ -12,11 +16,14 @@ export default ({navigation, item}) => {
     const { status } = await Location.requestForegroundPermissionsAsync()
     if (status !== 'granted'){
       return Alert.alert(avisoLoc)
+    }else{
+        setVisible(true)
+        const location = await Location.getCurrentPositionAsync({})
+        setVisible(false)
+         navigation.navigate('verDeterm', {
+             location : location.coords
+         })
     }
-    const location = await Location.getCurrentPositionAsync({})
-     navigation.navigate('verDeterm', {
-         location : location.coords
-     })
   }
 
     const rutaname=item.ruta
@@ -51,6 +58,12 @@ export default ({navigation, item}) => {
     }
 
   return (
+  <>
+        <Modal visibility={visible}>
+            <ActivityIndicator size={100} color={verdeO}/>
+            <Text style={{textAlign: 'center', fontWeight: 'bold', color:verdeO, fontSize: 16, marginBottom: 10, }}>Cargando...</Text>
+        </Modal>
+
 	<TouchableOpacity key={item.title} style={sty.item} onPress={ruta} >
 	  <View key={item.title}  style={sty.rowView}>
           <View style={sty.center}>
@@ -62,6 +75,7 @@ export default ({navigation, item}) => {
           {icono()}
 	  </View>
 	</TouchableOpacity>
+  </>
   );
 }
 

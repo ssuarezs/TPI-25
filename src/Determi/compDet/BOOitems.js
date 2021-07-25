@@ -23,14 +23,14 @@ export const BOO = ({ D, title }) => {
 export const SectionFrame = ({ D, title }) => {
   return (
 	    <View key={title} style={styles.seccionFrame} onPress={D} >
-        <Text style={styles.titleB} >{title}</Text>
+        <Text style={styles.titleD} >{title}</Text>
       </View>
   )
 }
 
 export const ItemTitle = ({ D, title }) => {
   return (
-	    <TouchableOpacity key={title} style={styles.button} onPress={D} >
+	    <TouchableOpacity key={title} style={styles.item} onPress={D} >
 		<Text style={styles.subtitle} >{title}</Text>
 	    </TouchableOpacity>
   )

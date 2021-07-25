@@ -4,15 +4,26 @@
       "Fenómenos de remoción en masa (FRM): Son movimientos de terreno, suelo o roca que se desplazan sobre las pendientes debido a factores naturales o por acciones humanas. Es necesario contar con una estrategia para reducir los impactos generados por este tipo de fenómenos, teniendo como medio de prevención instrumentos que permitan la evaluación y la adopción de medidas de mitigación."
   ], 
   "tipos" : [
-      "CAIDA DE ROCAS: Desprendimientos de suelos y rocas de un terreno empinado en forma de bloques a través del aire, por caída libre, saltos o rodamiento. Se caracterizan por su movimiento rápido y pueden estar precedidos por movimientos menores.",
-     "DESPLAZAMIENTOS: Desplazamiento lento o rápido, pendiente abajo, del material superficial de la corteza de la tierra, constituido, entre otros, por suelo, arena o rocas, debido a un aumento de peso, pérdida de la consistencia de los materiales u otros factores que generan desequilibrio en la ladera.",
-     "FLUJOS: Son movimientos de partículas de suelo, material vegetal o bloques pequeños de roca, dentro de una masa que se desliza o corre en una superficie; pueden ser lentos o rápidos, secos o húmedos.",
-     "VOLCAMIENTOS: Es el giro hacia adelante de uno o varios bloques de roca alrededor de un punto en el que están sostenidos, bien sea por acción de su propio peso o por el agua."
+      "TIPOS DE MOVIMIENTO DE MASAS",
+      "",
+      "CAIDA DE ROCAS",
+      "Desprendimientos de suelos y rocas de un terreno empinado en forma de bloques a través del aire, por caída libre, saltos o rodamiento. Se caracterizan por su movimiento rápido y pueden estar precedidos por movimientos menores.",
+     "DESPLAZAMIENTOS",
+     "Desplazamiento lento o rápido, pendiente abajo, del material superficial de la corteza de la tierra, constituido, entre otros, por suelo, arena o rocas, debido a un aumento de peso, pérdida de la consistencia de los materiales u otros factores que generan desequilibrio en la ladera.",
+     "FLUJOS",
+     "Son movimientos de partículas de suelo, material vegetal o bloques pequeños de roca, dentro de una masa que se desliza o corre en una superficie; pueden ser lentos o rápidos, secos o húmedos.",
+      "VOLCAMIENTOS",
+     " Es el giro hacia adelante de uno o varios bloques de roca alrededor de un punto en el que están sostenidos, bien sea por acción de su propio peso o por el agua."
   ],
   "clasif" : [
-      "AMENAZA BAJA, la categoría de uso aprobada por los subcomponentes anteriores se valida.",
-      "AMENAZA MEDIA, la categoría de uso aprobada por los subcomponentes anteriores se valida de manera condicionada.",
-      "AMENAZA ALTA, por amenaza volcánica, inundación, movimientos en masa y avenidas torrenciales (se exceptúa la sísmica por ser analizada como un detonante de otros eventos), se califica con uso condicionado y se define como categoría de conservación y protección ambiental, hasta tanto se realicen estudios más detallados por parte de las entidades territoriales para la toma de decisiones en la reglamentación de usos del suelo."
+      "CLASIFICACION DE LA AMENAZA",
+      "",
+      "AMENAZA BAJA",
+      "La categoría de uso aprobada por los subcomponentes anteriores se valida.",
+      "AMENAZA MEDIA",
+      "La categoría de uso aprobada por los subcomponentes anteriores se valida de manera condicionada.",
+      "AMENAZA ALTA",
+      "Por amenaza volcánica, inundación, movimientos en masa y avenidas torrenciales (se exceptúa la sísmica por ser analizada como un detonante de otros eventos), se califica con uso condicionado y se define como categoría de conservación y protección ambiental, hasta tanto se realicen estudios más detallados por parte de las entidades territoriales para la toma de decisiones en la reglamentación de usos del suelo."
   ],
   "Leyes" : [  
     {

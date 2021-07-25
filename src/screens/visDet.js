@@ -23,7 +23,6 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
   const handleName = (text) => {
     setNombre(text)
   }
-    console.log(location)
 
     const obtenerFecha = () => {
         const day = new Date().getDate()
@@ -68,14 +67,10 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
                 <Entypo name="chevron-left" size={35} color="#206a5d" />
             </TouchableOpacity>
             <Text style={sty.subtitle}>EXPLORANDO</Text>
-            <TouchableOpacity
-                onPress={() => setMVisibility(true)}
-                style={{alignItems: 'center', borderWidth: 2, borderColor: '#206a5d', borderRadius: 10,}}
-            >
-                <Entypo name="save" size={30} color="#206a5d" />
-                <Text style={{...sty.subtitle, fontSize: 8,}}>GUARDAR</Text>
-            </TouchableOpacity>
-       </View>
+            <View style={{alignItems: 'center'}} >
+                <Entypo name="save" size={30} color="white" />
+            </View>
+        </View>
          <Modal visibility={mVisibility}>
             <GuardarPunto
                 onSubmit={submitPuntos}
@@ -86,7 +81,7 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
                 handleName={handleName}
             />
          </Modal>
-         <DetMain posicion={posicion} />
+         <DetMain posicion={posicion} modalVis={() => setMVisibility(true)} />
     </View>
   );
 }

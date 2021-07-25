@@ -1,0 +1,97 @@
+{
+  "titulo" : "AMENAZA POR MOVIMIENTO DE MASAS", 
+  "parrafos" : [
+      "Planes de ordenación y manejo de cuencas hidrográficas - POMCAS",
+      "Es un instrumento a través del cual se realiza la planeación del suelo, las aguas, de la flora y fauna y el manejo de una cuenca entendido como la ejecución de obras y tratamientos.",
+      "Su OBJETIVO es orientar el modelo de ocupación incorporando las disposiciones definidas en el POMCA con relación a la zonificación ambiental.",
+      "El alcance de la determinante ambiental está derivado a partir de la zonificación ambiental del rio Garagoa por tanto se tiene una categoría de ordenación que cuenta con unas zonas y subzonas de uso y manejo establecidas para cada caso"
+  ], 
+  "tipos" : [
+      "CONSERVACIÓN Y PROTECCIÓN AMBIENTAL",
+      "Las áreas que intervienen dentro de esta categoría son aquellas que buscan garantizar la oferta de servicios ecosistémicos relacionados especialmente con el ciclo hidrológico y en general con los procesos de regulación y disponibilidad del recurso hídrico en el territorio de la Cuenca del Río Garagoa. Así, esta categoría incluye las áreas que deben ser objeto de especial protección ambiental de acuerdo con la legislación vigente y las que hacen parte de la estructura ecológica principal del territorio.",
+      "AREAS PROTEGIDAS",
+      " ",
+      "SINAP",
+      "Son áreas protegidas de orden tanto nacional como regional. Son identificadas para asegurar la continuidad de los procesos ecológicos y evolutivos naturales para mantener la diversidad biológica.",
+      "Áreas con reglamentación especial",
+      "Son aquellas áreas que comprenden territorios de patrimonio cultural e interés arqueológico.",
+      "Áreas de importancia ambiental:",
+      "Aquellas áreas que incluyen a los complejos de páramos delimitados bajo la Ley 1382 – 2010. Se excluyen de la minería.",
+      "Áreas complementarias para la conservación:",
+      "Corresponden a áreas de distinción tanto internacional como nacional tales como Parques Naturales Municipales (PNM) existentes, así como áreas para la conservación de la biodiversidad.",
+      "Áreas de Amenazas:",
+      "Corresponden a los territorios que se han visto afectados por la ocurrencia de desastres naturales, y se hace necesario condicionamientos y lineamientos para mitigar de manera segura el nivel de amenaza."
+  ],
+  "clasif" : [
+      "ZONAS DE USO MÚLTIPLE",
+      "Se trata de aquellas áreas donde se realizará la producción sostenible dentro del territorio de la Cuenca del Río Garagoa, cuyos y manejos propuestos no sólo provienen de la identificación de la capacidad de uso de la tierra, si no que responden al resultado de la aplicación de indicadores tanto físico-bióticos, socioeconómicos bajo las leyes, decretos y normatividad vigente establecida en el país.",
+      "AREAS DE RESTAURACION",
+      "  ",
+      "Áreas de Rehabilitación:",
+      "Relaciona aquellas áreas enfocadas en el restablecimiento de manera parcial de elementos estructurales o funcionales de un ecosistema deteriorado. Se incluyen bosques fragmentados los cuales se hallan bajo un estado actual de transformación.",
+      "Áreas de restauración ecológica:",
+      "Corresponde a aquellas áreas destinadas al restablecimiento de un ecosistema que ha sido degradado, dañado o destruido.",
+      "Áreas de restauración para el uso múltiple:",
+      "Corresponde a aquellas áreas donde se tiene como objetivo restaurar la utilidad del ecosistema para la prestación de servicios diferentes a los del ecosistema original.",
+      "-",
+      "",
+      "AREAS PARA LA PRODUCCION AGRICOLA, GANADERA Y DE USO SOSTENIBLE DE RECURSOS NATURALES",
+      "   ",
+      "Áreas agrícolas:",
+      "Corresponden a aquellas áreas, cuyo uso agrícola vienen siendo cultivos intensivos y semi-intensivos transitorios y permanentes.",
+      "Áreas agrícolas condicionadas:",
+      "Se trata de aquellas áreas agrícolas definidas anteriormente, con la diferencia de que éstas se encuentran sometidas a una amenaza de categoría media. Por tal razón se establecen condiciones para la disminución de riesgos.",
+      "Áreas agrosilvopastoriles:",
+      "Son aquellas áreas, cuyo uso agrícola, pecuario y forestal resulta sostenible, por tanto se definen y condicionan el desarrollo de estas actividades.",
+      "Áreas agrosilvopastoriles (Amenaza Media):",
+      "Corresponden a las mismas áreas tratadas anteriormente con la única diferencia que éstas se encuentran sometidas a una amenaza de categoría media, por tal razón se establecen ciertos condicionamientos que buscan disminuir la generación de riesgos"
+  ],
+  "Leyes" : [  
+    {
+      "num" : 0,
+      "titulo" : "LEY 99 DE 1993",
+      "contenido" : ["Régimen ambiental - La Prevención de desastres será materia de interés colectivo y las medidas tomadas para evitar o mitigar los efectos de su ocurrencia serán de obligatorio cumplimiento."]
+    }, 
+    {
+      "num" : 1,
+      "titulo" : "Ley 99 de 1993 - Parágrafo 3º.", 
+      "contenido" : ["Reglamentado por el Decreto Nacional 1498 de 2008. La política de cultivos forestales con fines comerciales, de especies introducidas o autóctonas, será fijada por el Ministerio de Agricultura con base en la Política Nacional Ambiental y de Recursos Naturales Renovables que establezca el Ministerio del Medio Ambiente."]
+    }, 
+    {
+      "num" : 2,
+      "titulo" : "Ley 1450 de 2011",
+      "contenido" : ["ARTÍCULO  66. Programa Especial para la Reforestación. En el marco del Plan Nacional de Desarrollo Forestal, créase el Programa Nacional de Reforestación Comercial con el fin de aprovechar el potencial forestal nacional y ampliar la oferta productiva, contribuyendo a rehabilitar el uso de los suelos con potencial para la reforestación, incluyendo las cuencas de los ríos y las áreas conectadas con ellas."]
+    }, 
+    {
+      "num" : 3,
+      "titulo" : "DECRETO 2811 DEL 18 DE DICIEMBRE DE 1974",
+      "contenido" : [
+          "Sección II - De las cuencas hidrográficas en ordenación",
+          "Artículo 316.- Se entiende por ordenación de una cuenca la planeación del uso coordinado del suelo, de las aguas, de la flora y la fauna, y por manejo de la cuenca, la ejecución de obras y tratamientos.",
+          "Artículo 317.- Para la estructuración de un plan de ordenación y manejo se deberá consultar a los usuarios de los recursos de la cuenca y a las entidades, públicas y privadas, que desarrollan actividades en la región.",
+          "Artículo 318.- La administración declarará en ordenación una cuenca cuando existan condiciones ecológicas, económicas y sociales que así lo requieran.",
+          "Artículo 319.- El plan de ordenación y manejo de una cuenca en ordenación será de forzoso cumplimiento por las entidades públicas que realicen actividades en la zona.",
+          "Artículo 320.- A los particulares que no se avinieren a adecuar sus explotaciones a las finalidades del plan se podrán imponer las limitaciones de dominio o las servidumbres necesarias para alcanzar dichas finalidades, con arreglo a este Código y a las demás leyes vigentes.",
+          "Artículo 321.- En las cuencas hidrográficas sometidas a planes de ordenación y manejo, la construcción y operación de obras de infraestructura y, en general, la utilización directa o indirecta de los recursos naturales, estarán sujetas a los planes respectivos."
+      ]
+    }, 
+    {
+      "num" : 4,
+      "titulo" : "DECRETO 1076 DE 2015",
+      "contenido" : [
+          "ARTÍCULO       2.2.1.1.5.1. Verificación. Cuando la Corporación reciba solicitud de aprovechamiento forestal único de bosque natural ubicado en terrenos de dominio público deberá verificar, como mínimo, los siguientes:",
+          "d) Que en las áreas de manejo especial, tales como las cuencas hidrográficas en ordenación, los distritos de conservación de suelos y los distritos de manejo integrado u otras áreas protegidas, los bosques no se encuentren en sectores donde deba conservarse, de conformidad con los planes de manejo diseñados para dichas áreas."
+      ]
+    }
+  ], 
+  "Recursos" : [   
+    {
+      "titulo" : "FICHAS TÉCNICAS DE DETERMINANTES AMBIENTALES DE POMCA",
+      "link" : "https://www.corpochivor.gov.co/wp-content/uploads/2021/04/Ficha-POMCA-Rio-Garagoa-Ramiriquí.pdf"
+    }, 
+    {
+      "titulo" : "DOCUMENTO GENERAL POMCA",
+      "link" : "https://www.corpochivor.gov.co/wp-content/uploads/2015/11/1.-Documento-POMCA.pdf"
+    } 
+  ]
+}

@@ -21,7 +21,8 @@ export default ({ posicion }) => {
             resizeMode:'cover',
         }}/>
         <View style={{backgroundColor: '#206a5d', height: 2, width: width*0.9, marginBottom: 4,}}/>
-        <Text style={styles.subtitle} >NIVEL DE AMENAZA{':'} {resDeter}</Text>
+        <Text style={styles.subtitle} >El Lugar elegido es{':'}</Text>
+        <Text style={styles.subtitle} >UN ÁREA {resDeter}</Text>
           </>
       :
         <Text style={styles.subtitle} >La zona elegida no tiene cobertura</Text>
@@ -30,8 +31,6 @@ export default ({ posicion }) => {
     </View>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   center: {

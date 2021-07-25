@@ -9,7 +9,7 @@ export default ({ onSubmit, close, handleLong, handleLat }) => {
 
     return <View style={{width: width*0.8, height: height*0.3}}>
         <Text style={{...sty.title, textAlign: 'center', marginBottom: 20}}>
-            Ingresa las coordenadas de tu interes</Text>
+            Ingresa las coordenadas de tu interes en grados</Text>
         <Input
             title=" Ingresa la longitud del punto"
             placeholder="Escribe coordenada..."

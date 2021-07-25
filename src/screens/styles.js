@@ -19,7 +19,6 @@ const styles = {
     justifyContent: 'center',
     backgroundColor: '#fff',
     marginTop: STATUSBAR_HEIGHT,
-    padding: 5,
   },
   center : {
     flex: 1,
