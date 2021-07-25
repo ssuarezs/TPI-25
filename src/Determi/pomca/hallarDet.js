@@ -12,17 +12,13 @@ import res from './geojson/7res.json'
 import agr from './geojson/8agr.json'
 import con from './geojson/9con.json'
 import sil from './geojson/10sil.json'
-import silC from './geojson/11silvoCond.json'
 
 export default ( posicion ) => {
 
-  let point = turf.point([0, 0])
-
- if(posicion != null){
-     point = turf.point([posicion.longitude, posicion.latitude])
-   }
-
+    let point = turf.point([0, 0])
     let la = {}
+
+    if(posicion != null){ point = turf.point([posicion.longitude, posicion.latitude])}
 
     sin.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.sin = true}})
     reg.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.reg = true}})
@@ -34,22 +30,20 @@ export default ( posicion ) => {
     agr.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.agr = true}})
     con.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.con = true}})
     sil.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.sil = true}})
-    silC.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.silC = true}})
 
 
   let detHallado = ''
 
-    if (la.sin) {detHallado = detHallado + 'SINAP,'}
-    if (la.reg) {detHallado = detHallado + 'con Reglamentacion Especial,'}
-    if (la.imp) {detHallado = detHallado + 'de Importancia Ambiental,'}
-    if (la.com) {detHallado = detHallado + 'complementaria para la conservación,'}
-    if (la.ame) {detHallado = detHallado + 'de Amenaza,'}
-    if (la.reh) {detHallado = detHallado + 'de Rehabilitación,'}
-    if (la.res) {detHallado = detHallado + 'de Restauración,'}
-    if (la.agr) {detHallado = detHallado + 'Agrícola,'}
-    if (la.con) {detHallado = detHallado + 'Agrícola Condicionada,'}
-    if (la.sil) {detHallado = detHallado + 'Agrosilvopastoril,'}
-    if (la.silC) {detHallado = detHallado + 'Agrosilvopastoril Condicionada,'}
+    if (la.sin) {detHallado = detHallado + 'SINAP, '}
+    if (la.reg) {detHallado = detHallado + 'con Reglamentacion Especial, '}
+    if (la.imp) {detHallado = detHallado + 'de Importancia Ambiental, '}
+    if (la.com) {detHallado = detHallado + 'complementaria para la conservación, '}
+    if (la.ame) {detHallado = detHallado + 'de Amenaza, '}
+    if (la.reh) {detHallado = detHallado + 'de Rehabilitación, '}
+    if (la.res) {detHallado = detHallado + 'de Restauración, '}
+    if (la.agr) {detHallado = detHallado + 'Agrícola, '}
+    if (la.con) {detHallado = detHallado + 'Agrícola Condicionada, '}
+    if (la.sil) {detHallado = detHallado + 'Agrosilvopastoril,  '}
 
   return detHallado;
 

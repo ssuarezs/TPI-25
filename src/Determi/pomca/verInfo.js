@@ -13,13 +13,13 @@ export default ({ posicion }) => {
 
   return (
     <View style={styles.center}>
-      {resDeter ?
-          <>
           <Image source={portada} style={{
             width:width*0.88,
             height: width*0.22,
             resizeMode:'cover',
         }}/>
+      {resDeter ?
+          <>
         <View style={{backgroundColor: '#206a5d', height: 2, width: width*0.9, marginBottom: 4,}}/>
         <Text style={styles.subtitle} >El Lugar elegido es{':'}</Text>
         <Text style={styles.subtitle} >un Área {resDeter}</Text>

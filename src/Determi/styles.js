@@ -186,6 +186,7 @@ const styles = {
     image: {
         width:width*0.8,
         height: width*0.4,
+        alignSelf: 'center',
         resizeMode:'cover',
     },
     centro: {

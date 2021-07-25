@@ -12,6 +12,8 @@ import {
     TouchableOpacity,
     NativeModules,
 } from 'react-native';
+import { Entypo } from '@expo/vector-icons';
+import sty from './styles.js'
 import { HallarDet, ListaDet, InfoDet } from './tabs'
 
 const {width, height} = Dimensions.get('screen');
@@ -165,34 +167,6 @@ export default ({navigation}) => {
               />
           </Animated.View>
         </View>
-        <View style={[
-          StyleSheet.absoluteFillObject,
-          {
-            flex: 1,
-            width: width,
-            height: width*0.14,
-            flexDirection: 'row',
-            marginTop: STATUSBAR_HEIGHT+10,
-        }]}>
-            <View style={{
-              width: width*0.7,
-              height: width*0.13,
-              marginLeft: 20,
-              backgroundColor:'rgba(255,255,255,0.8)',
-              borderRadius: 20,
-            }}>
-            </View>
-            <View style={{
-              margin: 1,
-              marginLeft: 15,
-              marginRight: 20,
-              width: 50,
-              backgroundColor:'rgba(255,255,255,0.8)',
-              borderRadius: 25,
-            }}>
-            </View>
-        </View>
-
         <Animated.FlatList
           ref={ref}
           data={data}
@@ -231,8 +205,44 @@ export default ({navigation}) => {
               </View>
               )
           }}
-      />
-      <Tabs scrollX={scrollX} data={data} onItemPress={onItemPress} />
+        />
+        <View style={[
+          StyleSheet.absoluteFillObject,
+          {
+            flex: 1,
+            width: width,
+            height: width*0.14,
+            flexDirection: 'row',
+            marginTop: STATUSBAR_HEIGHT+10,
+        }]}>
+            <View style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: width*0.7,
+              height: width*0.13,
+              marginLeft: 20,
+              backgroundColor:'rgba(255,255,255,0.8)',
+              borderRadius: 20,
+            }}>
+            <Text style={sty.title}>Ramiriquí</Text>
+            </View>
+            <View style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              margin: 1,
+              marginLeft: 15,
+              marginRight: 20,
+              width: 50,
+              backgroundColor:'rgba(255,255,255,0.8)',
+              borderRadius: 25,
+            }}>
+                <TouchableOpacity onPress={()=> navigation.navigate('menu')} >
+                <Entypo name="grid" size={32} color="#206a5d" />
+            </TouchableOpacity>
+            </View>
+        </View>
+
+        <Tabs scrollX={scrollX} data={data} onItemPress={onItemPress} />
     </View>
   );
 }

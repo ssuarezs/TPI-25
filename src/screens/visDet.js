@@ -66,7 +66,7 @@ const VisScreen = ({ navigation, lista, saveLug }) => {
             <TouchableOpacity onPress={()=> navigation.goBack()} >
                 <Entypo name="chevron-left" size={35} color="#206a5d" />
             </TouchableOpacity>
-            <Text style={sty.subtitle}>EXPLORANDO</Text>
+            <Text style={sty.title}>EXPLORANDO</Text>
             <View style={{alignItems: 'center'}} >
                 <Entypo name="save" size={30} color="white" />
             </View>

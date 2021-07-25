@@ -36,8 +36,8 @@ const initialState = {
     data: [
         {
             "coordinate": {
-              "latitude": 4.2120368,
-              "longitude": -74.6340045,
+              "latitude": 5.3,
+              "longitude": -73.3,
             },
             "name": "Tu Primera Ubicacion",
         },

@@ -6,7 +6,7 @@ export const dets = [
             {
                 'titulo' : 'POMCA',
                 'num' : 3,
-                'map' : require('./maps/incendio.png'),
+                'map' : require('./maps/pomca.jpg'),
             },
         ]
     },

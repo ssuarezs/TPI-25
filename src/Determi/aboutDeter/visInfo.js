@@ -9,11 +9,31 @@ import info from './info.json'
 const {width, height} = Dimensions.get('screen')
 
 const images = {
-    "¿Qué son los determinantes ambientales?": require('./images/A.png'),
-    "¿Cómo se clasifican los determinantes ambientales?": require('./images/B.png'),
-    "¿Cuál es la importancia de los determinantes ambientales?": require('./images/C.png'),
-    "¿Qué es Corpochivor?": require('./images/D.png'),
-    "¿Quiénes somos?": require('./images/E.png'),
+    "¿Qué son los determinantes ambientales?": [
+            require('./images/A.png'),
+            false,
+            require('./images/A2.png'),
+    ],
+    "¿Cómo se clasifican los determinantes ambientales?": [
+            require('./images/B1.png'),
+            require('./images/B2.png'),
+            require('./images/B3.png'),
+            require('./images/B4.png'),
+    ],
+    "¿Cuál es la importancia de los determinantes ambientales?": [
+            require('./images/C.png'),
+            require('./images/C2.png'),
+    ],
+    "¿Qué es Corpochivor?": [
+            require('./images/D.png'),
+            false,
+            require('./images/D2.png'),
+    ],
+    "¿Quiénes somos?": [
+            require('./images/E.png'),
+            false,
+            require('./images/E2.png'),
+    ],
 }
 
 export default ({navigation}) => {
@@ -58,7 +78,7 @@ export default ({navigation}) => {
                   renderItem={({item, index}) => (
                       <View>
                       <ShowCont item={item} />
-                      {index === 0 && (<Image source={images[data.subtitle]} style={styles.image}/>)}
+                      {images[data.subtitle][index] && (<Image source={images[data.subtitle][index]} style={styles.image}/>)}
                       </View>
                 )}
                 />

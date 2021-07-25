@@ -76,7 +76,7 @@ export default ({navigation}) => {
             <TouchableOpacity onPress={()=> navigation.goBack()} >
             <Entypo name="chevron-left" size={35} color="#206a5d" />
             </TouchableOpacity>
-            <Text style={sty.subtitle}>ELIGE TU PUNTO DE INTERES</Text>
+            <Text style={{...sty.title, fontSize: 15}}>ELIGE TU PUNTO DE INTERES</Text>
             <Entypo name="chevron-left" size={35} color="white" />
        </View>
        {tipoModal ?

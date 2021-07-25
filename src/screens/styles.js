@@ -55,6 +55,19 @@ const styles = {
     fontWeight: 'bold',
     fontSize: 18,
   },
+  textA : {
+    marginTop: 10,
+    marginLeft: 10,
+    color: verde,
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  textB : {
+    marginLeft: 20,
+    color: verdeO,
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
   subtitle : {
     color: verdeO,
     fontWeight: 'bold',
@@ -65,6 +78,17 @@ const styles = {
   mapa: {
     flex: 6,
   },
+  link: {
+    marginTop: 20,
+    marginLeft: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor:verde,
+    width: width*0.8,
+    padding: 10,
+    borderRadius: 20,
+    borderWidth: 3,
+    }
 };
 
 export default styles

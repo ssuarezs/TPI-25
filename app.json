@@ -2,7 +2,7 @@
   "expo": {
     "name": "RDA",
     "slug": "TPI-25",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/RDA-icon.png",
     "splash": {
@@ -14,7 +14,7 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
-      "assets/*"
+      "**/*"
     ],
     "ios": {
       "supportsTablet": true
@@ -31,9 +31,6 @@
               "apiKey": "AIzaSyDXRNNiGs-JmHrLZjsX5tK4O_opEc6VxIk"
           }
       }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }
