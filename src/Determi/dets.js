@@ -19,7 +19,7 @@ export const dets = [
                 'map' : require('./maps/incendio.png'),
             },
             {
-                'titulo' : 'AMENAZA POR MOVIMIENTO DE MASAS',
+                'titulo' : 'MOVIMIENTO DE MASAS',
                 'num' : 2,
                 'map' : require('./maps/movMasa.png'),
             },

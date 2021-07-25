@@ -15,7 +15,6 @@ import { dets } from './dets'
 import DetIncendio from './incendios/verInfo'
 import DetMovMasa from './movMasa/verInfo'
 import DetPomca from './pomca/verInfo'
-import mapazona from './pomca/geojson/1Sin'
 
 const ITEM = ({ D, title }) => {
     return (
@@ -61,15 +60,21 @@ export default ({ posicion, modalVis }) => {
         showsVerticalScrollIndicator={false}
     >
         <View style={{ height: 200}}>
-          <Map posicion={posicion} >
-        <Geojson geojson={mapazona}
-            strokeColor='green'
-            strokeWidth={2} />
-      </Map>
+          <Map posicion={posicion} />
         </View>
         <View style={{ height: 4}}/>
-        {(determ == 0) && (<Text style={{...styles.title, marginTop: 20, padding: 10}}>
-            Seleccione un determinante Ambiental con el boton de ¡Opciones!</Text>)}
+        {(determ == 0) && (
+            <>
+            <Text style={{...styles.title, marginTop: 20, padding: 10}}>
+            Seleccione un determinante Ambiental con el boton de ¡Opciones!</Text>
+                <TouchableOpacity
+                    onPress={() => {setVisible(true)}}
+                    style={{alignItems: 'center',  borderWidth: 3, borderColor: verde, borderRadius: 60}}
+                    >
+                    <Entypo name="cog" size={100} color="#206a5d" />
+                </TouchableOpacity>
+            </>
+        )}
         {(determ == 1) && (<DetIncendio posicion={posicion} />)}
         {(determ == 2) && (<DetMovMasa posicion={posicion} />)}
         {(determ == 3) && (<DetPomca posicion={posicion} />)}
@@ -89,15 +94,15 @@ export default ({ posicion, modalVis }) => {
             ]}>
                 <View style={{ backgroundColor:'white', flexDirection: 'row', height: 60, alignItems: 'center', justifyContent: 'center' }}>
                       <View style={styles.buttonB}>
-                        <Text style={styles.titleB} >{detE}</Text>
+                        <Text style={{...styles.titleB, fontSize: 18}} >{detE}</Text>
                       </View>
                     <Animated.View style={[sty.icon]}>
                         <TouchableOpacity
                             onPress={() => {setVisible(true)}}
                             style={{alignItems: 'center',}}
                             >
-                            <Entypo name="cog" size={40} color="#206a5d" />
-                            <Text style={{...styles.subtitle, fontSize: 7,}}>OPCIONES</Text>
+                            <Entypo name="cog" size={45} color="#206a5d" />
+                            <Text style={{...styles.subtitle, fontSize: 6,}}>OPCIONES</Text>
                         </TouchableOpacity>
                     </Animated.View>
                     <Animated.View style={[sty.icon]}>
@@ -105,7 +110,7 @@ export default ({ posicion, modalVis }) => {
                             onPress={modalVis}
                             style={{alignItems: 'center',}}
                             >
-                            <Entypo name="save" size={40} color="#206a5d" />
+                            <Entypo name="save" size={45} color="#206a5d" />
                             <Text style={{...styles.subtitle, fontSize: 7,}}>GUARDAR</Text>
                         </TouchableOpacity>
                     </Animated.View>

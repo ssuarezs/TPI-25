@@ -2,7 +2,7 @@ import React from 'react';
 import { Geojson } from 'react-native-maps';
 import * as turf from '@turf/turf'
 
-import sin from './geojson/1Sin.json'
+import sin from './geojson/1Sin'
 import reg from './geojson/2reg.json'
 import imp from './geojson/3imp.json'
 import com from './geojson/4com.json'
@@ -22,31 +22,34 @@ export default ( posicion ) => {
      point = turf.point([posicion.longitude, posicion.latitude])
    }
 
-  let sinP = turf.booleanPointInPolygon(point, sin.features[0]);
-  let regP = turf.booleanPointInPolygon(point, reg.features[0]);
-  let impP = turf.booleanPointInPolygon(point, imp.features[0]);
-  let comP = turf.booleanPointInPolygon(point, com.features[0]);
-  let ameP = turf.booleanPointInPolygon(point, ame.features[0]);
-  let rehP = turf.booleanPointInPolygon(point, reh.features[0]);
-  let resP = turf.booleanPointInPolygon(point, res.features[0]);
-  let agrP = turf.booleanPointInPolygon(point, agr.features[0]);
-  let conP = turf.booleanPointInPolygon(point, con.features[0]);
-  let silP = turf.booleanPointInPolygon(point, sil.features[0]);
-  let siCP = turf.booleanPointInPolygon(point, silC.features[0]);
+    let la = {}
 
-  let detHallado = 'lala'
+    sin.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.sin = true}})
+    reg.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.reg = true}})
+    imp.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.imp = true}})
+    com.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.com = true}})
+    ame.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.ame = true}})
+    reh.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.reh = true}})
+    res.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.res = true}})
+    agr.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.agr = true}})
+    con.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.con = true}})
+    sil.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.sil = true}})
+    silC.features.forEach((i) => {if(turf.booleanPointInPolygon(point, i)){la.silC = true}})
 
-    if (sinP) {detHallado = 'SINAP'}
-    if (regP) {detHallado = 'SINAP'}
-    if (impP) {detHallado = 'SINAP'}
-    if (comP) {detHallado = 'SINAP'}
-    if (ameP) {detHallado = 'SINAP'}
-    if (rehP) {detHallado = 'SINAP'}
-    if (resP) {detHallado = 'SINAP'}
-    if (agrP) {detHallado = 'SINAP'}
-    if (conP) {detHallado = 'SINAP'}
-    if (silP) {detHallado = 'SINAP'}
-    if (siCP) {detHallado = 'SINAP'}
+
+  let detHallado = ''
+
+    if (la.sin) {detHallado = detHallado + 'SINAP,'}
+    if (la.reg) {detHallado = detHallado + 'con Reglamentacion Especial,'}
+    if (la.imp) {detHallado = detHallado + 'de Importancia Ambiental,'}
+    if (la.com) {detHallado = detHallado + 'complementaria para la conservación,'}
+    if (la.ame) {detHallado = detHallado + 'de Amenaza,'}
+    if (la.reh) {detHallado = detHallado + 'de Rehabilitación,'}
+    if (la.res) {detHallado = detHallado + 'de Restauración,'}
+    if (la.agr) {detHallado = detHallado + 'Agrícola,'}
+    if (la.con) {detHallado = detHallado + 'Agrícola Condicionada,'}
+    if (la.sil) {detHallado = detHallado + 'Agrosilvopastoril,'}
+    if (la.silC) {detHallado = detHallado + 'Agrosilvopastoril Condicionada,'}
 
   return detHallado;
 
